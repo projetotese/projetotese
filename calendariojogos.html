@@ -69,6 +69,54 @@ th {
 }
 </style>
 </head>
+
+<script>
+
+    "use strict"
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./sw.js');
+    }
+  
+
+  
+  
+  function openGames(evt, gamePlay) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(gamePlay).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  //carregar dados do excel de jogos realizados para colocar os resultados do jogo
+  /*
+  var myInit = { method: 'GET',
+           headers: {
+            'Content-Type': 'application/json'
+           },
+           mode: 'cors',
+           cache: 'default'};
+  
+  let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
+  
+  fetch(myRequest)
+        .then(function(resp) {
+          return resp.json();
+        })
+        .then(function(data){
+          console.log(data);
+        });
+          
+  *\
+  </script>
 <body>
 
 <h2>Jogos</h2>
@@ -182,51 +230,7 @@ th {
 </div>
 
 
-<script>
 
-	"use strict"
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
-  }
-
-
-/*
-var myInit = { method: 'GET',
-			   headers: {
-			   	'Content-Type': 'application/json'
-			   },
-			   mode: 'cors',
-			   cache: 'default'};
-
-let myRequest = new Request("./jogo.json", myInit);
-
-fetch(myRequest)
-			.then(function(resp) {
-				return resp.json();
-			})
-			.then(function(data){
-				console.log(data);
-			});
-				
-*/
-
-
-function openGames(evt, gamePlay) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(gamePlay).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
    
 </body>
 </html> 
