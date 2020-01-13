@@ -1,76 +1,92 @@
-//<!--Team.json-->
+
 
 [
     {
     	"ID": "1",
-        "Data Jogo": "9/11/2019",
+        "Data Jogo": "5-10-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Adcr Caxinas Poça Barca",
+        "Adversario": "SCBraga-Futsal Azemeis",
         "Local":"Casa"
     },
     {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "2",
+        "Data Jogo": "12-10-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Gcr Ossela",
+        "Adversario": "Jorge Antunes",
         "Local":"Casa"
     },
       {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "3",
+        "Data Jogo": "20-10-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Futsal Azeméis By Noxae",
+        "Adversario": "SCBraga-Modicus",
         "Local":"Casa"
     },
       {
-        "ID": "1",
-        "Data Jogo": "9/11/2019",
+        "ID": "4",
+        "Data Jogo": "27-10-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Ad Jorge Antunes",
+        "Adversario": "CS S.João-SCBraga",
         "Local":"Casa"
     },
       {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "5",
+        "Data Jogo": "2-11-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Ad Modicus",
+        "Adversario": "SCBraga-Nogueiró",
         "Local":"Casa"
     },
       {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "6",
+        "Data Jogo": "9-11-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Cs S. João Urgicentro Sanfil",
+        "Adversario": "SCBraga-Caxinas",
         "Local":"Casa"
     },
       {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "7",
+        "Data Jogo": "23-11-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Adc Nogueiró Tenões",
+        "Adversario": "Futsal Azemeis-SCBraga",
         "Local":"Casa"
     },
     {
-    	"ID": "1",
-        "Data Jogo": "9/11/2019",
+    	"ID": "8",
+        "Data Jogo": "30-11-2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Adcr Caxinas Poça Barca",
+        "Adversario": "Jorge Antunes",
         "Local":"Casa"
     },
     {
-        "ID": "1",
-        "Data Jogo": "9/11/2019",
+        "ID": "9",
+        "Data Jogo": "7/12/2019",
         "Horario Jogo": "16:00",
         "Competicao": "CN Sub19 Futsal Masculino",
-        "Adversario": "Gcr Ossela",
+        "Adversario": "Modicus-SCBraga",
         "Local":"Casa"
-    }
+    },
+    {
+      "ID": "10",
+      "Data Jogo": "15/12/2019",
+      "Horario Jogo": "16:00",
+      "Competicao": "CN Sub19 Futsal Masculino",
+      "Adversario": "SCBraga-CSSJoao",
+      "Local":"Casa"
+  },
+  {
+    "ID": "11",
+    "Data Jogo": "22/12/2019",
+    "Horario Jogo": "16:00",
+    "Competicao": "CN Sub19 Futsal Masculino",
+    "Adversario": "Nogueiro-SCBraga",
+    "Local":"Casa"
+}
 ]
