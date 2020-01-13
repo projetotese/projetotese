@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Registo de Eventos</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="stylesheet" href="css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="white"/>
-<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-<link rel="apple-touch-icon" href="images/hello-icon-152.png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma"> 
-<meta name="theme-color" content="white"/>  
-<meta name="apple-mobile-web-app-capable" content="yes">  
-<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
-<meta name="apple-mobile-web-app-title" content="Plataforma de Eventos"> 
-<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
-<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial;}
 
@@ -71,7 +56,7 @@ body {font-family: Arial;}
 
 <div id="Gerais" class="tabcontent">
   <h3>Estatisticas Gerais</h3>
-  <table class="w3-table w3 bordered w3-stripped">
+    <table class="w3-table w3 bordered w3-stripped">
       <tr>
         <th>Posse Bola</th>
         <th>Golos</th>
@@ -93,7 +78,7 @@ body {font-family: Arial;}
 
 <div id="PorJogador" class="tabcontent">
   <h3>Estatisticas por Jogador</h3>
-  <table class="w3-table w3 bordered w3-stripped">
+    <table class="w3-table w3 bordered w3-stripped">
       <tr>
         <th>Jogador</th>
         <th>Golos</th>
@@ -113,7 +98,7 @@ body {font-family: Arial;}
 
 <div id="ListaEventos" class="tabcontent">
   <h3>Lista Eventos</h3>
-  <table class="w3-table w3 bordered w3-stripped">
+    <table class="w3-table w3 bordered w3-stripped">
       <tr>
         <th>Evento</th>
         <th>Minuto de Jogo</th>
@@ -142,8 +127,6 @@ function openGames(evt, gameStats) {
   document.getElementById(gameStats).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-
 /*
 var myInit = { method: 'GET',
          headers: {
@@ -163,8 +146,6 @@ fetch(myRequest)
       });
         
 *\
-
-
 </script>
    
 </body>
