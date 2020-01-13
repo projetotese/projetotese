@@ -173,7 +173,7 @@ function exportToCsv(filename, rows) {
 
 
 
-exportToCsv('export.csv', [
+exportToCsv('teste.csv', [
 ['evento','Golo'],	
 ['Jogador','Titular1'],
 ['campogolo','""'],
