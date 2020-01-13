@@ -1,0 +1,76 @@
+//<!--Team.json-->
+
+[
+    {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Adcr Caxinas Poça Barca",
+        "Local":"Casa"
+    },
+    {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Gcr Ossela",
+        "Local":"Casa"
+    },
+      {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Futsal Azeméis By Noxae",
+        "Local":"Casa"
+    },
+      {
+        "ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Ad Jorge Antunes",
+        "Local":"Casa"
+    },
+      {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Ad Modicus",
+        "Local":"Casa"
+    },
+      {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Cs S. João Urgicentro Sanfil",
+        "Local":"Casa"
+    },
+      {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Adc Nogueiró Tenões",
+        "Local":"Casa"
+    },
+    {
+    	"ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Adcr Caxinas Poça Barca",
+        "Local":"Casa"
+    },
+    {
+        "ID": "1",
+        "Data Jogo": "9/11/2019",
+        "Horario Jogo": "16:00",
+        "Competicao": "CN Sub19 Futsal Masculino",
+        "Adversario": "Gcr Ossela",
+        "Local":"Casa"
+    }
+]

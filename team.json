@@ -1,0 +1,112 @@
+//<!--Team.json-->
+
+[
+    {
+    	"ID": "1",
+        "nomeJogador": "Diogo Vieira",
+        "fotoJogador": "diogovieira.jpg",
+        "estado":""
+    },
+    {
+    	"ID": "2",
+        "nomeJogador": "Marco Oliveira",
+        "fotoJogador": "marcooliveira.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "3",
+        "nomeJogador": "Alexandre Fernandes",
+        "fotoJogador": "alexandrefernandes.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "4",
+        "nomeJogador": "André Carvalho",
+        "fotoJogador": "andrecarvalho.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "5",
+        "nomeJogador": "Cláudio Silva",
+        "fotoJogador": "claudiosilva.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "6",
+        "nomeJogador": "Dinis Pereira",
+        "fotoJogador": "dinispereira.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "7",
+        "nomeJogador": "Diogo José",
+        "fotoJogador": "diogojose.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "8",
+        "nomeJogador": "Diogo Silva",
+        "fotoJogador": "diogosilva.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "9",
+        "nomeJogador": "Elian Leitao",
+        "fotoJogador": "elianleitao.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "10",
+        "nomeJogador": "Guilherme Cepeda",
+        "fotoJogador": "guilhermecepeda.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "11",
+        "nomeJogador": "João Lopes",
+        "fotoJogador": "joaolopes.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "12",
+        "nomeJogador": "Luis Matos",
+        "fotoJogador": "luismatos.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "13",
+        "nomeJogador": "Paulo Correia",
+        "fotoJogador": "paulocorreia.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "14",
+        "nomeJogador": "Rafael Ferreira",
+        "fotoJogador": "rafaelferreira.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "15",
+        "nomeJogador": "Ricardo Lopes",
+        "fotoJogador": "ricardolopes.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "16",
+        "nomeJogador": "Ruben Rocha",
+        "fotoJogador": "rubenrocha.jpg",
+        "estado":""
+    },
+      {
+    	"ID": "17",
+        "nomeJogador": "Samuel Marques",
+        "fotoJogador": "samuelmarques.jpg",
+        "estado":""
+    },
+    {
+    	"ID": "18",
+        "nomeJogador": "Tomás Castro",
+        "fotoJogador": "tomascastro.jpg",
+        "estado":""
+    }
+]

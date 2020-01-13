@@ -1,0 +1,250 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:10}
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.div {
+  height: 100px;
+  width: 50%;
+  border: 1px solid black;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+ul li:last child{
+	border-right: none;
+}
+
+ul li a{
+	text-decoration: none;
+	padding: 0 50px;
+	display: block;
+}
+
+ul li a .icon {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	overflow: hidden;
+	margin:0 auto 10px;
+}
+
+ul li a.icon .fa{
+	width: 100%
+	height: 100%;
+	line-height: 40px;
+	font-size: 34px;
+
+}
+
+/*Campo Golo*/
+.zona1 {
+   position: absolute;
+   	top: 102%;
+    width: 120px;
+    height: 70px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -40%;
+    right: 0;
+    border-radius: 3px;
+}
+.zona2 {
+   position: absolute;
+   	top: 112%;
+    width: 120px;
+    height: 110px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -40%;
+    right: 0;
+    border-radius: 3px;
+}
+.zona3 {
+ position: absolute;
+   	top: 127%;
+    width: 120px;
+    height: 70px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -40%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona4 {
+ position: absolute;
+   	top: 102%;
+    width: 220px;
+    height: 72px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -15%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona5 {
+   
+
+        position: absolute;
+   	top: 112%;
+    width: 220px;
+    height: 112px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -15%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona6 {
+      position: absolute;
+   	top: 127%;
+    width: 220px;
+    height: 72px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: -15%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona7 {
+   position: absolute;
+   	top: 102%;
+    width: 120px;
+    height: 70px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: 12%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona8 {
+     position: absolute;
+   	top: 112%;
+     width: 120px;
+    height: 110px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: 12%;
+    right: 0;
+    border-radius: 3px;
+}
+
+.zona9 {
+   position: absolute;
+   	top: 127%;
+     width: 120px;
+    height: 70px;
+    opacity: 0.7;
+    padding: 10px;
+    background-color: #ff9800;
+    border: none;
+    font-weight: 700;
+    margin: 1px auto;
+    left: 12%;
+    right: 0;
+    border-radius: 3px;
+}
+
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;

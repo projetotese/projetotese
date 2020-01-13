@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registo de Eventos</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="white"/>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma"> 
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Plataforma de Eventos"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+  </head>
+  
+<body class="fullscreen">
+
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="calendariojogos.html" onclick="w3_close()" class="w3-bar-item w3-button">Placar</a>
+  <a href="equipa.html" onclick="w3_close()" class="w3-bar-item w3-button">Equipas em Campo</a>
+  <a href="estatisticas.html" onclick="w3_close()" class="w3-bar-item w3-button">Estatisticas</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-center w3-padding-16">PLATAFORMA DE REGISTO DE EVENTOS</div>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:800px;margin-top:100px">
+
+  <!-- Escolha dos Eventos-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="evento">
+    <div class="w3-quarter">
+      <a href="javascript:showJogGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/golo.png" alt="Golo" style="width:80px">
+      <h3>Golo</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/bolaicon.png" alt="FaltaEfetuada" style="width:80px">
+      <h3>Falta Efetuada</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/falta.png" alt="FaltaSofrida" style="width:80px">
+      <h3>Falta Sofrida</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogPerdaBola()">
+      <img src="E:/5 Ano Universidade/trabalho/images/bolaicon.png" alt="PerdaBola" style="width:80px">
+      <h3>PerdaBola</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/remate.png" alt="Remate" style="width:80px">
+      <h3>Remate</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogSubs()">
+      <img src="E:/5 Ano Universidade/trabalho/images/substituicao.png" alt="Substituicao" style="width:80px">
+      <h3>Substituição</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showJogSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/cartoes.png" alt="Substituicao" style="width:80px">
+      <h3>Sanção</h3>
+    </div>
+  </div>
+  
+  <!-- Mostrar Jogadores Golo-->
+  <div id="DivJogGolo" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+  </div>
+
+  <!-- Mostrar Jogadores Remate-->
+  <div id="DivJogRemate" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoRemate()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+  </div>
+
+
+  <!-- Mostrar Jogadores PerdaBola-->
+  <div id="DivJogPerdaBola" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoPerda()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoPerda()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoPerda()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoPerda()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoPerda()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+  </div>
+
+
+  <!-- Mostrar Jogadores Falta Efetuada-->
+  <div id="DivJogFalta" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+  </div>
+
+  <!-- Mostrar Jogadores FaltaSofrida-->
+  <div id="DivJogFalta" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoFalta()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+</div>
+
+ <!-- Mostrar Jogadores Substituicao-->
+  <div id="DivJogSubs" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+</div>
+
+ <!-- Mostrar Jogadores SancaoDisciplinar-->
+  <div id="DivJogSancao" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showtipoSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showtipoSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showtipoSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showtipoSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showtipoSancao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+</div> 
+
+ <!-- Mostrar Jogadores Comentario-->
+  <div id="DivJogComentario" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/diogovieira.png" alt="Titular1" style="width:80px">
+      <h3>Titular 1</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/alexandrefernandes.png" alt="Titular2" style="width:80px">
+      <h3>Titular 2</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/andrecarvalho.png" alt="Titular3" style="width:80px">
+      <h3>Titular 3</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/claudiosilva.png" alt="Titular4" style="width:80px">
+      <h3>Titular 4</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showCampoGolo()">
+      <img src="E:/5 Ano Universidade/trabalho/images/dinispereira.png" alt="Titular5" style="width:80px">
+      <h3>Titular 5</h3>
+    </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+<!-- Mostrar Campo Golo-->
+<div id="DivCampoGolo" style="display:none" >
+<div class="row">
+    <br>
+    
+    <div class="col-sm">
+    <a> <img src="E:/5 Ano Universidade/trabalho/images/campofutsal.png" alt="campogolo" style="width:80%"> </a>
+    <button type="button" id ="btn1" onclick="showtipoGolo();color(btn1);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona1" class="zona1">Zona1 </button>
+    <button type="button" id ="btn2" onclick="showtipoGolo();color(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona2" class="zona2">Zona2 </button>
+    <button type="button" id ="btn3" onclick="showtipoGolo();color(btn3);disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona3" class="zona3">Zona3 </button>
+    <button type="button" id ="btn4" onclick="showtipoGolo();color(btn4);disable(btn2);disable(btn3);disable(btn1);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona4" class="zona4">Zona4 </button>
+    <button type="button" id ="btn5" onclick="showtipoGolo();color(btn5);disable(btn2);disable(btn3);disable(btn4);disable(btn1);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona5" class="zona5">Zona5 </button>
+    <button type="button" id ="btn6" onclick="showtipoGolo();color(btn6);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn1);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona6" class="zona6">Zona6 </button>
+    <button type="button" id ="btn7" onclick="showtipoGolo();showJogAssistGolo();color(btn7);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn1);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona7" class="zona7">Zona7 </button>
+    <button type="button" id ="btn8" onclick="showtipoGolo();color(btn8);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn1);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona8" class="zona8">Zona8 </button>
+    <button type="button" id ="btn9" onclick="showtipoGolo();color(btn9);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn1);disable(btn10);disable(btn11);disable(btn12)" value="golozona9" class="zona9">Zona9 </button>
+</div>
+    </div>
+  </div>
+
+
+<!--De forma provisoria tem para varios campos, mas o objetivo tal como nos jogadores vai ser colocar um campo de jogo apenas e com condições na zona de script-->
+<!--De forma provisoria tem para varios campos, mas o objetivo tal como nos jogadores vai ser colocar um campo de jogo apenas e com condições na zona de script-->
+<!-- Mostrar Campo Remate-->
+<div id="DivCampoRemate" style="display:none" >
+<div class="row">
+    <br>
+    
+    <div class="col-sm">
+    <a> <img src="E:/5 Ano Universidade/trabalho/images/campofutsal.png" alt="camporemate" style="width:80%"> </a>
+    <button type="button" id ="btn1" onclick="showtipoRemate();color(btn1);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona1" class="zona1">Zona1 </button>
+    <button type="button" id ="btn2" onclick="showtipoRemate();color(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona2" class="zona2">Zona2 </button>
+    <button type="button" id ="btn3" onclick="showtipoRemate();color(btn3);disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona3" class="zona3">Zona3 </button>
+    <button type="button" id ="btn4" onclick="showtipoRemate();color(btn4);disable(btn2);disable(btn3);disable(btn1);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona4" class="zona4">Zona4 </button>
+    <button type="button" id ="btn5" onclick="showtipoRemate();color(btn5);disable(btn2);disable(btn3);disable(btn4);disable(btn1);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona5" class="zona5">Zona5 </button>
+    <button type="button" id ="btn6" onclick="showtipoRemate();color(btn6);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn1);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona6" class="zona6">Zona6 </button>
+    <button type="button" id ="btn7" onclick="showtipoRemate();showJogAssistGolo();color(btn7);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn1);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona7" class="zona7">Zona7 </button>
+    <button type="button" id ="btn8" onclick="showtipoRemate();color(btn8);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn1);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="golozona8" class="zona8">Zona8 </button>
+    <button type="button" id ="btn9" onclick="showtipoRemate();color(btn9);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn1);disable(btn10);disable(btn11);disable(btn12)" value="golozona9" class="zona9">Zona9 </button>
+</div>
+    </div>
+  </div>
+
+<!-- Mostrar Campo PerdaBola-->
+
+<div id="DivCampoPerdaBola" style="display:none" >
+<div class="row">
+    <br>
+    
+    <div class="col-sm">
+    <a> <img src="E:/5 Ano Universidade/trabalho/images/campofutsal.png" alt="campogolo" style="width:80%"> </a>
+    <button type="button" id ="btn1" onclick="showtipoPerda();color(btn1);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona1" class="zona1">Zona1 </button>
+    <button type="button" id ="btn2" onclick="showtipoPerda();color(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona2" class="zona2">Zona2 </button>
+    <button type="button" id ="btn3" onclick="showtipoPerda();color(btn3);disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona3" class="zona3">Zona3 </button>
+    <button type="button" id ="btn4" onclick="showtipoPerda();color(btn4);disable(btn2);disable(btn3);disable(btn1);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona4" class="zona4">Zona4 </button>
+    <button type="button" id ="btn5" onclick="showtipoPerda();color(btn5);disable(btn2);disable(btn3);disable(btn4);disable(btn1);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona5" class="zona5">Zona5 </button>
+    <button type="button" id ="btn6" onclick="showtipoPerda();color(btn6);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn1);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona6" class="zona6">Zona6 </button>
+    <button type="button" id ="btn7" onclick="showtipoPerda();showJogAssistGolo();color(btn7);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn1);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona7" class="zona7">Zona7 </button>
+    <button type="button" id ="btn8" onclick="showtipoPerda();color(btn8);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn1);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona8" class="zona8">Zona8 </button>
+    <button type="button" id ="btn9" onclick="showtipoGolo();color(btn9);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn1);disable(btn10);disable(btn11);disable(btn12)" value="zona9" class="zona9">Zona9 </button>
+</div>
+    </div>
+  </div>
+
+
+<!-- Mostrar Campo Falta-->
+<div id="DivCampoFalta" style="display:none" >
+<div class="row">
+    <br>
+    
+    <div class="col-sm">
+    <a> <img src="E:/5 Ano Universidade/trabalho/images/campofutsal.png" alt="campogolo" style="width:80%"> </a>
+    <button type="button" id ="btn1" onclick="showFimCriacao();color(btn1);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona1" class="zona1">Zona1 </button>
+    <button type="button" id ="btn2" onclick="showFimCriacao();color(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona2" class="zona2">Zona2 </button>
+    <button type="button" id ="btn3" onclick="showFimCriacao();color(btn3);disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona3" class="zona3">Zona3 </button>
+    <button type="button" id ="btn4" onclick="showFimCriacao();color(btn4);disable(btn2);disable(btn3);disable(btn1);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona4" class="zona4">Zona4 </button>
+    <button type="button" id ="btn5" onclick="showFimCriacao();color(btn5);disable(btn2);disable(btn3);disable(btn4);disable(btn1);disable(btn6);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona5" class="zona5">Zona5 </button>
+    <button type="button" id ="btn6" onclick="showFimCriacao();color(btn6);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn1);disable(btn7);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona6" class="zona6">Zona6 </button>
+    <button type="button" id ="btn7" onclick="showFimCriacao();showJogAssistGolo();color(btn7);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn1);disable(btn8);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona7" class="zona7">Zona7 </button>
+    <button type="button" id ="btn8" onclick="showFimCriacao();color(btn8);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn1);disable(btn9);disable(btn10);disable(btn11);disable(btn12)" value="zona8" class="zona8">Zona8 </button>
+    <button type="button" id ="btn9" onclick="showFimCriacao();color(btn9);disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);disable(btn1);disable(btn10);disable(btn11);disable(btn12)" value="zona9" class="zona9">Zona9 </button>
+</div>
+    </div>
+  </div>
+
+<!-- FALTA CONFIGURAR DIREITO -->
+
+<!-- Tipo Golo -->
+
+ <div id="DivtipoGolo" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/bolaparada.png" alt="bolaparada" style="width:80px">
+      <h3>Canto</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/finalizacaocurta.png" alt="finalizacaocurta" style="width:80px">
+      <h3>Finalzação curta</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/jogadacorrida.png" alt="finalizacaomedia" style="width:80px">
+      <h3>Finalização Média</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/rematelongo.png" alt="finalizacaolonga" style="width:80px">
+      <h3>Finalização longa</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/penalti.png" alt="penalti" style="width:80px">
+      <h3>Penalti</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/livre10metros.png" alt="livre10metros" style="width:80px">
+      <h3>Livre 10 metros</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/freekick.png" alt="livre" style="width:80px">
+      <h3>Livre</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/bolaicon.png" alt="5para4" style="width:80px">
+      <h3>5 para 4</h3>
+    </div>
+</div>
+
+<!-- Tipo Remate -->
+
+ <div id="DivtipoRemate" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/defesa.png" alt="Titular1" style="width:80px">
+      <h3>Defendido</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/bolaicon.png" alt="Titular2" style="width:80px">
+      <h3>Fora</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/intersetado.png" alt="Titular3" style="width:80px">
+      <h3>Intersetado</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/poste.png" alt="Titular4" style="width:80px">
+      <h3>Poste</h3>
+    </div>
+</div>
+
+<!-- Tipo Perda Bola-->
+
+ <div id="DivtipoPerda" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao();disable(imgmaacao);disable(imgdesarme)">
+      <img id="imgpasseerrado" src="E:/5 Ano Universidade/trabalho/images/bolaicon.png" alt="Titular1" style="width:80px">
+      <h3>Passe Errado</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao();disable(imgpasseerrado);disable(imgmaacao)">
+      <img id="imgdesarme" src="E:/5 Ano Universidade/trabalho/images/intersetado.png" alt="Titular2" style="width:80px">
+      <h3>Desarme</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao();disable(imgpasseerrado);disable(imgdesarme)">
+      <img id="imgmaacao" src="E:/5 Ano Universidade/trabalho/images/maacaotecnica.png" alt="Titular3" style="width:80px">
+      <h3>Má Ação Técnica</h3>
+    </div>
+</div>
+
+<!-- Tipo Sancao -->
+
+ <div id="Divtiposancao" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/amarelo.png" alt="cartaoamarelo" style="width:80px">
+      <h3>Amarelo</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="javascript:showFimCriacao()">
+      <img src="E:/5 Ano Universidade/trabalho/images/vermelho.png" alt="cartaovermelho" style="width:80px">
+      <h3>Vermelho</h3>
+    </div>
+
+</div>
+
+
+<!-- Evento Final -->
+
+ <div id="DivFimCriacao" class="w3-row-padding w3-padding-16 w3-center" style="display:none">
+<br>
+<button type="button" id ="btncriar" onclick="color(btncriar);showEventoCriado()" value="Criado" class="criarevento">Criar Evento</button>
+
+    </div>
+
+
+
+ 
+<!-- End page content -->
+</div>
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>
