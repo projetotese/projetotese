@@ -142,6 +142,29 @@ function openGames(evt, gameStats) {
   document.getElementById(gameStats).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+
+/*
+var myInit = { method: 'GET',
+         headers: {
+          'Content-Type': 'application/json'
+         },
+         mode: 'cors',
+         cache: 'default'};
+
+let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
+
+fetch(myRequest)
+      .then(function(resp) {
+        return resp.json();
+      })
+      .then(function(data){
+        console.log(data);
+      });
+        
+*\
+
+
 </script>
    
 </body>
