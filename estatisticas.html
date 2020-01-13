@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Registo de Eventos</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="white"/>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma"> 
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Plataforma de Eventos"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
 <style>
 body {font-family: Arial;}
 
@@ -41,32 +56,170 @@ body {font-family: Arial;}
   border: 1px solid #ccc;
   border-top: none;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
 </style>
 </head>
-<body class="fullscreen">
 
-<h2>Estatisticas</h2>
+<script>
+
+    "use strict"
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./sw.js');
+    }
+  
+
+  
+  
+  function openGames(evt, gamePlay) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(gamePlay).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  //carregar dados do excel de jogos realizados para colocar os resultados do jogo
+  /*
+  var myInit = { method: 'GET',
+           headers: {
+            'Content-Type': 'application/json'
+           },
+           mode: 'cors',
+           cache: 'default'};
+  
+  let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
+  
+  fetch(myRequest)
+        .then(function(resp) {
+          return resp.json();
+        })
+        .then(function(data){
+          console.log(data);
+        });
+          
+  *\
+  </script>
+<body>
+
+<h2>Jogos</h2>
 
 <div class="tab">
   <button><a href="index.html">Home!</a></button>
-  <button class="tablinks" onclick="openGames(event, 'Gerais')">Estatisticas Gerais Jogo</button>
-  <button class="tablinks" onclick="openGames(event, 'PorJogador')">Estatisticas Jogador</button> 
-  <button class="tablinks" onclick="openGames(event, 'ListaEventos')">Lista Eventos</button>
+  <button class="tablinks" onclick="openGames(event, 'JogoaRealizar')">Jogos a Realizar</button>
+  <button class="tablinks" onclick="openGames(event, 'JogoRealizado')">Jogos Realizados</button>
 </div>
 
-<div id="Gerais" class="tabcontent">
-  <h3>Estatisticas Gerais</h3>
-    <table class="w3-table w3 bordered w3-stripped">
+<div id="JogoaRealizar" class="tabcontent">
+  <h3>Jogo a Realizar</h3>
+  <table class="w3-table w3 bordered w3-stripped">
+    <tr>
+      <th>ID</th>
+      <th>Jogo</th>
+      <th>Data</th> 
+      <th>Competição</th>
+    </tr>
+
+
+
+
+    <tr>
+      <td>1</td>
+      <td>SCBraga-Futsal Azeméis</td>
+      <td>5-10-2019</td>
+      <td>CN Sub19 Futsal Masculino</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jorge Antunes-SCBraga</td>
+      <td>12-10-2019</td>
+      <td>CN Sub19 Futsal Masculino</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>SCBraga-Modicus</td>
+      <td>20-10-2019</td>
+      <td>CN Sub19 Futsal Masculino</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>CS S.João-SCBraga</td>
+        <td>27-10-2019</td>
+        <td>CN Sub19 Futsal Masculino</td>
+    </tr>
+    <tr>
+          <td>5</td>
+          <td>SCBraga-Nogueiró</td>
+          <td>2-11-2019</td>
+          <td>CN Sub19 Futsal Masculino</td>
+    </tr>
+        <tr>
+            <td>6</td>
+            <td>SCBraga-Caxinas</td>
+            <td>9-11-2019</td>
+            <td>CN Sub19 Futsal Masculino</td>
+          </tr>
+          <tr>
+              <td>7</td>
+              <td>Futsal Azemeis-SCBraga</td>
+              <td>23-11-2019</td>
+              <td>CN Sub19 Futsal Masculino</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>SCBraga-Jorge Antunes</td>
+                <td>30-11-2019</td>
+                <td>CN Sub19 Futsal Masculino</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>Modicus-SCBraga</td>
+                  <td>7-12-2019</td>
+                  <td>CN Sub19 Futsal Masculino</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>SCBraga-CSJoao</td>
+                    <td>15-12-2019</td>
+                    <td>CN Sub19 Futsal Masculino</td>
+                  </tr>
+                  <tr>
+                      <td>11</td>
+                      <td>Nogueiro-SCBraga</td>
+                      <td>22-12-2019</td>
+                      <td>CN Sub19 Futsal Masculino</td>
+                    </tr>
+  </table>
+</div>
+
+<div id="JogoRealizado" class="tabcontent">
+  <h3>Jogo Realizado</h3>
+  <table class="w3-table w3 bordered w3-stripped">
       <tr>
-        <th>Posse Bola</th>
-        <th>Golos</th>
-        <th>Remates</th> 
-        <th>Faltas</th>
-        <th>Perdas de Bola</th>
-        <th>Cartões</th>
+        <th>ID</th>
+        <th>Jogo</th>
+        <th>Data</th> 
+        <th>Competição</th>
+        <th>Resultado</th>
       </tr>
       <tr>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -76,77 +229,8 @@ body {font-family: Arial;}
     </table>
 </div>
 
-<div id="PorJogador" class="tabcontent">
-  <h3>Estatisticas por Jogador</h3>
-    <table class="w3-table w3 bordered w3-stripped">
-      <tr>
-        <th>Jogador</th>
-        <th>Golos</th>
-        <th>AutoGolos</th> 
-        <th>Assistências</th>
-        <th>Minutos em Campo</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-</div>
-
-<div id="ListaEventos" class="tabcontent">
-  <h3>Lista Eventos</h3>
-    <table class="w3-table w3 bordered w3-stripped">
-      <tr>
-        <th>Evento</th>
-        <th>Minuto de Jogo</th>
-        <th>Jogador</th>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-</div>
 
 
-<script>
-function openGames(evt, gameStats) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(gameStats).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-/*
-var myInit = { method: 'GET',
-         headers: {
-          'Content-Type': 'application/json'
-         },
-         mode: 'cors',
-         cache: 'default'};
-
-let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
-
-fetch(myRequest)
-      .then(function(resp) {
-        return resp.json();
-      })
-      .then(function(data){
-        console.log(data);
-      });
-        
-*\
-</script>
    
 </body>
 </html> 
