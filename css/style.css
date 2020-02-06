@@ -1,3 +1,6 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:10}
+
 /* Make content area fill the entire browser window */
 html,
 .fullscreen {
@@ -6,6 +9,60 @@ html,
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.div {
+  height: 100px;
+  width: 50%;
+  border: 1px solid black;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+ul li:last child{
+	border-right: none;
+}
+
+ul li a{
+	text-decoration: none;
+	padding: 0 50px;
+	display: block;
+}
+
+ul li a .icon {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	overflow: hidden;
+	margin:0 auto 10px;
+}
+
+ul li a.icon .fa{
+	width: 100%
+	height: 100%;
+	line-height: 40px;
+	font-size: 34px;
+
 }
 
 /*Campo Golo*/
