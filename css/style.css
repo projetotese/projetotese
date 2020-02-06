@@ -8,15 +8,6 @@ html,
   width: 100%;
 }
 
-/* Center the content in the browser window */
-body
-{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-}
-
-
 /*Campo Golo*/
 .zona1 {
    position: absolute;
