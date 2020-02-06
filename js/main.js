@@ -127,7 +127,7 @@ function showEventoCriado() {
   alert("Evento Criado");
 }
 
-
+/*
 //Exportar para csv
 
 function exportToCsv(filename, rows) {
@@ -180,3 +180,4 @@ exportToCsv('teste.csv', [
 ['Tipo','""'],
 
 ])
+*/
