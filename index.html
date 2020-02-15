@@ -54,7 +54,23 @@
 
 <!-- End page content -->
 </div>
-  <script src="js/main.js"></script>
+  <script>
+
+window.onload = () => {
+    'use strict';
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('./sw.js');
+    }
+  }
+
+  document.getElementById("btn").onclick = function(){
+  this.disabled = true
+}
+
+
+  </script>
 
 
 </body>
