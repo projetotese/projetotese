@@ -56,10 +56,7 @@ window.onload = () => {
  //Mostrar zonaCampo
  function showJogSancao() {
     document.getElementById('DivJogSancao').style.display = "block";
- }
- function showJogComentario() {
-    document.getElementById('DivJogComentario').style.display = "block";
- }
+ 
  //Mostrar zonaCampo
  function showCampoGolo() {
     document.getElementById('DivCampoGolo').style.display = "block";
@@ -122,7 +119,7 @@ window.onload = () => {
     document.getElementById('DivFimCriacao').style.display = "block";
  }
  
- //Após Carregar Fim
+ //Após Carregar Proximo Evento
  function showEventoCriado() {
    alert("Evento Criado");
  }
