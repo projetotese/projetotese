@@ -37,7 +37,7 @@
   <!-- Escolha dos Eventos-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="eventos">
     <div id="div1" class="w3-quarter">
-        <input type="image" id="btn1" onclick="changecalendar(btn1)" src="./images/calendar.png" height="120px" width="120px" name="calendario"/>
+        <input type="image" id="btn1" onclick="changecalendar()" src="./images/calendar.png" height="120px" width="120px" name="calendario"/>
     </div>
     <div id="div2" class="w3-quarter">
       <input type="image" id="btn2" onclick="myFunction(btn2)" src="./images/convocados.png" height="120px" width="120px" name="calendario"/>
@@ -77,7 +77,7 @@ function disable(btn){
  }
 
  function changecalendar(){
-   var src= document.getElementById(btn1);
+   document.getElementById(btn.id).src="./images/calendarch.png"
  }
  
   </script>
