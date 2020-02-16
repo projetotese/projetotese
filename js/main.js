@@ -83,7 +83,6 @@ window.onload = () => {
  }
  
  function color(btn){
- 
  document.getElementById(btn.id).style.color = "#ff0000";
  }
  
