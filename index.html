@@ -38,16 +38,16 @@
   <!-- Escolha dos Eventos-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="eventos">
     <div class="w3-quarter">
-      <input id="btn1" onclick="" type="image" src="./images/calendar.png" height="120px" width="120px"  name="button"/>Calendário
+      <input id="btn1" onclick="disable(btn2);disable(btn3);disable(btn4)" type="image" src="./images/calendar.png" height="120px" width="120px"  name="button"/>Calendário
     </div>
     <div class="w3-quarter">
-      <input id="btn2" type="image" src="./images/convocados.png" height="120px" width="120px"  name="button"/>Plantel
+      <input id="btn2" onclick="disable(btn1);disable(btn3);disable(btn4)" type="image" src="./images/convocados.png" height="120px" width="120px"  name="button"/>Plantel
     </div>
     <div class="w3-quarter">
-      <input id="btn3" type="image" src="./images/registo.png" height="120px" width="120px"  name="button"/>Registo
+      <input id="btn3" onclick="disable(btn2);disable(btn1);disable(btn4)" type="image" src="./images/registo.png" height="120px" width="120px"  name="button"/>Registo
     </div>
     <div class="w3-quarter">
-      <input id="btn4" type="image" src="./images/stats.png" height="120px" width="120px"  name="button"/>Estatisticas
+      <input id="btn4" onclick="disable(btn2);disable(btn3);disable(btn4)" type="image" src="./images/stats.png" height="120px" width="120px"  name="button"/>Estatisticas
     </div>
 
   </div>
@@ -64,6 +64,7 @@ window.onload = () => {
                .register('./sw.js');
     }
   }
+
 function disable(btn){
          document.getElementById(btn.id).disabled = true;
  }
