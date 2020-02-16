@@ -40,15 +40,15 @@
         <button id="btn1" href="calendariojogos.html"><img id="calendario" src="./images/calendar.png" onclick="changecalendar()" height="120px" width="120px"></button>
     </div>
     <div id="div2" class="w3-quarter">
-      <button id="btn2" ><img src="./images/convocados.png" height="120px" width="120px"></button>
+      <button id="btn1" href="plantel.html"><img id="plantel" src="./images/convocados.png" onclick="changeplantel()" height="120px" width="120px"></button>
       
     </div>
     <div id="div3" class="w3-quarter">
-      <button id="btn3"><img src="./images/registo.png" height="120px" width="120px"></button>
+      <button id="btn1" href="registo.html"><img id="registo" src="./images/registo.png" onclick="changeregisto()" height="120px" width="120px"></button>
 
     </div>
     <div id="div4" class="w3-quarter">
-      <button id="btn4"><img src="./images/stats.png" height="120px" width="120px"></button>
+      <button id="btn1" href="estatisticas.html"><img id="stats" src="./images/stats.png" onclick="changestats()" height="120px" width="120px"></button>
 
 
     </div>
@@ -77,8 +77,19 @@ function disable(btn){
  }
 
  function changecalendar(){
-   document.getElementById("calendario").src="./images/calendarch.png"
-   
+   document.getElementById("calendario").src="./images/calendarch.png" 
+ }
+
+ function changeplantel(){
+   document.getElementById("plantel").src="./images/plantelch.png" 
+ }
+
+ function changeregisto(){
+   document.getElementById("registo").src="./images/registoch.png" 
+ }
+
+ function changestats(){
+   document.getElementById("stats").src="./images/statsch.png" 
  }
  
   </script>
