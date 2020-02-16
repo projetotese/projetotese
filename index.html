@@ -37,7 +37,7 @@
   <!-- Escolha dos Eventos-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="eventos">
     <div id="div1" class="w3-quarter">
-       <button id="btn1"><img id="calendario" src="./images/calendar.png" onclick="changecalendar();disablecalendario()" height="120px" width="120px"></button>
+       <button id="btn1"><img id="calendario" src="./images/calendar.png" onclick="changecalendar()" height="120px" width="120px"></button>
     </div>
     <div id="div2" class="w3-quarter">
       <button id="btn2"><img id="plantel" src="./images/convocados.png" onclick="changeplantel()" height="120px" width="120px"></button>
@@ -49,8 +49,6 @@
     </div>
     <div id="div4" class="w3-quarter">
       <button id="btn4"><img id="estatisticas" src="./images/stats.png" onclick="changestats()" height="120px" width="120px"></button>
-
-
     </div>
 
   </div>
@@ -92,29 +90,6 @@ function disable(btn){
    document.getElementById("stats").src="./images/statsch.png" 
  }
 
- function disablecalendario(){
-  document.getElementById("plantel").disabled = true;
-  document.getElementById("registo").disabled = true;
-  document.getElementById("estatisticas").disabled = true;
- }
-
- function disableplantel(){
-  document.getElementById("calendario").disabled = true;
-  document.getElementById("registo").disabled = true;
-  document.getElementById("estatisticas").disabled = true;
- }
- 
- function disableregisto(){
-  document.getElementById("plantel").disabled = true;
-  document.getElementById("calendario").disabled = true;
-  document.getElementById("estatisticas").disabled = true;
- }
- 
- function disableestatisticas(){
-  document.getElementById("plantel").disabled = true;
-  document.getElementById("registo").disabled = true;
-  document.getElementById("calendario").disabled = true;
- }
   </script>
 
 
