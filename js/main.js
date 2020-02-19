@@ -26,34 +26,30 @@ document.getElementById(btn.id).style.color = "#ff0000";
 }
  //botões eventos
 function changegolo(){
-document.getElementById("golo").src="./images/calendarch.png"; 
+document.getElementById("golo").src="./images/goloch.png"; 
 }
 
 function changefaltaefetuada(){
-document.getElementById("faltaefetuada").src="./images/plantelch.png";
+document.getElementById("faltaefetuada").src="./images/bolaiconch.png";
 }
 
 function changefaltasofrida(){
-   document.getElementById("faltasofrida").src="./images/plantelch.png";
+   document.getElementById("faltasofrida").src="./images/faltach.png";
    }
 
 function changeperdabola(){
-document.getElementById("perdabola").src="./images/registoch.png"; 
+document.getElementById("perdabola").src="./images/bolaiconch.png"; 
 }
 
 function changeremate(){
-document.getElementById("remate").src="./images/statsch.png";
+document.getElementById("remate").src="./images/rematech.png";
 }
 function changesubstituicao(){
-document.getElementById("substituicao").src="./images/statsch.png";
+document.getElementById("substituicao").src="./images/substituicaoch.png";
 }
 function changesancao(){
-document.getElementById("sancao").src="./images/statsch.png";
+document.getElementById("sancao").src="./images/cartoesch.png";
 }
-
-function submitButtonStyle(_this) {
-   _this.style.backgroundColor = "red";
- }
  
  
  function showJogGolo() {
