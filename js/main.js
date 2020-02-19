@@ -15,6 +15,45 @@ window.onload = () => {
  function w3_close() {
    document.getElementById("mySidebar").style.display = "none";
  }
+
+
+ function disable(btn){
+   document.getElementById(btn.id).disabled = true;
+}
+
+function color(btn){
+document.getElementById(btn.id).style.color = "#ff0000";
+}
+ //botões eventos
+function changegolo(){
+document.getElementById("golo").src="./images/calendarch.png"; 
+}
+
+function changefaltaefetuada(){
+document.getElementById("faltaefetuada").src="./images/plantelch.png";
+}
+
+function changefaltasofrida(){
+   document.getElementById("faltasofrida").src="./images/plantelch.png";
+   }
+
+function changeperdabola(){
+document.getElementById("perdabola").src="./images/registoch.png"; 
+}
+
+function changeremate(){
+document.getElementById("remate").src="./images/statsch.png";
+}
+function changesubstituicao(){
+document.getElementById("substituicao").src="./images/statsch.png";
+}
+function changesancao(){
+document.getElementById("sancao").src="./images/statsch.png";
+}
+
+function colorbutton(btn){
+btn.id.style.backgroundColor = "red";
+}
  
  
  function showJogGolo() {
