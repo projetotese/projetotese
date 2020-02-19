@@ -109,18 +109,6 @@ document.getElementById("sancao").src="./images/cartoesch.png";
     document.getElementById('DivCampoPerdaBola').style.display = "block";
  }
  
- function disable(btn){
-         document.getElementById(btn.id).disabled = true;
- }
- 
- function disable(img){
-    document.getElementById(img.id).disabled= true;
- }
- 
- function color(btn){
- document.getElementById(btn.id).style.color = "#ff0000";
- }
- 
  
  function showJogAssistGolo() {
     document.getElementById('DivJogAssistenciaGolo').style.display = "block";
