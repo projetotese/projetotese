@@ -51,9 +51,9 @@ function changesancao(){
 document.getElementById("sancao").src="./images/statsch.png";
 }
 
-function colorbutton(btn){
-btn.id.style.backgroundColor = "red";
-}
+function submitButtonStyle(_this) {
+   _this.style.backgroundColor = "red";
+ }
  
  
  function showJogGolo() {
