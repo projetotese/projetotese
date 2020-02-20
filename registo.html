@@ -52,12 +52,22 @@ div {
 </div>
 
 <div id="DivJogGolo" style="display:none">
-  <button id="btn8" onclick=disable(btn9);disable(btn10);disable(btn11);disable(btn12)><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="120px" width="120px"></button>
+  <button id="btn8" onclick=disable(btn9);disable(btn10);disable(btn11);disable(btn12);showTipoGolo()><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="120px" width="120px"></button>
   <button id="btn9" onclick=disable(btn8);disable(btn10);disable(btn11);disable(btn12)><img id="alexandrefernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandes()" height="120px" width="120px"></button>
   <button id="btn10" onclick=disable(btn8);disable(btn9);disable(btn11);disable(btn12)><img id="andrecarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalho()" height="120px" width="120px"></button>
   <button id="btn11" onclick=disable(btn8);disable(btn9);disable(btn10);disable(btn12)><img id="claudiosilva" src="./images/claudiosilva.png" onclick="changeclaudiosilva()" height="120px" width="120px"></button>
   <button id="btn12" onclick=disable(btn8);disable(btn9);disable(btn10);disable(btn11)><img id="dinispereira" src="./images/dinispereira.png" onclick="changedinispereira()" height="120px" width="120px"></button>
 </div>
+
+<div id="DivTipoGolo" style="display:none">
+  <button id="btn13" onclick=disable(btn14);disable(btn15);disable(btn16);disable(btn17)><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="120px" width="120px"></button>
+  <button id="btn14" onclick=disable(btn13);disable(btn15);disable(btn16);disable(btn17)><img id="alexandrefernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandes()" height="120px" width="120px"></button>
+  <button id="btn15" onclick=disable(btn13);disable(btn14);disable(btn16);disable(btn17)><img id="andrecarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalho()" height="120px" width="120px"></button>
+  <button id="btn16" onclick=disable(btn13);disable(btn14);disable(btn15);disable(btn17)><img id="claudiosilva" src="./images/claudiosilva.png" onclick="changeclaudiosilva()" height="120px" width="120px"></button>
+  <button id="btn17" onclick=disable(btn13);disable(btn14);disable(btn15);disable(btn16)><img id="dinispereira" src="./images/dinispereira.png" onclick="changedinispereira()" height="120px" width="120px"></button>
+</div>
+
+
 
 
 
@@ -125,6 +135,10 @@ div {
  
  function showJogRemate() {
     document.getElementById('DivJogRemate').style.display = "block";
+ }
+
+ function showTipoGolo() {
+    document.getElementById('DivTipoGolo').style.display = "block";
  }
     </script>
 
