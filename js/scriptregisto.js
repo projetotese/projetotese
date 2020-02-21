@@ -1,4 +1,3 @@
-<script>
 function disable(btn){
     document.getElementById(btn.id).disabled = true;
  }
@@ -45,4 +44,3 @@ function showTipoGolo() {
   document.getElementById('DivTipoGolo').style.display = "block";
 }
 
-</script>
