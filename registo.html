@@ -43,11 +43,11 @@ div {
   <br>
   <br>
     <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo()><img id="golo" src="./images/golo.png" onclick="changegolo()" height="120px" width="120px">Golo</button>
-    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8)><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
-    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8)><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
+    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador()><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
+    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador()><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
     <button id="btn4" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda()><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="120px" width="120px">Perda Bola</button>
     <button id="btn5" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate()><img id="remate" src="./images/remate.png" onclick="changeremate()" height="120px" width="120px">Remate</button>
-    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8)><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
+    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogador()><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
     <button id="btn7" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao()><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="120px" width="120px">Sanção</button>
     <button id="btn8" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario()><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="120px" width="120px">Golo Adversário</button>
 </div>
@@ -71,14 +71,14 @@ div {
   </div>
   <div id="DivTipoPerdaBola" style="display:none">
     <br>
-    <button id="btn21" onclick=disable(btn22);disable(btn23)><img id="passeerrado" src="./images/passeerrado.png" onclick="changegolo()" height="120px" width="120px"></button>
-    <button id="btn22" onclick=disable(btn21);disable(btn23)><img id="desarme" src="./images/passeintercetado.png" onclick="changefaltaefetuada()" height="120px" width="120px"></button>
-    <button id="btn23" onclick=disable(btn22);disable(btn21)><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changefaltasofrida()" height="120px" width="120px"></button>
+    <button id="btn21" onclick=disable(btn22);disable(btn23)><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="120px" width="120px"></button>
+    <button id="btn22" onclick=disable(btn21);disable(btn23)><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="120px" width="120px"></button>
+    <button id="btn23" onclick=disable(btn22);disable(btn21)><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="120px" width="120px"></button>
    </div>
     <div id="DivTipoSancao" style="display:none">
       <br>
-      <button id="btn24" onclick=disable(btn25)><img id="amarelo" src="./images/amarelo.png" onclick="changegolo()" height="120px" width="120px"></button>
-      <button id="btn25" onclick=disable(btn24)><img id="vermelho" src="./images/vermelho.png" onclick="changefaltaefetuada()" height="120px" width="120px"></button>
+      <button id="btn24" onclick=disable(btn25)><img id="amarelo" src="./images/amarelo.png" onclick="changeamarelo()" height="120px" width="120px"></button>
+      <button id="btn25" onclick=disable(btn24)><img id="vermelho" src="./images/vermelho.png" onclick="changevermelho()" height="120px" width="120px"></button>
       </div>
       <div id="DivTipoGoloVisitante" style="display:none">
         <br>
@@ -116,6 +116,7 @@ div {
         <button id="btn48" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49)><img id="dinispereira" src="./images/dinispereira.png" onclick="changedinispereira()" height="120px" width="120px"></button>
         <button id="btn49" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48)><img id="nenhum" src="./images/nenhum.png" onclick="changedinispereira()" height="120px" width="120px"></button>
       </div>
+      
 
 
 
