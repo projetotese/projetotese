@@ -109,12 +109,12 @@ div {
       </div>
       <div id="DivJogadorAssist" style="display:none">
         <br>
-        <button id="btn44" onclick=disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49)><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="120px" width="120px"></button>
-        <button id="btn45" onclick=disable(btn44);disable(btn46);disable(btn47);disable(btn48);disable(btn49)><img id="alexandrefernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandes()" height="120px" width="120px"></button>
-        <button id="btn46" onclick=disable(btn44);disable(btn45);disable(btn47);disable(btn48);disable(btn49)><img id="andrecarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalho()" height="120px" width="120px"></button>
-        <button id="btn47" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn48);disable(btn49)><img id="claudiosilva" src="./images/claudiosilva.png" onclick="changeclaudiosilva()" height="120px" width="120px"></button>
-        <button id="btn48" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49)><img id="dinispereira" src="./images/dinispereira.png" onclick="changedinispereira()" height="120px" width="120px"></button>
-        <button id="btn49" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48)><img id="nenhum" src="./images/nenhum.png" onclick="changedinispereira()" height="120px" width="120px"></button>
+        <button id="btn44" onclick=disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49)><img id="diovieira" src="./images/diogovieira.png" onclick="changediogovieiraassist()" height="120px" width="120px"></button>
+        <button id="btn45" onclick=disable(btn44);disable(btn46);disable(btn47);disable(btn48);disable(btn49)><img id="alexanfernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandesassist()" height="120px" width="120px"></button>
+        <button id="btn46" onclick=disable(btn44);disable(btn45);disable(btn47);disable(btn48);disable(btn49)><img id="andcarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalhoassist()" height="120px" width="120px"></button>
+        <button id="btn47" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn48);disable(btn49)><img id="clausilva" src="./images/claudiosilva.png" onclick="changeclaudiosilvaassist()" height="120px" width="120px"></button>
+        <button id="btn48" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49)><img id="dinpereira" src="./images/dinispereira.png" onclick="changedinispereiraassist()" height="120px" width="120px"></button>
+        <button id="btn49" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48)><img id="nenhum" src="./images/nenhum.png" onclick="changenenhum()" height="120px" width="120px"></button>
       </div>
       
 
@@ -695,7 +695,7 @@ function changedefendido(){
 
  
  //botões jogadoresAssist
- function changedvieira(){
+ function changediogovieiraassis(){
  document.getElementById("diovieira").src="./images/diogovieirach.png";
  document.getElementById("diovieira").height="50";
  document.getElementById("diovieira").width="50";
@@ -707,9 +707,11 @@ function changedefendido(){
  document.getElementById("clausilva").width="10";
  document.getElementById("dinpereira").height="10";
  document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
  }
 
- function changealexfernandes(){
+ function changealexandrefernandesassist(){
  document.getElementById("alexanfernandes").src="./images/alexandrefernandesch.png";
  document.getElementById("alexanfernandes").height="50";
  document.getElementById("alexanfernandes").width="50";
@@ -721,9 +723,11 @@ function changedefendido(){
  document.getElementById("clausilva").width="10";
  document.getElementById("dinpereira").height="10";
  document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
  }
 
- function changeacarvalho(){
+ function changeandrecarvalhoassist(){
  document.getElementById("andcarvalho").src="./images/andrecarvalhoph.png";
  document.getElementById("andcarvalho").height="50";
  document.getElementById("andcarvalho").width="50";
@@ -735,9 +739,11 @@ function changedefendido(){
  document.getElementById("clausilva").width="10";
  document.getElementById("dinpereira").height="10";
  document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
  }
 
- function changeclasilva(){
+ function changeclaudiosilvaassist(){
  document.getElementById("clausilva").src="./images/claudiosilvach.png";
  document.getElementById("clausilva").height="50";
  document.getElementById("clausilva").width="50";
@@ -749,9 +755,11 @@ function changedefendido(){
  document.getElementById("andcarvalho").width="10";
  document.getElementById("dinpereira").height="10";
  document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
  }
 
- function changedpereira(){
+ function changedinispereiraassist(){
  document.getElementById("dinpereira").src="./images/dinispereirach.png";
  document.getElementById("dinpereira").height="50";
  document.getElementById("dinpereira").width="50";
@@ -763,6 +771,24 @@ function changedefendido(){
  document.getElementById("andcarvalho").width="10";
  document.getElementById("clausilva").height="10";
  document.getElementById("clausilva").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changenenhum(){
+ document.getElementById("nenhum").src="./images/nenhumch.png";
+ document.getElementById("nenhum").height="50";
+ document.getElementById("nenhum").width="50";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
  }
 //botões showoutradiv jogadores
  function showJogadorGolo() {
@@ -790,6 +816,161 @@ function showTipoSancao() {
 function showTipoGoloAdversario() {
   document.getElementById('DivTipoGoloVisitante').style.display = "block";
 }
+//golo adversario
+//botões tipo golo
+function changebolaparadaadv(){
+ document.getElementById("canto").src="./images/bolaparadach.png";
+ document.getElementById("canto").height="50";
+ document.getElementById("canto").width="50";
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefinalizacaocurtaadv(){
+ document.getElementById("finalizacaocurta").src="./images/finalizacaocurtach.png";
+ document.getElementById("finalizacaocurta").height="50";
+ document.getElementById("finalizacaocurta").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ 
+ }
+ function changefinalizacaomediaadv(){
+ document.getElementById("finalizacaomedia").src="./images/jogadacorridach.png";
+ document.getElementById("finalizacaocurta").height="50";
+ document.getElementById("finalizacaocurta").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefinalizacaolongaadv(){
+ document.getElementById("finalizacaolonga").src="./images/rematelongoch.png";
+ document.getElementById("finalizacaolonga").height="50";
+ document.getElementById("finalizacaolonga").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changepenaltiadv(){
+ document.getElementById("penalti").src="./images/penaltich.png";
+ document.getElementById("penalti").height="50";
+ document.getElementById("penalti").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changelivre10metrosadv(){
+ document.getElementById("livre10metros").src="./images/livre10metrosch.png";
+ document.getElementById("livre10metros").height="50";
+ document.getElementById("livre10metros").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefreekickadv(){
+ document.getElementById("livre").src="./images/freekickch.png";
+ document.getElementById("livre").height="50";
+ document.getElementById("livre").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function change5para4adv(){
+ document.getElementById("5para4").src="./images/5para4ch.png";
+ document.getElementById("5para4").height="50";
+ document.getElementById("5para4").width="50";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ }
 
 
 
