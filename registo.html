@@ -42,14 +42,14 @@ div {
   <br>
   <br>
   <br>
-    <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo() name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="120px" width="120px">Golo</button>
-    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador() name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
-    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador() name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
-    <button id="btn4" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda() name="evento" value="perdabola"><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="120px" width="120px">Perda Bola</button>
-    <button id="btn5" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate() name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="120px" width="120px">Remate</button>
-    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst() name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
-    <button id="btn7" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao() name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="120px" width="120px">Sanção</button>
-    <button id="btn8" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario() name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="120px" width="120px">Golo Adversário</button>
+    <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();click(this) name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="120px" width="120px">Golo</button>
+    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();click(this) name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
+    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();click(this) name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
+    <button id="btn4" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda();click(this) name="evento" value="perdabola"><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="120px" width="120px">Perda Bola</button>
+    <button id="btn5" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate();click(this) name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="120px" width="120px">Remate</button>
+    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst();click(this) name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
+    <button id="btn7" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao();click(this) name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="120px" width="120px">Sanção</button>
+    <button id="btn8" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario();click(this) name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="120px" width="120px">Golo Adversário</button>
 </div>
 <div id="DivTipoGolo" style="display:none">
   <br>
@@ -1388,6 +1388,13 @@ function changediogojose(){
  document.getElementById("diogojose").height="10";
  document.getElementById("diogojose").width="10";
  }
+
+ function click(button){
+    var buttonclicked = document.getElementById(button.id).value;
+    firstbox.innerHTML = "Your Chosen button is: " + buttonclicked;
+    button.disabled = true;
+}
+
 
  function submeter(){
   alert("Submit button clicked!");
