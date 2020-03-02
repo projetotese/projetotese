@@ -69,32 +69,32 @@ div {
   </div>
 <div id="DivTipoRemate" style="display:none">
   <br>
-  <button id="btn17" onclick=disable(btn18);disable(btn19);disable(btn20);showFinalButton() value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="120px" width="120px">Defendido</button>
-  <button id="btn18" onclick=disable(btn17);disable(btn19);disable(btn20);showFinalButton() value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="120px" width="120px">Fora</button>
-  <button id="btn19" onclick=disable(btn18);disable(btn17);disable(btn20);showFinalButton() value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="120px" width="120px">Intersetado</button>
-  <button id="btn20" onclick=disable(btn18);disable(btn17);disable(btn19);showFinalButton() value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="120px" width="120px">Poste</button>
+  <button id="btn17" onclick=disable(btn18);disable(btn19);disable(btn20);showFinalButton();Tipo(btn17) value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="120px" width="120px">Defendido</button>
+  <button id="btn18" onclick=disable(btn17);disable(btn19);disable(btn20);showFinalButton();Tipo(btn18) value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="120px" width="120px">Fora</button>
+  <button id="btn19" onclick=disable(btn18);disable(btn17);disable(btn20);showFinalButton();Tipo(btn19) value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="120px" width="120px">Intersetado</button>
+  <button id="btn20" onclick=disable(btn18);disable(btn17);disable(btn19);showFinalButton();Tipo(btn20) value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="120px" width="120px">Poste</button>
   </div>
   <div id="DivTipoPerdaBola" style="display:none">
     <br>
-    <button id="btn21" onclick=disable(btn22);disable(btn23);showFinalButton() value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="120px" width="120px">Passe Errado</button>
-    <button id="btn22" onclick=disable(btn21);disable(btn23);showFinalButton() value="desarme"><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="120px" width="120px">Passe Intersetado</button>
-    <button id="btn23" onclick=disable(btn22);disable(btn21);showFinalButton() value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="120px" width="120px">Má Ação Técnica</button>
+    <button id="btn21" onclick=disable(btn22);disable(btn23);showFinalButton();Tipo(btn21) value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="120px" width="120px">Passe Errado</button>
+    <button id="btn22" onclick=disable(btn21);disable(btn23);showFinalButton();Tipo(btn22) value="desarme"><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="120px" width="120px">Passe Intersetado</button>
+    <button id="btn23" onclick=disable(btn22);disable(btn21);showFinalButton();Tipo(btn23) value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="120px" width="120px">Má Ação Técnica</button>
    </div>
     <div id="DivTipoSancao" style="display:none">
       <br>
-      <button id="btn24" onclick=disable(btn25);showFinalButton() value="amarelo"><img id="amarelo" src="./images/amarelo.png" onclick="changeamarelo()" height="120px" width="120px"></button>
-      <button id="btn25" onclick=disable(btn24);showFinalButton() value="vermelho"><img id="vermelho" src="./images/vermelho.png" onclick="changevermelho()" height="120px" width="120px"></button>
+      <button id="btn24" onclick=disable(btn25);showFinalButton();Tipo(btn24) value="amarelo"><img id="amarelo" src="./images/amarelo.png" onclick="changeamarelo()" height="120px" width="120px"></button>
+      <button id="btn25" onclick=disable(btn24);showFinalButton();Tipo(btn25) value="vermelho"><img id="vermelho" src="./images/vermelho.png" onclick="changevermelho()" height="120px" width="120px"></button>
       </div>
       <div id="DivTipoGoloVisitante" style="display:none">
         <br>
-        <button id="btn26" onclick=disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton() value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="120px" width="120px">BolaParada</button>
-        <button id="btn27" onclick=disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton() value="finalizacaocurtaadv"><img id="finalizacaocurtaadv" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurtaadv()" height="120px" width="120px">Fin.Curta</button>
-        <button id="btn28" onclick=disable(btn27);disable(btn26);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton() value="finalizacaomediaadv"><img id="finalizacaomediaadv" src="./images/jogadacorrida.png" onclick="changefinalizacaomediaadv()" height="120px" width="120px">Fin.Média</button>
-        <button id="btn29" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton() value="finalizacaolongaadv"><img id="finalizacaolongaadv" src="./images/rematelongo.png" onclick="changefinalizacaolongaadv()" height="120px" width="120px">Fin.Longa</button>
-        <button id="btn30" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn31);disable(btn32);disable(btn33);showFinalButton() value="penaltiadv"><img id="penaltiadv" src="./images/penalti.png" onclick="changepenaltiadv()" height="120px" width="120px">Penalti</button>
-        <button id="btn31" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showFinalButton() value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="120px" width="120px">Livre 10 Metros</button>
-        <button id="btn32" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showFinalButton() value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="120px" width="120px">Livre</button>
-        <button id="btn33" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showFinalButton() value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="120px" width="120px">5X4</button>
+        <button id="btn26" onclick=disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn26) value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="120px" width="120px">BolaParada</button>
+        <button id="btn27" onclick=disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn27) value="finalizacaocurtaadv"><img id="finalizacaocurtaadv" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurtaadv()" height="120px" width="120px">Fin.Curta</button>
+        <button id="btn28" onclick=disable(btn27);disable(btn26);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn28) value="finalizacaomediaadv"><img id="finalizacaomediaadv" src="./images/jogadacorrida.png" onclick="changefinalizacaomediaadv()" height="120px" width="120px">Fin.Média</button>
+        <button id="btn29" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn29) value="finalizacaolongaadv"><img id="finalizacaolongaadv" src="./images/rematelongo.png" onclick="changefinalizacaolongaadv()" height="120px" width="120px">Fin.Longa</button>
+        <button id="btn30" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn30) value="penaltiadv"><img id="penaltiadv" src="./images/penalti.png" onclick="changepenaltiadv()" height="120px" width="120px">Penalti</button>
+        <button id="btn31" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showFinalButton();Tipo(btn31) value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="120px" width="120px">Livre 10 Metros</button>
+        <button id="btn32" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showFinalButton();Tipo(btn32) value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="120px" width="120px">Livre</button>
+        <button id="btn33" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showFinalButton();Tipo(btn33) value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="120px" width="120px">5X4</button>
         </div>
       <div id="DivJogadorGolo" style="display:none">
         <br>
