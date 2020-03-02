@@ -42,14 +42,14 @@ div {
   <br>
   <br>
   <br>
-    <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();myFunction1() name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="120px" width="120px">Golo</button>
-    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction2() name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
-    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction3() name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
-    <button id="btn4" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda();myFunction4() name="evento" value="perdabola"><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="120px" width="120px">Perda Bola</button>
-    <button id="btn5" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate();myFunction5() name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="120px" width="120px">Remate</button>
-    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst();myFunction6() name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
-    <button id="btn7" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao();myFunction7() name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="120px" width="120px">Sanção</button>
-    <button id="btn8" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario();myFunction8() name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="120px" width="120px">Golo Adversário</button>
+    <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();myFunction() name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="120px" width="120px">Golo</button>
+    <button id="btn2" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction() name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="120px" width="120px">Falta Efetuada</button>
+    <button id="btn3" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction() name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="120px" width="120px">Falta Sofrida</button>
+    <button id="btn4" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda();myFunction() name="evento" value="perdabola"><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="120px" width="120px">Perda Bola</button>
+    <button id="btn5" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate();myFunction() name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="120px" width="120px">Remate</button>
+    <button id="btn6" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst();myFunction() name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="120px" width="120px">Substituição</button>
+    <button id="btn7" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao();myFunction() name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="120px" width="120px">Sanção</button>
+    <button id="btn8" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario();myFunction() name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="120px" width="120px">Golo Adversário</button>
 </div>
 <div id="DivTipoGolo" style="display:none">
   <br>
@@ -1392,36 +1392,8 @@ function changediogojose(){
  }
 
 //Evento
-function myFunction1() {
-  var x = document.getElementById("btn1").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction2() {
-  var x = document.getElementById("btn2").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction3() {
-  var x = document.getElementById("btn3").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction4() {
-  var x = document.getElementById("btn4").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction5() {
-  var x = document.getElementById("btn5").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction6() {
-  var x = document.getElementById("btn6").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction7() {
-  var x = document.getElementById("btn7").value;
-  document.getElementById("demo").innerHTML = x;
-}
-function myFunction8() {
-  var x = document.getElementById("btn8").value;
+function myFunction(btn) {
+  var x = document.getElementById(btn.id).value;
   document.getElementById("demo").innerHTML = x;
 }
 
