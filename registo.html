@@ -148,7 +148,7 @@ div {
 
       <div id="DivSubmeter" style="display:none">
         <br>
-        <button onClick="salvar()">Próximo Evento</button>
+        <button onClick="save()">Próximo Evento</button>
        </div>
 
 
@@ -1442,6 +1442,20 @@ function salvar() {
       saveAs(blob, "teste" + ".txt");
    }
 
+   function save(){
+function downloadInnerHtml(filename, elId) {
+debugger;
+    var elHtml = document.getElementById(elId).innerHTML;
+    var link = document.createElement('a');
+    link.setAttribute('download', filename);
+    
+    link.setAttribute('href', 'data:' + 'text/csv' + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+}
+var fileName =  'tags.csv'; // You can use the .txt extension if you want
+downloadInnerHtml(fileName, 'main');
+
+}
 
 //
  function submeter(){
