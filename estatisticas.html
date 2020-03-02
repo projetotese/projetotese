@@ -129,12 +129,16 @@ th {
       <table class="w3-table w3 bordered w3-stripped">
         <tr>
           <th>Evento</th>
-          <th>Minuto de Jogo</th>
+          <th>Tipo de Evento</th>
           <th>Jogador</th>
+          <th>Jogador</th>
+          <th>Minuto de Jogo</th>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
+          <td>golo</td>
+          <td>finalizacaomedia</td>
+          <td>alexandrefernandes</td>
+          <td>nenhum</td>
           <td></td>
         </tr>
       </table>
@@ -142,7 +146,25 @@ th {
 
 
   <script>
-
+ /*
+    var myInit = { method: 'GET',
+             headers: {
+              'Content-Type': 'application/json'
+             },
+             mode: 'cors',
+             cache: 'default'};
+    
+    let myRequest = new Request("./teste.csv", myInit);  //carregar dados do excel do jogo registado
+    
+    fetch(myRequest)
+          .then(function(resp) {
+            return resp.json();
+          })
+          .then(function(data){
+            console.log(data);
+          });
+            
+    */
       "use strict"
     
       if ('serviceWorker' in navigator) {
