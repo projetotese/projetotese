@@ -25,6 +25,11 @@ div {
   height:auto;
   width: auto;
 }
+
+.preamble {
+    border: 1px solid black;
+    margin-top: 20px
+}
 </style>
 
 <body class="fullscreen">
@@ -135,10 +140,16 @@ div {
 
       <div id="DivSubmeter" style="display:none">
         <br>
-        <button onClick="teste()">Próximo Evento</button>
-
+        <button onClick="window.location.reload();">Próximo Evento</button>
        </div>
 
+
+
+       <div class="preamble" id="zen-preamble" role="article">
+        <h3>The Road to Enlightenment</h3>
+        <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support, and abandoned browsers.</p>
+       </div>
+       
        <p id="demo"></p>
 
 
