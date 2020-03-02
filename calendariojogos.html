@@ -172,6 +172,7 @@ th {
         <th>Data</th> 
         <th>Competição</th>
         <th>Resultado</th>
+        <th>Estatisticas Jogo</th>
       </tr>
       <tr>
         <td></td>
@@ -210,26 +211,6 @@ th {
     evt.currentTarget.className += " active";
   }
   
-  //carregar dados do excel de jogos realizados para colocar os resultados do jogo
-  /*
-  var myInit = { method: 'GET',
-           headers: {
-            'Content-Type': 'application/json'
-           },
-           mode: 'cors',
-           cache: 'default'};
-  
-  let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
-  
-  fetch(myRequest)
-        .then(function(resp) {
-          return resp.json();
-        })
-        .then(function(data){
-          console.log(data);
-        });
-          
-  */
   </script>
    
 </body>
