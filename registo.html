@@ -138,7 +138,7 @@ div {
         <button id="btn62" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn50);showJogador();showFinalButton();Jogador2(btn62) value="tomascastro"><img id="tomascastro" src="./images/tomascastro.png" onclick="changetomascastro()" height="120px" width="120px"></button>
       </div>
 
-      <div class="preamble" id="fileContents" role="article">
+      <div class="preamble" id="texto" role="article">
         <h5>Eventos selecionados:</h5>
         <p id="demo"></p>
         <p id="tipo"></p>
@@ -1436,6 +1436,13 @@ document.getElementById("export").addEventListener("click",function(){
 },false)
 }
 
+function salvar() {
+      let texto = document.getElementById("texto").value;
+      let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+      saveAs(blob, "teste" + ".txt");
+   }
+
+
 //
  function submeter(){
   alert("Submit button clicked!");
@@ -1444,6 +1451,6 @@ document.getElementById("export").addEventListener("click",function(){
  }
 
 </script>
-
+<script type="text/javascript" src="FileSaver.min.js"></script>
 </body>
 </html>
