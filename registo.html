@@ -135,7 +135,7 @@ div {
 
       <div id="DivSubmeter" style="display:none">
         <br>
-        <button onClick="window.location.reload();">Próximo Evento</button>
+        <button onClick="printChecked()">Próximo Evento</button>
 
        </div>
 
@@ -1389,12 +1389,15 @@ function changediogojose(){
  document.getElementById("diogojose").width="10";
  }
 
- function click(button){
-    var buttonclicked = document.getElementById(button.id).value;
-    firstbox.innerHTML = "Your Chosen button is: " + buttonclicked;
-    button.disabled = true;
-}
-
+ function printChecked(){
+				var items=document.getElementsByName('evento');
+				var selectedItems="";
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='button' && items[i].checked==true)
+						selectedItems+=items[i].value+"\n";
+				}
+				alert(selectedItems);
+			}	
 
  function submeter(){
   alert("Submit button clicked!");
