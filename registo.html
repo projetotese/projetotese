@@ -42,6 +42,8 @@ div {
   </div>
 </div>
 
+<span id="countdown" class="timer"></span>
+
 <div class="w3-container">
 <div class="w3-row-padding w3-padding-16 w3-center" id="escolhaevento">
   <br>
@@ -1463,7 +1465,7 @@ downloadInnerHtml(fileName, 'main');
 
  }
 
- var seconds = 1200;
+var seconds = 1200;
 function secondPassed() {
     var minutes = Math.round((seconds - 30)/60);
     var remainingSeconds = seconds % 60;
