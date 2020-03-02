@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registo de Eventos</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="white"/>
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma"> 
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Plataforma de Eventos"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
+
+</head>
+
+
+<body>
+
+<h2>Equipa em Campo</h2>
+
+<h4>5 em Campo</h4>
+16-Diogo Vieira
+11-Andre Carvalho
+14-Claudio Silva
+16-Dinis Pereira
+22-Alexandre Fernandes
+
+<h6>Banco</h6>
+25-Marco Oliveira
+8-Diogo Jose
+-Diogo Silva
+-Elian Leitao
+-Guilherme Cepeda
+11-Joao Freitas
+-Joao Lopes
+10-Luis Matos
+-Paulo Correia
+-Rafael Ferreira
+19-Ricardo Lopes
+-Ruben Rocha
+3-Samuel Marques
+5-Tomas Castro
+
+
+
+  <script>
+
+ /*
+    var myInit = { method: 'GET',
+             headers: {
+              'Content-Type': 'application/json'
+             },
+             mode: 'cors',
+             cache: 'default'};
+    
+    let myRequest = new Request("./teste.csv", myInit);  //carregar dados do excel do jogo registado
+    
+    fetch(myRequest)
+          .then(function(resp) {
+            return resp.json();
+          })
+          .then(function(data){
+            console.log(data);
+          });
+            
+    */
+   
+      "use strict"
+    
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+                 .register('./sw.js');
+      }
+    
+  
+   
+    
+    //carregar dados do excel de jogos realizados para colocar os resultados do jogo
+    /*
+    var myInit = { method: 'GET',
+             headers: {
+              'Content-Type': 'application/json'
+             },
+             mode: 'cors',
+             cache: 'default'};
+    
+    let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
+    
+    fetch(myRequest)
+          .then(function(resp) {
+            return resp.json();
+          })
+          .then(function(data){
+            console.log(data);
+          });
+            
+    */
+    </script>
+   
+</body>
+</html> 
