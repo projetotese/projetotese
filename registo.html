@@ -35,6 +35,22 @@ div {
 
 <body class="fullscreen">
 
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+
+<!-- Page Content -->
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>My Page</h1>
+  </div>
+</div>
+
 <div class="w3-container">
 <div class="w3-row-padding w3-padding-16 w3-center" id="escolhaevento">
     <button id="btn1" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();myFunction(btn1) name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="60px" width="60px">Golo</button>
@@ -175,6 +191,15 @@ function disable(btn){
  function color(btn){
  document.getElementById(btn.id).style.color = "#ff0000";
  }
+
+ function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
   //botões tipo evento
  function changegolo(){
  document.getElementById("golo").src="./images/goloch.png"; 
