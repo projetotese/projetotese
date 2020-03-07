@@ -1489,7 +1489,7 @@ function secondPassed() {
     document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
+        document.getElementById('countdown').innerHTML = "Fim";
     } else {
         seconds--;
     }
