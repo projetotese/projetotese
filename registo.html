@@ -220,16 +220,16 @@ div {
   </div>
 <div id="DivTipoRemate" class="container-sm" style="display:none">
   <br>
-  <button id="btn17" onclick=disable(btn18);disable(btn19);disable(btn20);showFinalButton();Tipo(btn17) value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="60px" width="60px">Defendido</button>
-  <button id="btn18" onclick=disable(btn17);disable(btn19);disable(btn20);showFinalButton();Tipo(btn18) value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="60px" width="60px">Fora</button>
-  <button id="btn19" onclick=disable(btn18);disable(btn17);disable(btn20);showFinalButton();Tipo(btn19) value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="60px" width="60px">Intersetado</button>
-  <button id="btn20" onclick=disable(btn18);disable(btn17);disable(btn19);showFinalButton();Tipo(btn20) value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="60px" width="60px">Poste</button>
+  <button id="btn17" onclick=disable(btn18);disable(btn19);disable(btn20);showCampo();Tipo(btn17) value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="60px" width="60px">Defendido</button>
+  <button id="btn18" onclick=disable(btn17);disable(btn19);disable(btn20);showCampo();Tipo(btn18) value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="60px" width="60px">Fora</button>
+  <button id="btn19" onclick=disable(btn18);disable(btn17);disable(btn20);showCampo();Tipo(btn19) value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="60px" width="60px">Intersetado</button>
+  <button id="btn20" onclick=disable(btn18);disable(btn17);disable(btn19);showCampo();Tipo(btn20) value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="60px" width="60px">Poste</button>
   </div>
   <div id="DivTipoPerdaBola" class="container-sm" style="display:none">
     <br>
-    <button id="btn21" onclick=disable(btn22);disable(btn23);showFinalButton();Tipo(btn21) value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="60px" width="60px">Passe Errado</button>
-    <button id="btn22" onclick=disable(btn21);disable(btn23);showFinalButton();Tipo(btn22) value="desarme"><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="60px" width="60px">Passe Intersetado</button>
-    <button id="btn23" onclick=disable(btn22);disable(btn21);showFinalButton();Tipo(btn23) value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="60px" width="60px">Má Ação Técnica</button>
+    <button id="btn21" onclick=disable(btn22);disable(btn23);showCampo();Tipo(btn21) value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="60px" width="60px">Passe Errado</button>
+    <button id="btn22" onclick=disable(btn21);disable(btn23);showCampo();Tipo(btn22) value="desarme"><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="60px" width="60px">Passe Intersetado</button>
+    <button id="btn23" onclick=disable(btn22);disable(btn21);showCampo();Tipo(btn23) value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="60px" width="60px">Má Ação Técnica</button>
    </div>
     <div id="DivTipoSancao" class="container-sm" style="display:none">
       <br>
@@ -238,14 +238,14 @@ div {
       </div>
       <div id="DivTipoGoloVisitante" class="container-sm" style="display:none">
         <br>
-        <button id="btn26" onclick=disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn26) value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="60px" width="60px">BolaParada</button>
-        <button id="btn27" onclick=disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn27) value="finalizacaocurtaadv"><img id="finalizacaocurtaadv" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurtaadv()" height="60px" width="60px">Fin.Curta</button>
-        <button id="btn28" onclick=disable(btn27);disable(btn26);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn28) value="finalizacaomediaadv"><img id="finalizacaomediaadv" src="./images/jogadacorrida.png" onclick="changefinalizacaomediaadv()" height="60px" width="60px">Fin.Média</button>
-        <button id="btn29" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn29) value="finalizacaolongaadv"><img id="finalizacaolongaadv" src="./images/rematelongo.png" onclick="changefinalizacaolongaadv()" height="60px" width="60px">Fin.Longa</button>
-        <button id="btn30" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn31);disable(btn32);disable(btn33);showFinalButton();Tipo(btn30) value="penaltiadv"><img id="penaltiadv" src="./images/penalti.png" onclick="changepenaltiadv()" height="60px" width="60px">Penalti</button>
-        <button id="btn31" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showFinalButton();Tipo(btn31) value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="60px" width="60px">Livre 10 Metros</button>
-        <button id="btn32" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showFinalButton();Tipo(btn32) value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="60px" width="60px">Livre</button>
-        <button id="btn33" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showFinalButton();Tipo(btn33) value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="60px" width="60px">5X4</button>
+        <button id="btn26" onclick=disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn26) value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="60px" width="60px">BolaParada</button>
+        <button id="btn27" onclick=disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn27) value="finalizacaocurtaadv"><img id="finalizacaocurtaadv" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurtaadv()" height="60px" width="60px">Fin.Curta</button>
+        <button id="btn28" onclick=disable(btn27);disable(btn26);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn28) value="finalizacaomediaadv"><img id="finalizacaomediaadv" src="./images/jogadacorrida.png" onclick="changefinalizacaomediaadv()" height="60px" width="60px">Fin.Média</button>
+        <button id="btn29" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn29) value="finalizacaolongaadv"><img id="finalizacaolongaadv" src="./images/rematelongo.png" onclick="changefinalizacaolongaadv()" height="60px" width="60px">Fin.Longa</button>
+        <button id="btn30" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn30) value="penaltiadv"><img id="penaltiadv" src="./images/penalti.png" onclick="changepenaltiadv()" height="60px" width="60px">Penalti</button>
+        <button id="btn31" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showCampo();Tipo(btn31) value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="60px" width="60px">Livre 10 Metros</button>
+        <button id="btn32" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showCampo();Tipo(btn32) value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="60px" width="60px">Livre</button>
+        <button id="btn33" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showCampo();Tipo(btn33) value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="60px" width="60px">5X4</button>
         </div>
       <div id="DivJogadorGolo" class="container-sm" style="display:none">
         <br>
@@ -265,12 +265,12 @@ div {
       </div>
       <div id="DivJogadorAssist" class="container-sm" style="display:none">
         <br>
-        <button id="btn44" onclick=disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showFinalButton();Jogador2(btn44);show value="diogovieira"><img id="diovieira" src="./images/diogovieira.png" onclick="changediogovieiraassist()" height="60px" width="60px"></button>
-        <button id="btn45" onclick=disable(btn44);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showFinalButton();Jogador2(btn45) value="alexandrefernandes"><img id="alexanfernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandesassist()" height="60px" width="60px"></button>
-        <button id="btn46" onclick=disable(btn44);disable(btn45);disable(btn47);disable(btn48);disable(btn49);showFinalButton();Jogador2(btn46) value="andrecarvalho"><img id="andcarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalhoassist()" height="60px" width="60px"></button>
-        <button id="btn47" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn48);disable(btn49);showFinalButton();Jogador2(btn47) value="claudiosilva"><img id="clausilva" src="./images/claudiosilva.png" onclick="changeclaudiosilvaassist()" height="60px" width="60px"></button>
-        <button id="btn48" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49);showFinalButton();Jogador2(btn48) value="dinispereira"><img id="dinpereira" src="./images/dinispereira.png" onclick="changedinispereiraassist()" height="60px" width="60px"></button>
-        <button id="btn49" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48);showFinalButton();Jogador2(btn49) value="nenhum"><img id="nenhum" src="./images/nenhum.png" onclick="changenenhum()" height="60px" width="60px"></button>
+        <button id="btn44" onclick=disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn44);show value="diogovieira"><img id="diovieira" src="./images/diogovieira.png" onclick="changediogovieiraassist()" height="60px" width="60px"></button>
+        <button id="btn45" onclick=disable(btn44);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn45) value="alexandrefernandes"><img id="alexanfernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandesassist()" height="60px" width="60px"></button>
+        <button id="btn46" onclick=disable(btn44);disable(btn45);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn46) value="andrecarvalho"><img id="andcarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalhoassist()" height="60px" width="60px"></button>
+        <button id="btn47" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn48);disable(btn49);showCampo();Jogador2(btn47) value="claudiosilva"><img id="clausilva" src="./images/claudiosilva.png" onclick="changeclaudiosilvaassist()" height="60px" width="60px"></button>
+        <button id="btn48" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49);showCampo();Jogador2(btn48) value="dinispereira"><img id="dinpereira" src="./images/dinispereira.png" onclick="changedinispereiraassist()" height="60px" width="60px"></button>
+        <button id="btn49" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48);showCampo();Jogador2(btn49) value="nenhum"><img id="nenhum" src="./images/nenhum.png" onclick="changenenhum()" height="60px" width="60px"></button>
       </div>
       <div id="DivJogadoresBanco" class="container-sm" style="display:none">
         <h6>Jogador que Entra</h6>
@@ -289,7 +289,19 @@ div {
         <button id="btn62" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn50);showJogador();showFinalButton();Jogador2(btn62) value="tomascastro"><img id="tomascastro" src="./images/tomascastro.png" onclick="changetomascastro()" height="60px" width="60px"></button>
       </div>
 
-
+      <!-- Mostrar Campo-->
+      <div id="DivCampo" class="container-sm" style="display:none">
+        <a><img src="./images/campofutsal.png" alt="campogolo" style="width:80%"></a>
+        <button type="button" id ="btn70" onclick="showFimCriacao();color(btn70);disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona1">Zona1</button>
+        <button type="button" id ="btn71" onclick="showFimCriacao();color(btn71);disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona2">Zona2</button>
+        <button type="button" id ="btn72" onclick="showFimCriacao();color(btn72);disable(btn71);disable(btn70);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona3">Zona3</button>
+        <button type="button" id ="btn73" onclick="showFimCriacao();color(btn73);disable(btn71);disable(btn72);disable(btn70);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona4">Zona4</button>
+        <button type="button" id ="btn74" onclick="showFimCriacao();color(btn74);disable(btn71);disable(btn72);disable(btn73);disable(btn70);disable(btn75);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona5">Zona5</button>
+        <button type="button" id ="btn75" onclick="showFimCriacao();color(btn75);disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn70);disable(btn76);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona6">Zona6</button>
+        <button type="button" id ="btn76" onclick="showFimCriacao();color(btn76);disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn70);disable(btn77);disable(btn78);showFinalButton();Zona()" value="zona7">Zona7</button>
+        <button type="button" id ="btn77" onclick="showFimCriacao();color(btn77);disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn70);disable(btn78);showFinalButton();Zona()" value="zona8">Zona8</button>
+        <button type="button" id ="btn78" onclick="showFimCriacao();color(btn78);disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn70);showFinalButton();Zona()" value="zona9">Zona9</button>
+    </div>
  
       <div id="DivSubmeter" style="display:none">
         <br>
@@ -301,6 +313,7 @@ div {
         <p id="tipo"></p>
         <p id="jogador1"></p>
         <p id="jogador2"></p>
+        <p id="zona"></p>
       </div>
 
      
@@ -1016,6 +1029,9 @@ function showTipoGoloAdversario() {
 function showJogEntraSubst() {
   document.getElementById('DivJogadoresBanco').style.display = "block";
 }
+function showCampo() {
+  document.getElementById('DivCampo').style.display = "block";
+}
 function showFinalButton() {
   document.getElementById('DivSubmeter').style.display = "block";
 }
@@ -1586,6 +1602,11 @@ function Jogador1(btn) {
 function Jogador2(btn) {
   var x = document.getElementById(btn.id).value;
   document.getElementById("jogador2").innerHTML = x;
+}
+
+function Zona(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("zona").innerHTML = x;
 }
 
 function exportar() {
