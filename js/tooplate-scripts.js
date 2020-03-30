@@ -128,7 +128,7 @@ function drawBarChart() {
 
 function drawPieChart() {
   if ($("#pieChart").length) {
-    var chartHeight = 28;
+    var chartHeight = 300;
 
     $("#pieChartContainer").css("height", chartHeight + "px");
 
