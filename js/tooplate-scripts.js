@@ -108,7 +108,7 @@ function drawBarChart() {
         labels: [ "Vitórias","Empates", "Derrotas"],
         datasets: [
           {
-            label: "Numero de Vitorias",
+            label: "Resultados dos Jogos",
             data: [33, 40, 28],
             backgroundColor: [
               "#A8D582",
