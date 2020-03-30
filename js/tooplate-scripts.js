@@ -155,7 +155,7 @@ function drawPieChart() {
       data: {
         datasets: [
           {
-            data: [67.86 , 32,14],
+            data: [67.86 , 32.14],
             backgroundColor: ["#4ED6B8", "#A8D582"],
             label: "Jogos Realizados e Por Realizar"
           }
