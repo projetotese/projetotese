@@ -105,19 +105,15 @@ function drawBarChart() {
     configBar = {
       type: "horizontalBar",
       data: {
-        labels: ["Red", "Aqua", "Green", "Yellow", "Purple", "Orange", "Blue"],
+        labels: [ "Vitórias","Empates", "Derrotas"],
         datasets: [
           {
-            label: "# of Hits",
-            data: [33, 40, 28, 49, 58, 38, 44],
+            label: "Numero de Vitorias",
+            data: [33, 40, 28],
             backgroundColor: [
-              "#F7604D",
-              "#4ED6B8",
               "#A8D582",
-              "#D7D768",
-              "#9D66CC",
-              "#DB9C3F",
-              "#3889FC"
+              "#F7604D",
+              "#4ED6B8"
             ],
             borderWidth: 0
           }
