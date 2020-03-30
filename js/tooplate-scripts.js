@@ -109,7 +109,7 @@ function drawBarChart() {
         datasets: [
           {
             label: "Resultados dos Jogos",
-            data: [33, 40, 28],
+            data: [33, 40, 55],
             backgroundColor: [
               "#A8D582",
               "#F7604D",
