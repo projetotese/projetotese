@@ -81,7 +81,7 @@ function drawBarChart() {
             },
             scaleLabel: {
               display: true,
-              labelString: "Hits"
+              labelString: "Resultado"
             }
           }
         ]
@@ -108,7 +108,11 @@ function drawBarChart() {
         labels: [ "Vitórias","Empates", "Derrotas"],
         datasets: [
           {
-            
+            labels: [
+              "Vitórias",
+              "Empates",
+              "Derrotas"
+            ],
             data: [14, 3, 3],
             backgroundColor: [
               "#A8D582",
