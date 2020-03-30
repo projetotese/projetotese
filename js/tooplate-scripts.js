@@ -109,7 +109,7 @@ function drawBarChart() {
         datasets: [
           {
             label: "Resultados dos Jogos",
-            data: [33, 40, 55],
+            data: [14, 3, 3],
             backgroundColor: [
               "#A8D582",
               "#D7D768",
@@ -156,7 +156,7 @@ function drawPieChart() {
         datasets: [
           {
             data: [67.86 , 32.14],
-            backgroundColor: ["#4ED6B8", "#A8D582"],
+            backgroundColor: ["#4ED6B8", "#F7604D"],
             label: "Jogos Realizados e Por Realizar"
           }
         ],
