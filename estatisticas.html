@@ -1,217 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Registo de Eventos</title>
-<link rel="manifest" href="/manifest.json">
-<link rel="stylesheet" href="css/style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="white"/>
-<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-<link rel="apple-touch-icon" href="images/hello-icon-152.png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma"> 
-<meta name="theme-color" content="white"/>  
-<meta name="apple-mobile-web-app-capable" content="yes">  
-<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
-<meta name="apple-mobile-web-app-title" content="Plataforma de Eventos"> 
-<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
-<meta name="msapplication-TileColor" content="#FFFFFF">
-<style>
-body {font-family: Arial;}
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 5px;
-}
-th {
-  text-align: left;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Plataforma Registo de Eventos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <!--
+	Product Admin CSS Template
+	https://templatemo.com/tm-524-product-admin
+	-->
 </head>
 
+<body id="reportsPage">
+    <div class="" id="home">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container h-100">
+                <a class="navbar-brand">
+                    <h1 class="tm-site-title mb-0">Plataforma de Eventos</h1>
+                </a>
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars tm-nav-icon"></i>
+                </button>
 
-<body>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto h-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-calendar-alt"></i>
+                                Calendário de Jogos
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
 
-<h2>Estatisticas</h2>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-chart-line"></i>
+                                <span>
+                                    Estatisticas Gerais <i class="fas fa-angle-down"></i>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Estatisticas Gerais Época</a>
+                                <a class="dropdown-item" href="#">Estatisticas Por Jogo</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="plantel.html">
+                                <i class="fas fa-users"></i>
+                                Plantel
+                            </a>
+                        </li>
 
-<div class="tab">
-    <button><a href="index.html">Home!</a></button>
-    <button class="tablinks" onclick="openGames(event, 'Gerais')">Estatisticas Gerais Jogo</button>
-    <button class="tablinks" onclick="openGames(event, 'PorJogador')">Estatisticas Jogador</button> 
-    <button class="tablinks" onclick="openGames(event, 'ListaEventos')">Lista Eventos</button>
-  </div>
-  
-  <div id="Gerais" class="tabcontent">
-    <h3>Estatisticas Gerais</h3>
-      <table class="w3-table w3 bordered w3-stripped">
-        <tr>
-          <th>Posse Bola</th>
-          <th>Golos</th>
-          <th>Remates</th> 
-          <th>Faltas</th>
-          <th>Perdas de Bola</th>
-          <th>Cartões</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
-  
-  <div id="PorJogador" class="tabcontent">
-    <h3>Estatisticas por Jogador</h3>
-      <table class="w3-table w3 bordered w3-stripped">
-        <tr>
-          <th>Jogador</th>
-          <th>Golos</th>
-          <th>AutoGolos</th> 
-          <th>Assistências</th>
-          <th>Minutos em Campo</th>
-        </tr>
-        <tr>
-          <td>alexandrefernandes</td>
-          <td>1</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
-  
-  <div id="ListaEventos" class="tabcontent">
-    <h3>Lista Eventos</h3>
-      <table class="w3-table w3 bordered w3-stripped">
-        <tr>
-          <th>Evento</th>
-          <th>Tipo de Evento</th>
-          <th>Jogador</th>
-          <th>Jogador</th>
-          <th>Minuto de Jogo</th>
-        </tr>
-        <tr>
-          <td>golo</td>
-          <td>finalizacaomedia</td>
-          <td>alexandrefernandes</td>
-          <td>nenhum</td>
-          <td></td>
-        </tr>
-      </table>
-  </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="registo.html">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Registo de Eventos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+        </nav>
+        <div class="container">
+            <!-- row -->
+            <div class="row tm-content-row">
+               
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
+                    <div class="tm-bg-primary-dark tm-block">
+                        <h2 class="tm-block-title">Resultados Jogos</h2>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-block-col">
+                    <div class="tm-bg-primary-dark tm-block tm-block-taller">
+                        <h2 class="tm-block-title">Jogos Realizados e por Realizar</h2>
+                        <div id="pieChartContainer">
+                            <canvas id="pieChart" class="chartjs-render-monitor" width="200" height="200"></canvas>
+                        </div>                        
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+        <footer class="tm-footer row tm-mt-small">
+            <div class="col-12 font-weight-light">
+                <p class="text-center text-white mb-0 px-4 small">
+                    Copyright &copy; <b>2020</b> All rights reserved. 
+                    
+                    Plataforma Registo Eventos Jogo <a rel="nofollow noopener" class="tm-footer-link">Futsal SCBraga-AAUM</a>
+                </p>
+            </div>
+        </footer>
+    </div>
 
-  <script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="js/moment.min.js"></script>
+    <!-- https://momentjs.com/ -->
+    <script src="js/Chart.min.js"></script>
+    <!-- http://www.chartjs.org/docs/latest/ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script src="js/tooplate-scripts.js"></script>
+    <script>
+        Chart.defaults.global.defaultFontColor = 'white';
+        let ctxLine,
+            ctxBar,
+            ctxPie,
+            optionsLine,
+            optionsBar,
+            optionsPie,
+            configLine,
+            configBar,
+            configPie,
+            lineChart;
+        barChart, pieChart;
+        // DOM is ready
+        $(function () {
+            drawLineChart(); // Line Chart
+            drawBarChart(); // Bar Chart
+            drawPieChart(); // Pie Chart
 
- /*
-    var myInit = { method: 'GET',
-             headers: {
-              'Content-Type': 'application/json'
-             },
-             mode: 'cors',
-             cache: 'default'};
-    
-    let myRequest = new Request("./teste.csv", myInit);  //carregar dados do excel do jogo registado
-    
-    fetch(myRequest)
-          .then(function(resp) {
-            return resp.json();
-          })
-          .then(function(data){
-            console.log(data);
-          });
-            
-    */
-   
-      "use strict"
-    
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-                 .register('./sw.js');
-      }
-    
-  
-    
-    
-    function openGames(evt, gamePlay) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(gamePlay).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-    
-    //carregar dados do excel de jogos realizados para colocar os resultados do jogo
-    /*
-    var myInit = { method: 'GET',
-             headers: {
-              'Content-Type': 'application/json'
-             },
-             mode: 'cors',
-             cache: 'default'};
-    
-    let myRequest = new Request("./jogo.json", myInit);  //carregar dados do excel do jogo registado
-    
-    fetch(myRequest)
-          .then(function(resp) {
-            return resp.json();
-          })
-          .then(function(data){
-            console.log(data);
-          });
-            
-    */
+            $(window).resize(function () {
+                updateLineChart();
+                updateBarChart();                
+            });
+        })
     </script>
-   
 </body>
-</html> 
+
+</html>
