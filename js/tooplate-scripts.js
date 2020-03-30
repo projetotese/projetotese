@@ -112,8 +112,8 @@ function drawBarChart() {
             data: [33, 40, 55],
             backgroundColor: [
               "#A8D582",
-              "#F7604D",
-              "#4ED6B8"
+              "#D7D768",
+              "#F7604D"
             ],
             borderWidth: 0
           }
