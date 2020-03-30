@@ -128,7 +128,7 @@ function drawBarChart() {
 
 function drawPieChart() {
   if ($("#pieChart").length) {
-    var chartHeight = 300;
+    var chartHeight = 28;
 
     $("#pieChartContainer").css("height", chartHeight + "px");
 
@@ -155,15 +155,14 @@ function drawPieChart() {
       data: {
         datasets: [
           {
-            data: [18.24, 6.5, 9.15],
-            backgroundColor: ["#F7604D", "#4ED6B8", "#A8D582"],
-            label: "Storage"
+            data: [67.86 , 32,14],
+            backgroundColor: ["#4ED6B8", "#A8D582"],
+            label: "Jogos Realizados e Por Realizar"
           }
         ],
         labels: [
-          "Used Storage (18.240GB)",
-          "System Storage (6.500GB)",
-          "Available Storage (9.150GB)"
+          "Jogos Não Realizados(%)",
+          "Jogos Realizados(%)"
         ]
       },
       options: optionsPie
