@@ -295,9 +295,7 @@
         </div>
 
       </div>
-      <a
-      href="registarevento.html"
-      class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
+      <a href="registarevento.html" onclick="GetSelected()" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
       <div class="col-12 font-weight-light">
@@ -313,11 +311,30 @@
     <!-- https://jquery.com/download/ -->
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
-    <script>
-     
 
-
-
-    </script>
+    <script type="text/javascript">
+      function GetSelected() {
+          //Reference the Table.
+          var grid = document.getElementById("Table1");
+   
+          //Reference the CheckBoxes in Table.
+          var checkBoxes = grid.getElementsByTagName("INPUT");
+          var message = "Id Name                  Country\n";
+   
+          //Loop through the CheckBoxes.
+          for (var i = 0; i < checkBoxes.length; i++) {
+              if (checkBoxes[i].checked) {
+                  var row = checkBoxes[i].parentNode.parentNode;
+                  message += row.cells[1].innerHTML;
+                  message += "   " + row.cells[2].innerHTML;
+                  message += "   " + row.cells[3].innerHTML;
+                  message += "\n";
+              }
+          }
+   
+          //Display selected Row data in Alert Box.
+          alert(message);
+      }
+  </script>
   </body>
 </html>
