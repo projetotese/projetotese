@@ -20,6 +20,130 @@
 	-->
 </head>
 
+<style>
+
+
+    div {
+      position:relative;
+      height:auto;
+      width: auto;
+    }
+    
+    .preamble {
+        margin-top: auto;
+    }
+    
+    /*Campo Golo*/
+    .zona1 {
+           top: 4%;
+         font-size:xx-small;
+        text-align: center;
+        height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -92%;
+        right: 3%;
+    }
+    .zona2 {
+           top: 35%;
+        font-size:xx-small;
+        height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -92%;
+        right: 3%;
+    }
+    .zona3 {
+           top: 70%;
+        font-size:xx-small;
+        height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -92%;
+        right: 3%;
+    }
+    
+    .zona4 {
+           top: 4%;
+        font-size:xx-small;
+        height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -87%;
+        right: 0;
+    }
+    
+    .zona5 {
+      top: 35%;
+         font-size:xx-small;
+         height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -87%;
+        right: 0;
+    }
+    
+    .zona6 {
+           top: 70%;
+         font-size:xx-small;
+         height: 20px; 
+        width: 20px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        margin: 1px auto;
+        left: -87%;
+        right: 0;
+    }
+    
+    .zona7 {
+        top: 4%;
+         font-size:xx-small;
+        height: 20px; 
+        width: 78px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -73%;
+        right: 0;
+    }
+    
+    .zona8 {
+      top: 35%;
+         font-size:xx-small;
+         height: 20px; 
+         width: 78px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -73%;
+        right: 0;
+    }
+    
+    .zona9 {
+      top: 70%;
+         font-size:xx-small;
+           height: 20px; 
+           width: 78px;
+        opacity: 0.7;
+        padding: 10px;
+        background-color: #ff9800;
+        left: -73%;
+        right: 0;
+    }
+    
+    </style>
+    
 <body id="reportsPage">
     <div class="" id="home">
         <nav class="navbar navbar-expand-xl">
@@ -76,21 +200,129 @@
         </nav>
 
       <div class="container mt-5">
-        <div class="row tm-content-row">
-          <div class="col-12 tm-block-col">
-            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
-              <h2 class="tm-block-title">List of Accounts</h2>
-              <p class="text-white">Accounts</p>
-              <select class="custom-select">
-                <option value="0">Select account</option>
-                <option value="1">Admin</option>
-                <option value="2">Editor</option>
-                <option value="3">Merchant</option>
-                <option value="4">Customer</option>
-              </select>
-            </div>
-          </div>
+        <h2 class="tm-block-title">List of Accounts</h2>
+        <div class="container-sm" id="escolhaevento">
+            <button id="btn1" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();myFunction(btn1) name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="40px" width="40px">Golo</button>
+            <button id="btn2" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction(btn2) name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="40px" width="40px">Falta Efetuada</button>
+            <button id="btn3" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction(btn3) name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="40px" width="40px">Falta Sofrida</button>
+            <button id="btn4" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda();myFunction(btn4) name="evento" value="perdabola"><img id="perdabola" src="./images/bolaicon.png" onclick="changeperdabola()" height="40px" width="40px">Perda Bola</button>
+            <button id="btn5" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate();myFunction(btn5) name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="40px" width="40px">Remate</button>
+            <button id="btn6" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst();myFunction(btn6) name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="40px" width="40px">Substituição</button>
+            <button id="btn7" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao();myFunction(btn7) name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="40px" width="40px">Sanção</button>
+            <button id="btn8" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario();myFunction(btn8) name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="40px" width="40px">Golo Adversário</button>
         </div>
+        <div id="DivTipoGolo" class="container-sm" style="display:none">
+          <br>
+          <button id="btn9" style="margin-right: 8px;margin-bottom: 1rem;"   onclick=disable(btn10);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn9) value="bolaparada"><img id="canto" src="./images/bolaparada.png" onclick="changebolaparada()" height="40px" width="40px">Bola Parada</button>
+          <button id="btn10" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn10) value="finalizacaocurta"><img id="finalizacaocurta" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurta()" height="40px" width="40px">Fin.Curta</button>
+          <button id="btn11" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn12);disable(btn13);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn11) value="finalizacaomedia"><img id="finalizacaomedia" src="./images/jogadacorrida.png" onclick="changefinalizacaomedia()" height="40px" width="40px">Fin.Média</button>
+          <button id="btn12" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn11);disable(btn13);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn12) value="finalizacaolonga"><img id="finalizacaolonga" src="./images/rematelongo.png" onclick="changefinalizacaolonga()" height="40px" width="40px">Fin.Longa</button>
+          <button id="btn13" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn13) value="penalti"><img id="penalti" src="./images/penalti.png" onclick="changepenalti()" height="40px" width="40px">Penalti</button>
+          <button id="btn14" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn14) value="livre10metros"><img id="livre10metros" src="./images/livre10metros.png" onclick="changelivre10metros()" height="40px" width="40px">Livre 10 metros</button>
+          <button id="btn15" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn16);showJogadorGolo();Tipo(btn15) value="livre"><img id="livre" src="./images/freekick.png" onclick="changefreekick()" height="40px" width="40px">Livre</button>
+          <button id="btn16" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);showJogadorGolo();Tipo(btn16) value="5para4"><img id="5para4" src="./images/5x4.png" onclick="change5para4()" height="40px" width="40px">5X4</button>
+          </div>
+        <div id="DivTipoRemate" class="container-sm" style="display:none">
+          <br>
+          <button id="btn17"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn18);disable(btn19);disable(btn20);showCampo();Tipo(btn17) value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="40px" width="40px">Defendido</button>
+          <button id="btn18"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn17);disable(btn19);disable(btn20);showCampo();Tipo(btn18) value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="40px" width="40px">Fora</button>
+          <button id="btn19"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn18);disable(btn17);disable(btn20);showCampo();Tipo(btn19) value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="40px" width="40px">Intersetado</button>
+          <button id="btn20"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn18);disable(btn17);disable(btn19);showCampo();Tipo(btn20) value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="40px" width="40px">Poste</button>
+          </div>
+          <div id="DivTipoPerdaBola" class="container-sm" style="display:none">
+            <br>
+            <button id="btn21" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn22);disable(btn23);showCampo();Tipo(btn21) value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="40px" width="40px">Passe Errado</button>
+            <button id="btn22"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn21);disable(btn23);showCampo();Tipo(btn22) value="desarme"><img id="desarme" src="./images/passeintercetado.png" onclick="changepasseintersetado()" height="40px" width="40px">Passe Intersetado</button>
+            <button id="btn23" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn22);disable(btn21);showCampo();Tipo(btn23) value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="40px" width="40px">Má Ação Técnica</button>
+           </div>
+            <div id="DivTipoSancao" class="container-sm" style="display:none">
+              <br>
+              <button id="btn24" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn25);showFinalButton();Tipo(btn24);showJogador() value="amarelo"><img id="amarelo" src="./images/amarelo.png" onclick="changeamarelo()" height="40px" width="40px"></button>
+              <button id="btn25" style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn24);showFinalButton();Tipo(btn25);showJogador() value="vermelho"><img id="vermelho" src="./images/vermelho.png" onclick="changevermelho()" height="40px" width="40px"></button>
+              </div>
+              <div id="DivTipoGoloVisitante" class="container-sm" style="display:none">
+                <br>
+                <button id="btn26"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn26) value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="40px" width="40px">BolaParada</button>
+                <button id="btn27"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn27) value="finalizacaocurtaadv"><img id="finalizacaocurtaadv" src="./images/finalizacaocurta.png" onclick="changefinalizacaocurtaadv()" height="40px" width="40px">Fin.Curta</button>
+                <button id="btn28"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn27);disable(btn26);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn28) value="finalizacaomediaadv"><img id="finalizacaomediaadv" src="./images/jogadacorrida.png" onclick="changefinalizacaomediaadv()" height="40px" width="40px">Fin.Média</button>
+                <button id="btn29" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn29) value="finalizacaolongaadv"><img id="finalizacaolongaadv" src="./images/rematelongo.png" onclick="changefinalizacaolongaadv()" height="40px" width="40px">Fin.Longa</button>
+                <button id="btn30" style="margin-right: 8px;margin-bottom: 1rem;"  onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn30) value="penaltiadv"><img id="penaltiadv" src="./images/penalti.png" onclick="changepenaltiadv()" height="40px" width="40px">Penalti</button>
+                <button id="btn31"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showCampo();Tipo(btn31) value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="40px" width="40px">Livre 10 Metros</button>
+                <button id="btn32"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showCampo();Tipo(btn32) value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="40px" width="40px">Livre</button>
+                <button id="btn33"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showCampo();Tipo(btn33) value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="40px" width="40px">5X4</button>
+                </div>
+              <div id="DivJogadorGolo" class="container-sm" style="display:none">
+                <br>
+                <button id="btn34"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn35);disable(btn36);disable(btn37);disable(btn38);showJogadorAssist();Jogador1(btn34) value="diogovieira"><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="40px" width="40px"></button>
+                <button id="btn35"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn34);disable(btn36);disable(btn37);disable(btn38);showJogadorAssist();Jogador1(btn35) value="alexandrefernandes"><img id="alexandrefernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandes()" height="40px" width="40px"></button>
+                <button id="btn36"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn34);disable(btn35);disable(btn37);disable(btn38);showJogadorAssist();Jogador1(btn36) value="andrecarvalho"><img id="andrecarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalho()" height="40px" width="40px"></button>
+                <button id="btn37"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn34);disable(btn35);disable(btn36);disable(btn38);showJogadorAssist();Jogador1(btn37) value="claudiosilva"><img id="claudiosilva" src="./images/claudiosilva.png" onclick="changeclaudiosilva()" height="40px" width="40px"></button>
+                <button id="btn38"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn34);disable(btn35);disable(btn36);disable(btn37);showJogadorAssist();Jogador1(btn38) value="dinispereira"><img id="dinispereira" src="./images/dinispereira.png" onclick="changedinispereira()" height="40px" width="40px"></button>
+              </div>
+              <div id="DivJogador" class="container-sm" style="display:none">
+              <br>
+                <button id="btn39"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn40);disable(btn41);disable(btn42);disable(btn43);showFinalButton();Jogador1(btn39) value="diogovieira"><img id="dvieira" src="./images/diogovieira.png" onclick="changedvieira()" height="40px" width="40px"></button>
+                <button id="btn40"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn39);disable(btn41);disable(btn42);disable(btn43);showFinalButton();Jogador1(btn40) value="alexandrefernandes"><img id="alexfernandes" src="./images/alexandrefernandes.png" onclick="changealexfernandes()" height="40px" width="40px"></button>
+                <button id="btn41"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn39);disable(btn40);disable(btn42);disable(btn43);showFinalButton();Jogador1(btn41) value="andrecarvalho"><img id="acarvalho" src="./images/andrecarvalho.png" onclick="changeacarvalho()" height="40px" width="40px"></button>
+                <button id="btn42"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn39);disable(btn40);disable(btn41);disable(btn43);showFinalButton();Jogador1(btn42) value="claudiosilva"><img id="clasilva" src="./images/claudiosilva.png" onclick="changeclasilva()" height="40px" width="40px"></button>
+                <button id="btn43"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn39);disable(btn40);disable(btn41);disable(btn42);showFinalButton();Jogador1(btn43) value="dinispereira"><img id="dpereira" src="./images/dinispereira.png" onclick="changedpereira()" height="40px" width="40px"></button>
+              </div>
+              <div id="DivJogadorAssist" class="container-sm" style="display:none">
+                <br>
+                <button id="btn44"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn44);show value="diogovieira"><img id="diovieira" src="./images/diogovieira.png" onclick="changediogovieiraassist()" height="40px" width="40px"></button>
+                <button id="btn45"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn44);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn45) value="alexandrefernandes"><img id="alexanfernandes" src="./images/alexandrefernandes.png" onclick="changealexandrefernandesassist()" height="40px" width="40px"></button>
+                <button id="btn46"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn44);disable(btn45);disable(btn47);disable(btn48);disable(btn49);showCampo();Jogador2(btn46) value="andrecarvalho"><img id="andcarvalho" src="./images/andrecarvalho.png" onclick="changeandrecarvalhoassist()" height="40px" width="40px"></button>
+                <button id="btn47"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn48);disable(btn49);showCampo();Jogador2(btn47) value="claudiosilva"><img id="clausilva" src="./images/claudiosilva.png" onclick="changeclaudiosilvaassist()" height="40px" width="40px"></button>
+                <button id="btn48"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn49);showCampo();Jogador2(btn48) value="dinispereira"><img id="dinpereira" src="./images/dinispereira.png" onclick="changedinispereiraassist()" height="40px" width="40px"></button>
+                <button id="btn49"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn44);disable(btn45);disable(btn46);disable(btn47);disable(btn48);showCampo();Jogador2(btn49) value="nenhum"><img id="nenhum" src="./images/nenhum.png" onclick="changenenhum()" height="40px" width="40px"></button>
+              </div>
+              <div id="DivJogadoresBanco" class="container-sm" style="display:none">
+                <h6>Jogador que Entra</h6>
+                <button id="btn50"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn50) value="diogojose"><img id="diogojose" src="./images/diogojose.png" onclick="changediogojose()" height="40px" width="40px"></button>
+                <button id="btn51"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn50);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn51) value="diogosilva"><img id="diogosilva" src="./images/diogosilva.png" onclick="changediogosilva()" height="40px" width="40px"></button>
+                <button id="btn52"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn50);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn52) value="guilhermecepeda"><img id="guilhermecepeda" src="./images/guilhermecepeda.png" onclick="changeguilhermecepeda()" height="40px" width="40px"></button>
+                <button id="btn53"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn50);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn53) value="joaofreitas"><img id="joaofreitas" src="./images/joaofreitas.png" onclick="changejoaofreitas()" height="40px" width="40px"></button>
+                <button id="btn54"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn50);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn54) value="joaolopes"><img id="joaolopes" src="./images/joaolopes.png" onclick="changejoaolopes()" height="40px" width="40px"></button>
+                <button id="btn55"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn50);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn55) value="luismatos"><img id="luismatos" src="./images/luismatos.png" onclick="changeluismatos()" height="40px" width="40px"></button>
+                <button id="btn56"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn50);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn56) value="marcooliveira"><img id="marcooliveira" src="./images/marcooliveira.png" onclick="changemarcooliveira()" height="40px" width="40px"></button>
+                <button id="btn57"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn50);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn57) value="paulocorreia"><img id="paulocorreia" src="./images/paulocorreia.png" onclick="changepaulocorreia()" height="40px" width="40px"></button>
+                <button id="btn58"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn50);disable(btn59);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn58) value="rafaelferreira"><img id="rafaelferreira" src="./images/rafaelferreira.png" onclick="changerafaelferreira()" height="40px" width="40px"></button>
+                <button id="btn59"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn50);disable(btn60);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn59) value="ricardolopes"><img id="ricardolopes" src="./images/ricardolopes.png" onclick="changericardolopes()" height="40px" width="40px"></button>
+                <button id="btn60"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn50);disable(btn61);disable(btn62);showJogador();showFinalButton();Jogador2(btn60) value="rubenrocha"><img id="rubenrocha" src="./images/rubenrocha.png" onclick="changerubenrocha()" height="40px" width="40px"></button>
+                <button id="btn61"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn50);disable(btn62);showJogador();showFinalButton();Jogador2(btn61) value="samuelmarques"><img id="samuelmarques" src="./images/samuelmarques.png" onclick="changesamuelmarques()" height="40px" width="40px"></button>
+                <button id="btn62"  style="margin-right: 8px;margin-bottom: 1rem;" onclick=disable(btn51);disable(btn52);disable(btn53);disable(btn54);disable(btn55);disable(btn56);disable(btn57);disable(btn58);disable(btn59);disable(btn60);disable(btn61);disable(btn50);showJogador();showFinalButton();Jogador2(btn62) value="tomascastro"><img id="tomascastro" src="./images/tomascastro.png" onclick="changetomascastro()" height="40px" width="40px"></button>
+              </div>
+        
+              <!-- Mostrar Campo-->
+        <br>
+              <div id="DivCampo" class="container-sm" height="120px" width="120px" style="display:none">
+                <a><img src="./images/campofutsal.png" alt="campogolo" style="width:20%"></a>
+                <button id="btn70" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn70) class="zona1" value="zona1">1</button>
+                <button id="btn71" onclick=showFinalButton();disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn71) class="zona2" value="zona2">2</button>
+                <button id="btn72" onclick=showFinalButton();disable(btn71);disable(btn70);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn72) class="zona3" value="zona3">3</button>
+                <button id="btn73" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn70);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn73) class="zona4" value="zona4">4</button>
+                <button id="btn74" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn70);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn74) class="zona5" value="zona5">5</button>
+                <button id="btn75" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn70);disable(btn76);disable(btn77);disable(btn78);Zona(btn75) class="zona6" value="zona6">6</button>
+                <button id="btn76" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn70);disable(btn77);disable(btn78);Zona(btn76) class="zona7" value="zona7">7</button>
+                <button id="btn77" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn70);disable(btn78);Zona(btn77) class="zona8" value="zona8">8</button>
+                <button id="btn78" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn70);Zona(btn78) class="zona9" value="zona9">9</button>
+                </div>
+         
+              <div id="DivSubmeter" style="display:none">
+                <br>
+                <button onClick="save();window.location.reload();">Próximo Evento</button>
+               </div>
+        <br>
+               <div class="preamble" id="main" role="article">
+                <p id="demo"></p>
+                <p id="tipo"></p>
+                <p id="jogador1"></p>
+                <p id="jogador2"></p>
+                <p id="zona"></p>
+              </div>
+
+
+
       
       </div>
       <footer class="tm-footer row tm-mt-small">
@@ -108,5 +340,1334 @@
     <!-- https://jquery.com/download/ -->
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
+    <script>
+function disable(btn){
+    document.getElementById(btn.id).disabled = true;
+ }
+ 
+ function color(btn){
+ document.getElementById(btn.id).style.color = "#ff0000";
+ }
+
+ function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+  //botões tipo evento
+ function changegolo(){
+ document.getElementById("golo").src="./images/goloch.png"; 
+ document.getElementById("golo").height="40";
+ document.getElementById("golo").width="40";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+ document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10";
+ }
+ 
+ function changefaltaefetuada(){
+ document.getElementById("faltaefetuada").src="./images/bolaiconch.png";
+ document.getElementById("faltaefetuada").height="40";
+ document.getElementById("faltaefetuada").width="40";
+ document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10";
+ }
+ 
+ function changefaltasofrida(){
+document.getElementById("faltasofrida").src="./images/faltach.png";
+document.getElementById("faltasofrida").height="40";
+document.getElementById("faltasofrida").width="40";
+document.getElementById("golo").height="10";
+document.getElementById("golo").width="10";
+document.getElementById("faltaefetuada").height="10";
+document.getElementById("faltaefetuada").width="10";
+document.getElementById("perdabola").height="10";
+document.getElementById("perdabola").width="10";
+document.getElementById("remate").height="10";
+document.getElementById("remate").width="10";
+document.getElementById("substituicao").height="10";
+document.getElementById("substituicao").width="10";
+document.getElementById("sancao").height="10";
+document.getElementById("sancao").width="10";
+document.getElementById("goloadversario").height="10";
+document.getElementById("goloadversario").width="10";
+ }
+ 
+ function changeperdabola(){
+ document.getElementById("perdabola").src="./images/bolaiconch.png";
+ document.getElementById("perdabola").height="40";
+ document.getElementById("perdabola").width="40";
+document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10"; 
+ }
+ 
+ function changeremate(){
+ document.getElementById("remate").src="./images/rematech.png";
+ document.getElementById("remate").height="40";
+ document.getElementById("remate").width="40";
+document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10"; 
+ }
+ function changesubstituicao(){
+ document.getElementById("substituicao").src="./images/substituicaoch.png";
+ document.getElementById("substituicao").height="40";
+ document.getElementById("substituicao").width="40";
+document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10"; 
+ }
+ function changesancao(){
+ document.getElementById("sancao").src="./images/cartoesch.png";
+ document.getElementById("sancao").height="40";
+ document.getElementById("sancao").width="40";
+document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("goloadversario").height="10";
+ document.getElementById("goloadversario").width="10"; 
+ }
+ function changegoloadversario(){
+ document.getElementById("goloadversario").src="./images/goloadversarioch.png";
+ document.getElementById("goloadversario").height="40";
+ document.getElementById("goloadversario").width="40";
+document.getElementById("golo").height="10";
+ document.getElementById("golo").width="10";
+ document.getElementById("faltaefetuada").height="10";
+ document.getElementById("faltaefetuada").width="10";
+document.getElementById("faltasofrida").height="10";
+ document.getElementById("faltasofrida").width="10";
+ document.getElementById("perdabola").height="10";
+ document.getElementById("perdabola").width="10";
+ document.getElementById("remate").height="10";
+ document.getElementById("remate").width="10";
+ document.getElementById("substituicao").height="10";
+ document.getElementById("substituicao").width="10";
+ document.getElementById("sancao").height="10";
+ document.getElementById("sancao").width="10"; 
+ }
+
+//botões tipo golo
+function changebolaparada(){
+ document.getElementById("canto").src="./images/bolaparadach.png";
+ document.getElementById("canto").height="40";
+ document.getElementById("canto").width="40";
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefinalizacaocurta(){
+ document.getElementById("finalizacaocurta").src="./images/finalizacaocurtach.png";
+ document.getElementById("finalizacaocurta").height="40";
+ document.getElementById("finalizacaocurta").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ 
+ }
+ function changefinalizacaomedia(){
+ document.getElementById("finalizacaomedia").src="./images/jogadacorridach.png";
+ document.getElementById("finalizacaomedia").height="40";
+ document.getElementById("finalizacaomedia").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefinalizacaolonga(){
+ document.getElementById("finalizacaolonga").src="./images/rematelongoch.png";
+ document.getElementById("finalizacaolonga").height="40";
+ document.getElementById("finalizacaolonga").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changepenalti(){
+ document.getElementById("penalti").src="./images/penaltich.png";
+ document.getElementById("penalti").height="40";
+ document.getElementById("penalti").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changelivre10metros(){
+ document.getElementById("livre10metros").src="./images/livre10metrosch.png";
+ document.getElementById("livre10metros").height="40";
+ document.getElementById("livre10metros").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function changefreekick(){
+ document.getElementById("livre").src="./images/freekickch.png";
+ document.getElementById("livre").height="40";
+ document.getElementById("livre").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("5para4").height="10";
+ document.getElementById("5para4").width="10"; 
+ }
+ function change5para4(){
+ document.getElementById("5para4").src="./images/5para4ch.png";
+ document.getElementById("5para4").height="40";
+ document.getElementById("5para4").width="40";
+ document.getElementById("canto").height="10";
+ document.getElementById("canto").width="10";
+ document.getElementById("finalizacaomedia").height="10";
+ document.getElementById("finalizacaomedia").width="10"; 
+ document.getElementById("finalizacaocurta").height="10";
+ document.getElementById("finalizacaocurta").width="10"; 
+ document.getElementById("finalizacaolonga").height="10";
+ document.getElementById("finalizacaolonga").width="10"; 
+ document.getElementById("penalti").height="10";
+ document.getElementById("penalti").width="10"; 
+ document.getElementById("livre10metros").height="10";
+ document.getElementById("livre10metros").width="10"; 
+ document.getElementById("livre").height="10";
+ document.getElementById("livre").width="10"; 
+ }
+
+//botões tipo remate
+function changedefendido(){
+ document.getElementById("defendido").src="./images/defesach.png";
+ document.getElementById("defendido").height="40";
+ document.getElementById("defendido").width="40";
+ document.getElementById("fora").height="10";
+ document.getElementById("fora").width="10";
+ document.getElementById("intersetado").height="10";
+ document.getElementById("intersetado").width="10";
+ document.getElementById("poste").height="10";
+ document.getElementById("poste").width="10";
+ }
+ function changebolafora(){
+ document.getElementById("fora").src="./images/bolaforach.png";
+ document.getElementById("fora").height="40";
+ document.getElementById("fora").width="40";
+ document.getElementById("defendido").height="10";
+ document.getElementById("defendido").width="10";
+ document.getElementById("intersetado").height="10";
+ document.getElementById("intersetado").width="10";
+ document.getElementById("poste").height="10";
+ document.getElementById("poste").width="10";
+ }
+ function changeintersetado(){
+ document.getElementById("intersetado").src="./images/intersetadoch.png";
+ document.getElementById("intersetado").height="40";
+ document.getElementById("intersetado").width="40";
+ document.getElementById("defendido").height="10";
+ document.getElementById("defendido").width="10";
+ document.getElementById("fora").height="10";
+ document.getElementById("fora").width="10";
+ document.getElementById("poste").height="10";
+ document.getElementById("poste").width="10";
+ }
+ function changeposte(){
+ document.getElementById("poste").src="./images/postech.png";
+ document.getElementById("poste").height="40";
+ document.getElementById("poste").width="40";
+ document.getElementById("defendido").height="10";
+ document.getElementById("defendido").width="10";
+ document.getElementById("fora").height="10";
+ document.getElementById("fora").width="10";
+ document.getElementById("intersetado").height="10";
+ document.getElementById("intersetado").width="10";
+ }
+ //botões tipo perdabola
+ function changepasseerrado(){
+ document.getElementById("passeerrado").src="./images/passeerradoch.png";
+ document.getElementById("passeerrado").height="40";
+ document.getElementById("passeerrado").width="40";
+ document.getElementById("desarme").height="10";
+ document.getElementById("desarme").width="10";
+ document.getElementById("maacaotecnica").height="10";
+ document.getElementById("maacaotecnica").width="10";
+ }
+ function changepasseintersetado(){
+ document.getElementById("desarme").src="./images/passeintercetadoch.png";
+ document.getElementById("desarme").height="40";
+ document.getElementById("desarme").width="40";
+ document.getElementById("passeerrado").height="10";
+ document.getElementById("passeerrado").width="10";
+ document.getElementById("maacaotecnica").height="10";
+ document.getElementById("maacaotecnica").width="10";
+ }
+ function changemaacaotecnica(){
+ document.getElementById("maacaotecnica").src="./images/maacaotecnicach.png";
+ document.getElementById("maacaotecnica").height="40";
+ document.getElementById("maacaotecnica").width="40";
+ document.getElementById("passeerrado").height="10";
+ document.getElementById("passeerrado").width="10";
+ document.getElementById("desarme").height="10";
+ document.getElementById("desarme").width="10";
+ }
+
+ //botões tipo sancao
+ function changeamarelo(){
+ document.getElementById("amarelo").src="./images/amareloch.png";
+ document.getElementById("amarelo").height="40";
+ document.getElementById("amarelo").width="40";
+ document.getElementById("vermelho").height="10";
+ document.getElementById("vermelho").width="10";
+ }
+ function changevermelho(){
+ document.getElementById("vermelho").src="./images/vermelhoch.png";
+ document.getElementById("vermelho").height="40";
+ document.getElementById("vermelho").width="40";
+ document.getElementById("amarelo").height="10";
+ document.getElementById("amarelo").width="10";
+ }
+
+//botões jogadores
+ function changediogovieira(){
+ document.getElementById("diogovieira").src="./images/diogovieirach.png";
+ document.getElementById("diogovieira").height="40";
+ document.getElementById("diogovieira").width="40";
+ document.getElementById("alexandrefernandes").height="10";
+ document.getElementById("alexandrefernandes").width="10";
+ document.getElementById("andrecarvalho").height="10";
+ document.getElementById("andrecarvalho").width="10";
+ document.getElementById("claudiosilva").height="10";
+ document.getElementById("claudiosilva").width="10";
+ document.getElementById("dinispereira").height="10";
+ document.getElementById("dinispereira").width="10";
+ }
+
+ function changealexandrefernandes(){
+ document.getElementById("alexandrefernandes").src="./images/alexandrefernandesch.png";
+ document.getElementById("alexandrefernandes").height="40";
+ document.getElementById("alexandrefernandes").width="40";
+ document.getElementById("diogovieira").height="10";
+ document.getElementById("diogovieira").width="10";
+ document.getElementById("andrecarvalho").height="10";
+ document.getElementById("andrecarvalho").width="10";
+ document.getElementById("claudiosilva").height="10";
+ document.getElementById("claudiosilva").width="10";
+ document.getElementById("dinispereira").height="10";
+ document.getElementById("dinispereira").width="10";
+ }
+
+ function changeandrecarvalho(){
+ document.getElementById("andrecarvalho").src="./images/andrecarvalhoph.png";
+ document.getElementById("andrecarvalho").height="40";
+ document.getElementById("andrecarvalho").width="40";
+ document.getElementById("diogovieira").height="10";
+ document.getElementById("diogovieira").width="10";
+ document.getElementById("alexandrefernandes").height="10";
+ document.getElementById("alexandrefernandes").width="10";
+ document.getElementById("claudiosilva").height="10";
+ document.getElementById("claudiosilva").width="10";
+ document.getElementById("dinispereira").height="10";
+ document.getElementById("dinispereira").width="10";
+ }
+
+ function changeclaudiosilva(){
+ document.getElementById("claudiosilva").src="./images/claudiosilvach.png";
+ document.getElementById("claudiosilva").height="40";
+ document.getElementById("claudiosilva").width="40";
+ document.getElementById("diogovieira").height="10";
+ document.getElementById("diogovieira").width="10";
+ document.getElementById("alexandrefernandes").height="10";
+ document.getElementById("alexandrefernandes").width="10";
+ document.getElementById("andrecarvalho").height="10";
+ document.getElementById("andrecarvalho").width="10";
+ document.getElementById("dinispereira").height="10";
+ document.getElementById("dinispereira").width="10";
+ }
+
+ function changedinispereira(){
+ document.getElementById("dinispereira").src="./images/dinispereirach.png";
+ document.getElementById("dinispereira").height="40";
+ document.getElementById("dinispereira").width="40";
+ document.getElementById("diogovieira").height="10";
+ document.getElementById("diogovieira").width="10";
+ document.getElementById("alexandrefernandes").height="10";
+ document.getElementById("alexandrefernandes").width="10";
+ document.getElementById("andrecarvalho").height="10";
+ document.getElementById("andrecarvalho").width="10";
+ document.getElementById("claudiosilva").height="10";
+ document.getElementById("claudiosilva").width="10";
+ }
+
+ //botões jogadores1
+ function changedvieira(){
+ document.getElementById("dvieira").src="./images/diogovieirach.png";
+ document.getElementById("dvieira").height="40";
+ document.getElementById("dvieira").width="40";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changealexfernandes(){
+ document.getElementById("alexfernandes").src="./images/alexandrefernandesch.png";
+ document.getElementById("alexfernandes").height="40";
+ document.getElementById("alexfernandes").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changeacarvalho(){
+ document.getElementById("acarvalho").src="./images/andrecarvalhoph.png";
+ document.getElementById("acarvalho").height="40";
+ document.getElementById("acarvalho").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changeclasilva(){
+ document.getElementById("clasilva").src="./images/claudiosilvach.png";
+ document.getElementById("clasilva").height="40";
+ document.getElementById("clasilva").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changedpereira(){
+ document.getElementById("dpereira").src="./images/dinispereirach.png";
+ document.getElementById("dpereira").height="40";
+ document.getElementById("dpereira").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ }
+
+ 
+ //botões jogadoresAssist
+ function changediogovieiraassis(){
+ document.getElementById("diovieira").src="./images/diogovieirach.png";
+ document.getElementById("diovieira").height="40";
+ document.getElementById("diovieira").width="40";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changealexandrefernandesassist(){
+ document.getElementById("alexanfernandes").src="./images/alexandrefernandesch.png";
+ document.getElementById("alexanfernandes").height="40";
+ document.getElementById("alexanfernandes").width="40";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changeandrecarvalhoassist(){
+ document.getElementById("andcarvalho").src="./images/andrecarvalhoph.png";
+ document.getElementById("andcarvalho").height="40";
+ document.getElementById("andcarvalho").width="40";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changeclaudiosilvaassist(){
+ document.getElementById("clausilva").src="./images/claudiosilvach.png";
+ document.getElementById("clausilva").height="40";
+ document.getElementById("clausilva").width="40";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changedinispereiraassist(){
+ document.getElementById("dinpereira").src="./images/dinispereirach.png";
+ document.getElementById("dinpereira").height="40";
+ document.getElementById("dinpereira").width="40";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("nenhum").height="10";
+ document.getElementById("nenhum").width="10";
+ }
+
+ function changenenhum(){
+ document.getElementById("nenhum").src="./images/nenhumch.png";
+ document.getElementById("nenhum").height="40";
+ document.getElementById("nenhum").width="40";
+ document.getElementById("diovieira").height="10";
+ document.getElementById("diovieira").width="10";
+ document.getElementById("alexanfernandes").height="10";
+ document.getElementById("alexanfernandes").width="10";
+ document.getElementById("andcarvalho").height="10";
+ document.getElementById("andcarvalho").width="10";
+ document.getElementById("clausilva").height="10";
+ document.getElementById("clausilva").width="10";
+ document.getElementById("dinpereira").height="10";
+ document.getElementById("dinpereira").width="10";
+ }
+//botões showoutradiv jogadores
+ function showJogadorGolo() {
+  document.getElementById('DivJogadorGolo').style.display = "block";
+}
+function showJogador() {
+  document.getElementById('DivJogador').style.display = "block";
+}
+function showJogadorAssist() {
+  document.getElementById('DivJogadorAssist').style.display = "block";
+}
+//botões showoutradiv jogadores
+function showTipoGolo() {
+  document.getElementById('DivTipoGolo').style.display = "block";
+}
+function showTipoPerda() {
+  document.getElementById('DivTipoPerdaBola').style.display = "block";
+}
+function showTipoRemate() {
+  document.getElementById('DivTipoRemate').style.display = "block";
+}
+function showTipoSancao() {
+  document.getElementById('DivTipoSancao').style.display = "block";
+}
+function showTipoGoloAdversario() {
+  document.getElementById('DivTipoGoloVisitante').style.display = "block";
+}
+function showJogEntraSubst() {
+  document.getElementById('DivJogadoresBanco').style.display = "block";
+}
+function showCampo() {
+  document.getElementById('DivCampo').style.display = "block";
+}
+function showFinalButton() {
+  document.getElementById('DivSubmeter').style.display = "block";
+}
+
+//golo adversario
+//botões tipo golo
+
+function changebolaparadaadv(){
+ document.getElementById("cantoadv").src="./images/bolaparadach.png";
+ document.getElementById("cantoadv").height="50";
+ document.getElementById("cantoadv").width="50";
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function changefinalizacaocurtaadv(){
+ document.getElementById("finalizacaocurtaadv").src="./images/finalizacaocurtach.png";
+ document.getElementById("finalizacaocurtaadv").height="50";
+ document.getElementById("finalizacaocurtaadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ 
+ }
+ function changefinalizacaomediaadv(){
+ document.getElementById("finalizacaomediaadv").src="./images/jogadacorridach.png";
+ document.getElementById("finalizacaomediaadv").height="50";
+ document.getElementById("finalizacaomediaadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function changefinalizacaolongaadv(){
+ document.getElementById("finalizacaolongaadv").src="./images/rematelongoch.png";
+ document.getElementById("finalizacaolongaadv").height="50";
+ document.getElementById("finalizacaolongaadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function changepenaltiadv(){
+ document.getElementById("penaltiadv").src="./images/penaltich.png";
+ document.getElementById("penaltiadv").height="50";
+ document.getElementById("penaltiadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function changelivre10metrosadv(){
+ document.getElementById("livre10metrosadv").src="./images/livre10metrosch.png";
+ document.getElementById("livre10metrosadv").height="50";
+ document.getElementById("livre10metrosadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function changefreekickadv(){
+ document.getElementById("livreadv").src="./images/freekickch.png";
+ document.getElementById("livreadv").height="50";
+ document.getElementById("livreadv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("5para4adv").height="10";
+ document.getElementById("5para4adv").width="10"; 
+ }
+ function change5para4adv(){
+ document.getElementById("5para4adv").src="./images/5para4ch.png";
+ document.getElementById("5para4adv").height="50";
+ document.getElementById("5para4adv").width="50";
+ document.getElementById("cantoadv").height="10";
+ document.getElementById("cantoadv").width="10";
+ document.getElementById("finalizacaomediaadv").height="10";
+ document.getElementById("finalizacaomediaadv").width="10"; 
+ document.getElementById("finalizacaocurtaadv").height="10";
+ document.getElementById("finalizacaocurtaadv").width="10"; 
+ document.getElementById("finalizacaolongaadv").height="10";
+ document.getElementById("finalizacaolongaadv").width="10"; 
+ document.getElementById("penaltiadv").height="10";
+ document.getElementById("penaltiadv").width="10"; 
+ document.getElementById("livre10metrosadv").height="10";
+ document.getElementById("livre10metrosadv").width="10"; 
+ document.getElementById("livreadv").height="10";
+ document.getElementById("livreadv").width="10"; 
+ }
+
+//botões jogadoresbanco
+
+function changediogojose(){
+ document.getElementById("diogojose").src="./images/diogojosech.png";
+ document.getElementById("diogojose").height="50";
+ document.getElementById("diogojose").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changediogosilva(){
+ document.getElementById("diogojose").src="./images/diogosilvach.png";
+ document.getElementById("diogojose").height="50";
+ document.getElementById("diogojose").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changeguilhermecepeda(){
+ document.getElementById("guilhermecepeda").src="./images/guilhermecepedach.png";
+ document.getElementById("guilhermecepeda").height="50";
+ document.getElementById("guilhermecepeda").width="50";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changejoaofreitas(){
+ document.getElementById("joaofreitas").src="./images/joaofreitasch.png";
+ document.getElementById("joaofreitas").height="50";
+ document.getElementById("joaofreitas").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changejoaolopes(){
+ document.getElementById("joaolopes").src="./images/joaolopesch.png";
+ document.getElementById("joaolopes").height="50";
+ document.getElementById("joaolopes").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+ function changeluismatos(){
+ document.getElementById("luismatos").src="./images/luismatosch.png";
+ document.getElementById("luismatos").height="50";
+ document.getElementById("luismatos").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+ function changemarcooliveira(){
+ document.getElementById("marcooliveira").src="./images/marcooliveirach.png";
+ document.getElementById("marcooliveira").height="50";
+ document.getElementById("marcooliveira").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changepaulocorreia(){
+ document.getElementById("paulocorreia").src="./images/paulocorreiach.png";
+ document.getElementById("paulocorreia").height="50";
+ document.getElementById("paulocorreia").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changerafaelferreira(){
+ document.getElementById("rafaelferreira").src="./images/rafaelferreirach.png";
+ document.getElementById("rafaelferreira").height="50";
+ document.getElementById("rafaelferreira").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changericardolopes(){
+ document.getElementById("ricardolopes").src="./images/ricardolopesch.png";
+ document.getElementById("ricardolopes").height="50";
+ document.getElementById("ricardolopes").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changerubenrocha(){
+ document.getElementById("rubenrocha").src="./images/rubenrochach.png";
+ document.getElementById("rubenrocha").height="50";
+ document.getElementById("rubenrocha").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changesamuelmarques(){
+ document.getElementById("samuelmarques").src="./images/samuelmarquesch.png";
+ document.getElementById("samuelmarques").height="50";
+ document.getElementById("samuelmarques").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ document.getElementById("tomascastro").height="10";
+ document.getElementById("tomascastro").width="10";
+ }
+
+ function changetomascastro(){
+ document.getElementById("tomascastro").src="./images/tomascastroch.png";
+ document.getElementById("tomascastro").height="50";
+ document.getElementById("tomascastro").width="50";
+ document.getElementById("diogosilva").height="10";
+ document.getElementById("diogosilva").width="10";
+ document.getElementById("guilhermecepeda").height="10";
+ document.getElementById("guilhermecepeda").width="10";
+ document.getElementById("joaofreitas").height="10";
+ document.getElementById("joaofreitas").width="10";
+ document.getElementById("joaolopes").height="10";
+ document.getElementById("joaolopes").width="10";
+ document.getElementById("luismatos").height="10";
+ document.getElementById("luismatos").width="10";
+ document.getElementById("marcooliveira").height="10";
+ document.getElementById("marcooliveira").width="10";
+ document.getElementById("paulocorreia").height="10";
+ document.getElementById("paulocorreia").width="10";
+ document.getElementById("rafaelferreira").height="10";
+ document.getElementById("rafaelferreira").width="10";
+ document.getElementById("ricardolopes").height="10";
+ document.getElementById("ricardolopes").width="10";
+ document.getElementById("rubenrocha").height="10";
+ document.getElementById("rubenrocha").width="10";
+ document.getElementById("samuelmarques").height="10";
+ document.getElementById("samuelmarques").width="10";
+ document.getElementById("diogojose").height="10";
+ document.getElementById("diogojose").width="10";
+ }
+
+//Evento
+function myFunction(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+function Tipo(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("tipo").innerHTML = x;
+}
+
+function Jogador1(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("jogador1").innerHTML = x;
+}
+
+function Jogador2(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("jogador2").innerHTML = x;
+}
+
+function Zona(btn) {
+  var x = document.getElementById(btn.id).value;
+  document.getElementById("zona").innerHTML = x;
+}
+
+function exportar() {
+document.getElementById("export").addEventListener("click",function(){
+    let dataUri = 'data:text/html,' 
+        + encodeURIComponent(document.getElementById("fileContents").textContent);
+    this.href = dataUri;        
+},false)
+}
+
+function salvar() {
+      let texto = document.getElementById("texto").value;
+      let blob = new Blob([texto], { type: "text/plain;charset=utf-8" });
+      saveAs(blob, "teste" + ".txt");
+   }
+
+   function save(){
+function downloadInnerHtml(filename, elId) {
+debugger;
+    var elHtml = document.getElementById(elId).innerHTML;
+    var link = document.createElement('a');
+    link.setAttribute('download', filename);
+    
+    link.setAttribute('href', 'data:' + 'text/csv' + ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+}
+var fileName =  'teste.csv'; // You can use the .txt extension if you want
+downloadInnerHtml(fileName, 'main');
+
+}
+
+//
+ function submeter(){
+  alert("Submit button clicked!");
+   return true;
+
+ }
+
+var seconds = 1200;
+function secondPassed() {
+    var minutes = Math.round((seconds - 30)/60);
+    var remainingSeconds = seconds % 60;
+    if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;  
+    }
+    document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
+    if (seconds == 0) {
+        clearInterval(countdownTimer);
+        document.getElementById('countdown').innerHTML = "Fim";
+    } else {
+        seconds--;
+    }
+}
+ 
+var countdownTimer = setInterval('secondPassed()', 1000);     
+
+
+
+    </script>
+
+
+
+
   </body>
 </html>
