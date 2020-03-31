@@ -80,42 +80,197 @@
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
           <div class="tm-bg-primary-dark tm-block tm-block-products">
             <div class="tm-product-table-container">
-          <div class="tab tab-1">
-              <table id="table">
+              <table id="myTable" class="table table-hover tm-table-small tm-product-table">
+                <thead>
                   <tr>
-                      <th>Nome</th>
-                      <th>Foto</th>
-                      <th>Age</th>
+                    <th scope="col">NOME JOGADOR</th>
+                    <th scope="col">IDADE</th>
+                    <th scope="col">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tm-product-name">Diogo Vieira</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
                   </tr>
                   <tr>
-                      <td>A1</td>
-                      <td>B1</td>
-                      <td>10</td>
+                    <td class="tm-product-name">Marco Oliveira</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
                   </tr>
                   <tr>
-                      <td>A3</td>
-                      <td>B3</td>
-                      <td>30</td>
+                    <td class="tm-product-name">Andre Carvalho</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
                   </tr>
                   <tr>
-                      <td>A2</td>
-                      <td>B2</td>
-                      <td>20</td>
+                    <td class="tm-product-name">Claudio Silva</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
                   </tr>
+                  <tr>
+                    <td class="tm-product-name">Dinis Pereira</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Alexandre Fernandes</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Diogo José</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Elian Leitão</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Guilherme Cepeda</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">João Freitas</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">João Lopes</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Luis Matos</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Paulo Correia</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Rafael Ferreira</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Ricardo Lopes</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Rúben Rocha</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Samuel Marques</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Tomás Castro</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Teste Jogador</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tm-product-name">Rafael 2</td>
+                    <td>20</td>
+                    <td>
+                      <a onclick="deleteRow(this)" class="tm-product-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
-          </div>
-          <br>
-          <div class="tab tab-2">
-              First Name :<input type="text" name="fname" id="fname">
-              Last Name :<input type="text" name="lname" id="lname">
-              Age :<input type="number" name="age" id="age">
-              
-              <button onclick="addHtmlTableRow();">Add</button>
-              <button onclick="editHtmlTbleSelectedRow();">Edit</button>
-              <button onclick="removeSelectedRow();">Remove</button>
-          </div>
-      </div>
-
             </div>
             <!-- table container -->
             <a
@@ -141,94 +296,16 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
     <script>
-            var rIndex,
-                table = document.getElementById("table");
-            
-            // check the empty input
-            function checkEmptyInput()
-            {
-                var isEmpty = false,
-                    fname = document.getElementById("fname").value,
-                    lname = document.getElementById("lname").value,
-                    age = document.getElementById("age").value;
-            
-                if(fname === ""){
-                    alert("First Name Connot Be Empty");
-                    isEmpty = true;
-                }
-                else if(lname === ""){
-                    alert("Last Name Connot Be Empty");
-                    isEmpty = true;
-                }
-                else if(age === ""){
-                    alert("Age Connot Be Empty");
-                    isEmpty = true;
-                }
-                return isEmpty;
-            }
-            
-            // add Row
-            function addHtmlTableRow()
-            {
-                // get the table by id
-                // create a new row and cells
-                // get value from input text
-                // set the values into row cell's
-                if(!checkEmptyInput()){
-                var newRow = table.insertRow(table.length),
-                    cell1 = newRow.insertCell(0),
-                    cell2 = newRow.insertCell(1),
+      $(function() {
+        $(".tm-product-name").on("click", function() {
+          window.location.href = "editardadosjogador.html";
+        });
+      });
 
-                    fname = document.getElementById("fname").value,
-                    lname = document.getElementById("lname").value,
-                    age = document.getElementById("age").value;
-            
-                cell1.innerHTML = fname;
-                cell2.innerHTML = lname;
-                cell3.innerHTML = age;
-                // call the function to set the event to the new row
-                selectedRowToInput();
-            }
-            }
-            
-            // display selected row data into input text
-            function selectedRowToInput()
-            {
-                
-                for(var i = 1; i < table.rows.length; i++)
-                {
-                    table.rows[i].onclick = function()
-                    {
-                      // get the seected row index
-                      rIndex = this.rowIndex;
-                      document.getElementById("fname").value = this.cells[0].innerHTML;
-                      document.getElementById("lname").value = this.cells[1].innerHTML;
-                      document.getElementById("age").value = this.cells[2].innerHTML;
-                    };
-                }
-            }
-            selectedRowToInput();
-            
-            function editHtmlTbleSelectedRow()
-            {
-                var fname = document.getElementById("fname").value,
-                    lname = document.getElementById("lname").value,
-                    age = document.getElementById("age").value;
-               if(!checkEmptyInput()){
-                table.rows[rIndex].cells[0].innerHTML = fname;
-                table.rows[rIndex].cells[1].innerHTML = lname;
-                table.rows[rIndex].cells[2].innerHTML = age;
-              }
-            }
-            
-            function removeSelectedRow()
-            {
-                table.deleteRow(rIndex);
-                // clear input text
-                document.getElementById("fname").value = "";
-                document.getElementById("lname").value = "";
-                document.getElementById("age").value = "";
-            }
+      function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("myTable").deleteRow(i);
+}
 
     </script>
   </body>
