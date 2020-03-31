@@ -46,7 +46,7 @@
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-chart-line"></i>
                                 <span>
-                                    Estatisticas<i class="fas fa-angle-down"></i>
+                                    Estatisticas <i class="fas fa-angle-down"></i>
                                 </span>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -78,6 +78,7 @@
                 <div class="col-12 tm-block-col">
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                         <h2 class="tm-block-title">Calendário de Jogos</h2>
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -466,6 +467,25 @@
                 updateBarChart();                
             });
         })
+
+  function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
     </script>
 </body>
 
