@@ -258,7 +258,7 @@
             <a
               href="adicionarjogador.html"
               class="btn btn-primary btn-block text-uppercase mb-3">Adicionar Jogador</a>
-            <button class="btn btn-primary btn-block text-uppercase">
+            <button onclick="nameDelete()" class="btn btn-primary btn-block text-uppercase">
               Excluir Jogador Plantel
             </button>
           </div>
@@ -286,6 +286,11 @@
           window.location.href = "editardadosjogador.html";
         });
       });
+
+      function nameDelete(ctl) {
+  $(ctl).parents("tr").remove();
+}
+
     </script>
   </body>
 </html>
