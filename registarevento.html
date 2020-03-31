@@ -306,10 +306,11 @@
                 <button id="btn77" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn70);disable(btn78);Zona(btn77) class="zona8" value="zona8">8</button>
                 <button id="btn78" onclick=showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn70);Zona(btn78) class="zona9" value="zona9">9</button>
                 </div>
-         
+                <div id="welcomeDiv"  style="display:none;" class="answer_list" > WELCOME</div>
+
               <div id="DivSubmeter" style="display:none">
                 <br>
-                <button onClick="save();window.location.reload();">Próximo Evento</button>
+                <button onClick="guardar();window.location.reload();">Próximo Evento</button>
                </div>
         <br>
                <div class="preamble" id="main" role="article">
@@ -1661,6 +1662,9 @@ function secondPassed() {
  
 var countdownTimer = setInterval('secondPassed()', 1000);     
 
+function showDiv() {
+   document.getElementById('welcomeDiv').style.display = "block";
+}
 
 
     </script>
