@@ -146,7 +146,7 @@ h4 {
                   </td>
                   <td style="position:center; text-align:center">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="Suplente1" checked>
+                        <input type="checkbox" class="custom-control-input 1" id="Suplente1" checked>
                         <label class="custom-control-label" for="Suplente1"></label>
                     </div>
                   </td>
@@ -157,7 +157,7 @@ h4 {
                   <td>24</td>
                   <td style="position:center; text-align:center">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox"  class="custom-control-input" id="Titular3" value="Titular" onclick="return myfun()">
+                      <input type="checkbox"  class="custom-control-input 1" id="Titular3" value="Titular" onclick="return myfun()">
                       <label class="custom-control-label" for="Titular3"></label>
                     </div>
                   </td>
@@ -175,7 +175,7 @@ h4 {
                     <td>11</td>
                     <td style="position:center; text-align:center">
                       <div  class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="Titular3" value="Titular" onclick="return myfun()">
+                        <input type="checkbox" class="custom-control-input 1" id="Titular3" value="Titular" onclick="return myfun()">
                         <label class="custom-control-label" for="Titular3"></label>
                       </div>
                     </td>
@@ -192,7 +192,7 @@ h4 {
                   <td>8</td>
                   <td style="position:center; text-align:center">
                     <div  class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="Titular4" value="Titular" onclick="return myfun()">
+                      <input type="checkbox" class="custom-control-input 1" id="Titular4" value="Titular" onclick="return myfun()">
                       <label class="custom-control-label" for="Titular4"></label>
                     </div>
                   </td>
@@ -285,6 +285,26 @@ if(newvar>=2){
   return false;
 }
 }
+
+
+        var totChecks = 0;
+        $('.chkGroup').on('change', function() {
+              if($(this).prop("checked") == true)
+              {
+                 if(totChecks > 2){
+                   /*cancel your action*/
+                   console.log("too many checks!");
+                   return false;
+                 }
+                 /*otherwise, proceed*/
+                 totChecks = totChecks + 1;
+              }
+             else //checkbox is unchecked, so remove a point from totChecks.
+              {
+                totChecks = totChecks - 1;
+              }
+        });
+
   </script>
   </body>
 </html>
