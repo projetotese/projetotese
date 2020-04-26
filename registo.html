@@ -139,7 +139,7 @@ h4 {
                   <td>Bootstrap 4 CDN and Starter Template</td>
                   <td>Cristina</td>
                   <td style="position:center; text-align:center">
-                    <div  class="check">
+                    <div  class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
                         <label class="custom-control-label" for="5Inicial1"></label>
                     </div>
@@ -156,7 +156,7 @@ h4 {
                   <td>Bootstrap 4 CDN and Starter Template</td>
                   <td>Cristina</td>
                   <td style="position:center; text-align:center">
-                    <div  class="check">
+                    <div  class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
                         <label class="custom-control-label" for="5Inicial1"></label>
                     </div>
@@ -174,7 +174,7 @@ h4 {
                     <td>Bootstrap 4 CDN and Starter Template</td>
                     <td>152</td>
                     <td style="position:center; text-align:center">
-                      <div  class="check">
+                      <div  class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
                           <label class="custom-control-label" for="5Inicial1"></label>
                       </div>
@@ -190,8 +190,8 @@ h4 {
 
                   <td>Bootstrap Flexbox Tutorial and Examples</td>
                   <td>Cristina</td>
-                  <td style="position:center; text-align:center;margin-top: 10px;"></tdstyle>>
-                    <div class="check">
+                  <td style="position:center; text-align:center" ></tdstyle>>
+                    <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="5Inicial3">
                         <label class="custom-control-label" for="5Inicial3"></label>
                     </div>
@@ -267,16 +267,6 @@ function printSelected() {
   for (var i = 0; i < selectedRows.length; ++i) {
     textArea.value += selectedRows[i].textContent.trim() + '\n';
   }
-}
-
-var checks = document.querySelectorAll(".check");
-var max = 2;
-for (var i = 0; i < checks.length; i++)
-  checks[i].onclick = selectiveCheck;
-function selectiveCheck (event) {
-  var checkedChecks = document.querySelectorAll(".check:checked");
-  if (checkedChecks.length >= max + 1)
-    return false;
 }
 
   </script>
