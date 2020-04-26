@@ -140,8 +140,7 @@ h4 {
                   <td>Cristina</td>
                   <td style="position:center; text-align:center">
                     <div  class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
-                        <label class="custom-control-label" for="5Inicial1"></label>
+                      <input type="checkbox" name="5inicial" onclick="return myfun()">    
                     </div>
                   </td>
                   <td style="position:center; text-align:center">
@@ -157,8 +156,7 @@ h4 {
                   <td>Cristina</td>
                   <td style="position:center; text-align:center">
                     <div  class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
-                        <label class="custom-control-label" for="5Inicial1"></label>
+                      <input type="checkbox" name="5inicial" onclick="return myfun()">    
                     </div>
                   </td>
                   <td style="position:center; text-align:center">
@@ -175,8 +173,7 @@ h4 {
                     <td>152</td>
                     <td style="position:center; text-align:center">
                       <div  class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="5Inicial1" checked>
-                          <label class="custom-control-label" for="5Inicial1"></label>
+                      <input type="checkbox" name="5inicial" onclick="return myfun()">    
                       </div>
                     </td>
                     <td style="position:center; text-align:center" >
@@ -192,8 +189,7 @@ h4 {
                   <td>Cristina</td>
                   <td style="position:center; text-align:center" ></tdstyle>>
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="5Inicial3">
-                        <label class="custom-control-label" for="5Inicial3"></label>
+                      <input type="checkbox" name="5inicial" onclick="return myfun()">    
                     </div>
                   </td>
                   <td style="position:center; text-align:center" >
@@ -269,6 +265,22 @@ function printSelected() {
   }
 }
 
+function myfun(){
+
+var a = document.getElementsByName('5inicial');
+var newvar = 0;
+var count;
+for(count=0; count<a.length; count ++){
+  if(a[count].checked==true){
+    newvar = newvar + 1;
+  }
+}
+
+if(newvar>=2){
+  document.getElementById('notvalid').innerHTML="Selecione apenas 2 jogadores"
+  return false;
+}
+}
   </script>
   </body>
 </html>
