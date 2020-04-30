@@ -680,6 +680,15 @@ function Suplente20() {
 }
 
 
+$(function(){
+  var MAX_SELECT = 3; // Máximo de 'input' selecionados
+  
+  $('input.custom-control-input 1').on('change', function(){
+    if( $(this).siblings(':checked').length >= MAX_SELECT ){
+       this.checked = false;
+    }
+  });
+});
 
 
 
