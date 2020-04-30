@@ -680,16 +680,14 @@ function Suplente20() {
 }
 
 
-$(function(){
-  var MAX_SELECT = 3; // Máximo de 'input' selecionados
-  
-  $('input.custom-control-input 1').on('change', function(){
-    if( $(this).siblings(':checked').length >= MAX_SELECT ){
-       this.checked = false;
-    }
-  });
+$(document).on('click', '.custom-control-input 1', function(){
+   var limit = 3;
+   var counter = $('.custom-control-input 1:checked').length;
+   if(counter > limit) {
+      this.checked = false;
+      alert('Limite atingido');
+   }
 });
-
 
 
 
