@@ -120,6 +120,14 @@ h4 {
           </div>
         </div>
       </div>
+      <div class="checkboxdiv">
+        <input type="hidden" name="Extras" value="">
+        <input type="checkbox" name="Extras" value="Wedges"><label>Wedges</label> <br/>
+        <input type="checkbox" name="Extras" value="Chips"><label>Chips</label> <br/>
+        <input type="checkbox" name="Extras" value="Garlic Bread"><label>Garlic Bread</label> <br/>
+        <input type="checkbox" name="Extras" value="Chicken Wings"><label>Chicken Wings</label> <br/>
+        <input type="checkbox" name="Extras" value="Cheese Sticks"><label>Cheese Sticks</label>
+    </div>
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -680,14 +688,7 @@ function Suplente20() {
 }
 
 
-$(document).on('click', '.custom-control-input 1', function(){
-   var limit = 3;
-   var counter = $('.custom-control-input 1:checked').length;
-   if(counter > limit) {
-      this.checked = false;
-      alert('Limite atingido');
-   }
-});
+
 
 limit = 0; //set limit
 
@@ -727,7 +728,41 @@ for (i = 0; i < checkboxes.length; i++) {
 
 
 
+limit = 0; //set limit
 
+checkboxes = document.querySelectorAll('.checkboxdiv input[type="checkbox"]'); //select all checkboxes
+
+function checker(elem) {
+  if (elem.checked) { //if checked, increment counter
+    limit++;
+  } else {
+    limit--; //else, decrement counter
+  }
+
+  for (i = 0; i < checkboxes.length; i++) { // loop through all 
+
+    if (limit == 2) {
+      if (!checkboxes[i].checked) {
+        checkboxes[i].disabled = true; // and disable unchecked checkboxes
+
+      }
+
+    } else { //if limit is less than two
+
+      if (!checkboxes[i].checked) {
+        checkboxes[i].disabled = false; // enable unchecked checkboxes
+      }
+
+    }
+  }
+
+}
+
+for (i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].onclick = function() { //call function on click and send current element as param
+    checker(this);
+  }
+}
 
 
   </script>
