@@ -154,9 +154,7 @@
     opacity:0.9;
 }
 
-.button{
-  border:  10px solid black;
-}
+
     </style>
 
 <body id="reportsPage">
@@ -183,7 +181,7 @@
     <div class="container mt-5">
         <div class="container-sm" id="escolhaevento" style="display:none" >
             <button id="btn1"  class="w3-button w3-black" style="background-color: transparent" onclick=disable(btn2);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoGolo();myFunction(btn1) name="evento" value="golo"><img id="golo" src="./images/golo.png" onclick="changegolo()" height="170px" width="110px">a</button>
-            <button id="btn2"  style="background-color: transparent" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction(btn2) name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="170px" width="110px">a</button>
+            <button id="btn2"  style="background-color: transparent;border:  10px solid black" onclick=disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction(btn2) name="evento" value="faltaefetuada"><img id="faltaefetuada" src="./images/bolaicon.png" onclick="changefaltaefetuada()" height="170px" width="110px">a</button>
             <button id="btn3"  style="background-color: transparent" onclick=disable(btn2);disable(btn1);disable(btn4);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showJogador();myFunction(btn3) name="evento" value="faltasofrida"><img id="faltasofrida" src="./images/falta.png" onclick="changefaltasofrida()" height="170px" width="110px">a</button>
             <button id="btn4"  style="background-color: transparent" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn5);disable(btn6);disable(btn7);disable(btn8);showTipoPerda();myFunction(btn4) name="evento" value="perdabola"><img id="perdabola" src="./images/perdabola.png" onclick="changeperdabola()" height="170px" width="110px">a</button>
             <button id="btn5"  style="background-color: transparent" onclick=disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn6);disable(btn7);disable(btn8);showTipoRemate();myFunction(btn5) name="evento" value="Remate"><img id="remate" src="./images/remate.png" onclick="changeremate()" height="170px" width="110px">a</button>
