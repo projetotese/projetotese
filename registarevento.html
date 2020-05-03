@@ -1664,6 +1664,11 @@ function resumeTimer() {
 
 start.addEventListener("click", function () {
     startTimer(20, 0);
+
+    if(display.textContent == "00:00") {
+            document.querySelector("#div1").style.display="block";
+        }
+        
 }, false);
 
 pause.addEventListener("click", pauseTimer, false);
