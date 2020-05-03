@@ -157,7 +157,7 @@
 
                 <div>
                   <p id="timer">00:00</p>
-<button id="start">Start</button>
+
 <button id="pause">Pause</button>
 <button id="resume">Resume</button>
                 </div>
@@ -293,7 +293,7 @@
                 <p id="zona"></p>
               </div>
               <div class="inicio">
-              <button id="btn00"  style="background-color: transparent; text-align: center"   onclick="showTipoEvento();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Iniciar Jogo</button>
+              <button id="start"  style="background-color: transparent; text-align: center"   onclick="showTipoEvento();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Iniciar Jogo</button>
             </div>
               
       
@@ -1013,7 +1013,7 @@ function showFinalButton() {
 }
 
 function hideinicio(){
-    var x= document.getElementById("btn00");
+    var x= document.getElementById("start");
     x.style.display = "block";
         
     }
