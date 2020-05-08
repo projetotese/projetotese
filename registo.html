@@ -102,7 +102,7 @@ h4 {
       </nav>
 
     <div class="container mt-5">
-      <div class="row tm-content-row">
+      <div id="div1" class="row tm-content-row">
         <div class="col-12 tm-block-col">
           <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
             <h2 class="tm-block-title">Lista de Jogos</h2>
@@ -451,7 +451,7 @@ h4 {
         </div>
       </div>
 
-      <a href="registarevento.html" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
+      <a onclick="avançar(this)" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
       <div class="col-12 font-weight-light">
@@ -709,6 +709,15 @@ function yesnoCheck(that) {
     } else {
       alert("Selecione um jogo");
         document.getElementById("convocados").style.display = "none";
+    }
+}
+
+function avançar(that) {
+  var d1= document.getElementById('div1');
+    if (d1.that.value >= "2" ) {
+      window.location.href = "http://www.w3schools.com";
+    } else {
+      alert("Selecione um jogo");
     }
 }
 
