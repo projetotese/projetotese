@@ -713,11 +713,11 @@ function yesnoCheck(that) {
 }
 
 function avançar() {
-  var valor= document.getElementById('valor');
-    if (valor >= 2 ) {
+  var valor = document.getElementById('valor');
+    if (valor >= "2" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor
       window.location.href = "http://www.w3schools.com";
     } else {
-      alert("Selecione um jogo");
+      alert("Tem de selecionar um jogo para continuar");
     }
 }
 
