@@ -298,8 +298,8 @@
               <div class="inicio">
               <button id="start" class="btn btn-outline-primary" style="background-color: transparent; text-align: center;border:  5px solid black"   onclick="showTipoEvento();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Iniciar Jogo</button>
             </div>
-            <div class="intervalo" style="display:none">
-              <button id="start"  style="background-color: transparent; text-align: center;border:  5px solid black"   onclick="showTipoEvento();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Começar 2ª parte</button>
+            <div id="2parte" class="intervalo" style="display:none">
+              <button id="start"  style="background-color: transparent; text-align: center;border:  5px solid black"   onclick="showTipoEvento2();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Começar 2ª parte</button>
             </div>
               
       
@@ -982,6 +982,9 @@ function changedefendido(){
 function showTipoEvento() {
   document.getElementById('escolhaevento').style.display = "block";
 }
+function showTipoEvento2() {
+  document.getElementById('escolhaevento').style.display = "block";
+}
 
  function showJogadorGolo() {
   document.getElementById('DivJogadorGolo').style.display = "block";
@@ -1656,6 +1659,7 @@ function startTimer(m, s) {
           document.getElementById('DivJogadoresBanco').style.display = "none";
           document.getElementById('DivCampo').style.display = "none";
           document.getElementById('DivSubmeter').style.display = "none";
+          document.getElementById('2parte').style.display = "block";
             return;
         } else if (m != 0) {
             m = m - 1;
