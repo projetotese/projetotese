@@ -288,7 +288,7 @@
                 <button onClick="showDiv();guardar();">Próximo Evento</button>
                </div>
         <br>
-            <div style="background-color: transparent" class="preamble" id="main" role="article">
+            <div style="background-color: transparent" class="preamble" id="main" role="article" style="display: none;">
                 <p id="demo"></p>
                 <p id="tipo"></p>
                 <p id="jogador1"></p>
@@ -1645,6 +1645,17 @@ function startTimer(m, s) {
     if (s == 0) {
         if (m == 0) {
           document.getElementById('escolhaevento').style.display = "block";
+          document.getElementById('DivTipoGolo').style.display = "block";
+          document.getElementById('DivTipoRemate').style.display = "block";
+          document.getElementById('DivTipoPerdaBola').style.display = "block";
+          document.getElementById('DivTipoSancao').style.display = "block";
+          document.getElementById('DivTipoGoloVisitante').style.display = "block";
+          document.getElementById('DivJogadorGolo').style.display = "block";
+          document.getElementById('DivJogador').style.display = "block";
+          document.getElementById('DivJogadorAssist').style.display = "block";
+          document.getElementById('DivJogadoresBanco').style.display = "block";
+          document.getElementById('DivCampo').style.display = "block";
+          document.getElementById('DivSubmeter').style.display = "block";
             return;
         } else if (m != 0) {
             m = m - 1;
