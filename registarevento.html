@@ -1645,6 +1645,7 @@ function startTimer(m, s) {
     if (s == 0) {
         if (m == 0) {
           alert('Acabou o tempo!!!');
+          document.getElementById('escolhaevento').style.display = "block";
             return;
         } else if (m != 0) {
             m = m - 1;
