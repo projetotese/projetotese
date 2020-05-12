@@ -159,11 +159,14 @@
             <div class="container h-100">
                
               <p style="text-align: center;font-size: 45px">2ª Parte</p>
-                <div>
-                  <p id="timer">00:00</p>
-<button id="pause" style="background-color: transparent">Pausa</button>
-<button id="resume" style="background-color: transparent">Retomar</button>
-                </div>
+              <div>
+                <p id="timer">00:00</p>
+              </div>
+
+              <div>
+                <button id="pause" style="background-color: transparent;display:none">Pausa</button>
+                <button id="resume" style="background-color: transparent;display:none">Retomar</button>
+              </div>
 
 
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -978,6 +981,10 @@ function changedefendido(){
 //botões showoutradiv jogadores
 function showTipoEvento() {
   document.getElementById('escolhaevento').style.display = "block";
+}
+function showtimer(){
+  document.getElementById('pause').style.display = "block";
+  document.getElementById('resume').style.display = "block";
 }
 function showTipoEvento2() {
   document.getElementById('escolhaevento').style.display = "block";
