@@ -161,8 +161,8 @@
               <p style="text-align: center;font-size: 30px">1ª Parte</p>
                 <div>
                   <p id="timer">00:00</p>
-                  <button id="pause" style="background-color: transparent">Pausa</button>
-                  <button id="resume" style="background-color: transparent">Retomar</button>
+                  <button id="pause" style="background-color: transparent;display:none">Pausa</button>
+                  <button id="resume" style="background-color: transparent;display:none">Retomar</button>
                 </div>
 
 
@@ -298,9 +298,7 @@
               <div class="inicio">
               <button id="start" class="btn btn-outline-primary" style="background-color: transparent; text-align: center;border:  5px solid black"   onclick="showTipoEvento();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Iniciar Jogo</button>
             </div>
-            <div id="2parte" class="intervalo" style="display:none">
-              <button id="start"  class="btn btn-outline-primary" style="background-color: transparent; text-align: center;border:  5px solid black"   onclick="showTipoEvento2();startTimer();this.style.visibility= 'hidden';" name="iniciojogo" value="iniciojogo"><img id="iniciojogo" src="./images/juiz.png" height="170px" width="110px">Começar 2ª parte</button>
-            </div>
+           
               
       
       </div>
@@ -981,6 +979,8 @@ function changedefendido(){
 //botões showoutradiv jogadores
 function showTipoEvento() {
   document.getElementById('escolhaevento').style.display = "block";
+  document.getElementById('pause').style.display = "block";
+  document.getElementById('resume').style.display = "block";
 }
 function showTipoEvento2() {
   document.getElementById('escolhaevento').style.display = "block";
