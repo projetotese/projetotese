@@ -154,8 +154,8 @@ h4 {
                         <label class="custom-control-label" for="Suplente1">Suplente</label>
                     </div>
                   </td>
-                  <td style="position:center; text-align:center;zoom:1.5;">
-                    <button>Corrigir</button>
+                  <td style="position:center; text-align:center;zoom:1.5;display: none;">
+                    <button id="corrigir1">Corrigir</button>
                   </td>
                   
                 </tr>
@@ -621,6 +621,7 @@ if(newvar>=2){
 //Disable Suplentes
 function Titular1() {
   document.getElementById("Suplente1").disabled = true;
+  document.getElementById('corrigir1').style.display = "none";
 }
 function Titular2() {
   document.getElementById("Suplente2").disabled = true;
