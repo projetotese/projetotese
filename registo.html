@@ -625,7 +625,6 @@ function Titular1() {
 }
 function Titular2() {
   document.getElementById("Suplente2").disabled = true;
-  document.getElementById('corrigir1').style.display = "block";
 }
 function Titular4() {
   document.getElementById("Suplente4").disabled = true;
@@ -737,7 +736,12 @@ function Suplente19() {
 function Suplente20() {
   document.getElementById("Titular20").disabled = true;
 }
-
+//Enable de novo
+function corrigir1() {
+  document.getElementById("Titular1").disabled = false;
+  document.getElementById("Suplente1").disabled = false;
+  document.getElementById('corrigir1').style.display = "none";
+}
 
 
 
