@@ -870,7 +870,8 @@ function yesnoCheck(that) {
 
 function avançar() {
   var valor = document.getElementById('valor');
-    if (valor.value >= "3" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor
+  var count = document.getElementById('iterationlist')
+    if (iterationlist.count >= "5" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor
       window.location.href = "registarevento.html";
     } else {
       alert("Tem de selecionar um jogo para continuar");
@@ -900,8 +901,6 @@ if( count > maxchecked ) {
    }
 if( count == 5 ) { 
   document.getElementById('avancarregisto').style.display ="block";
-  
-   
    }
 }
 
