@@ -164,8 +164,8 @@
               </div>
 
               <div>
-                <button id="pause" style="background-color: transparent;display:none">Pausa</button>
-                <button id="resume" style="background-color: transparent;display:none">Retomar</button>
+                <button id="pause" onclick="colocarpausa()" style="background-color: transparent;display:none">Pausa</button>
+                <button id="resume" onclick="retomarjogo()" style="background-color: transparent;display:none">Retomar</button>
               </div>
 
 
@@ -1023,6 +1023,15 @@ function showCampo() {
 }
 function showFinalButton() {
   document.getElementById('DivSubmeter').style.display = "block";
+}
+
+//botaopausa
+function colocarpausa(){
+  document.getElementById('resume').style.display = "block";
+}
+
+function retomarjogo(){
+  document.getElementById('resume').style.display = "none";
 }
 
 function hideinicio(){
