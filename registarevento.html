@@ -164,8 +164,8 @@
                 </div>
 
                 <div>
-                  <button id="pause" style="background-color: transparent;display:none">Pausa</button>
-                  <button id="resume" style="background-color: transparent;display:none">Retomar</button>
+                  <button id="pause" onclick="colocarpausa()" style="background-color: transparent;display:none">Pausa</button>
+                  <button id="resume" style="background-color: transparent;display:block">Retomar</button>
                 </div>
 
 
@@ -985,7 +985,7 @@ function showTipoEvento() {
 }
 function showtimer(){
   document.getElementById('pause').style.display = "block";
-  document.getElementById('resume').style.display = "block";
+  document.getElementById('resume').style.display = "none";
 }
 function showTipoEvento2() {
   document.getElementById('escolhaevento').style.display = "block";
@@ -1024,6 +1024,10 @@ function showCampo() {
 }
 function showFinalButton() {
   document.getElementById('DivSubmeter').style.display = "block";
+}
+//botaopausa
+function colocarpausa(){
+  document.getElementById('resume').style.display = "block";
 }
 
 function hideinicio(){
