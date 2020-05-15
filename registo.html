@@ -872,7 +872,7 @@ function avançar() {
   var valor = document.getElementById('valor');
   var count = document.getElementById('listone');
     if (count.count >= 5 ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor
-      window.location.href = "registarevento.html";
+      alert('Só jogadores podem ser selecionados.');
     } else {
       alert("Tem de selecionar um jogo para continuar");
     }
