@@ -524,7 +524,7 @@ h4 {
         </div>
       </div>
 
-      <a style="display: block;" onclick="avançar()" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
+      <a style="display: block;" onclick="avançar()" id="avancarregisto" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
       <div class="col-12 font-weight-light">
@@ -893,6 +893,9 @@ var count = 0;
 for( var i=0; i<iterationlist.length; i++ ) {
    if( document.getElementById(iterationlist[i]).checked == true) { count++; }
    if( count > maxchecked ) { latestcheck.checked = false; }
+   }
+   if( count = 5 ) { 
+  document.getElementById('avancarregisto').style.display = "none";
    }
 if( count > maxchecked ) {
    alert('Só' + maxchecked + ' jogadores podem ser selecionados.');
