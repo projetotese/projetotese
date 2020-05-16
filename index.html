@@ -85,8 +85,8 @@
                 <div class="col-12 tm-block-col">
                     <br>
                         <h2 class="tm-block-title">Calendário de Jogos</h2>
-                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-                        <table id="myTable" class="table">
+                        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
@@ -99,7 +99,7 @@
                                     <th scope="col">CONSULTAR</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="myTable" >
                                 <tr>
                                     <th scope="row"><b>1</b></th>
                                     <td>Realizado
@@ -475,24 +475,14 @@
             });
         })
 
-        function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
+        $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
     </script>
 </body>
 
