@@ -85,7 +85,8 @@
                 <div class="col-12 tm-block-col">
                     <br>
                         <h2 class="tm-block-title">Calendário de Jogos</h2>
-                        <table class="table">
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                        <table id="myTable" class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
@@ -474,11 +475,11 @@
             });
         })
 
-  function myFunction() {
+        function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("table");
+  table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
