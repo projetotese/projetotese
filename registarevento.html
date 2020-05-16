@@ -194,25 +194,29 @@
           <button id="btn14" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn14)" value="livre10metros"><img id="livre10metros" src="./images/livre10metros.png" onclick="changelivre10metros()" height="170px" width="110px"></button>
           <button id="btn15" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn16);showJogadorGolo();Tipo(btn15)" value="livre"><img id="livre" src="./images/freekick.png" onclick="changefreekick()" height="170px" width="110px"></button>
           <button id="btn16" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);showJogadorGolo();Tipo(btn16)" value="5para4"><img id="5para4" src="./images/5contra4.png" onclick="change5para4()" height="170px" width="110px"></button>
-          </div>
+          <button id="corrigir2" style="position:center;text-align: center;" onclick="corrigir2()">Corrigir</button>
+        </div>
         <div id="DivTipoRemate" class="container-sm" style="display:none">
           <br>
           <button id="btn17"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn18);disable(btn19);disable(btn20);showCampo();Tipo(btn17)" value="rematedefendido"><img id="defendido" src="./images/defesa.png" onclick="changedefendido()" height="170px" width="110px"></button>
           <button id="btn18"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn17);disable(btn19);disable(btn20);showCampo();Tipo(btn18)" value="remateparafora"><img id="fora" src="./images/bolafora.png" onclick="changebolafora()" height="170px" width="110px"></button>
           <button id="btn19"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn18);disable(btn17);disable(btn20);showCampo();Tipo(btn19)" value="remateintersetado"><img id="intersetado" src="./images/intersetado.png" onclick="changeintersetado()" height="170px" width="110px"></button>
           <button id="btn20"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn18);disable(btn17);disable(btn19);showCampo();Tipo(btn20)" value="remateaoposte"><img id="poste" src="./images/poste.png" onclick="changeposte()" height="170px" width="110px"></button>
-          </div>
+          <button id="corrigir3" style="position:center;text-align: center;" onclick="corrigir3()">Corrigir</button>  
+        </div>
           <div id="DivTipoPerdaBola" class="container-sm" style="display:none">
             <br>
             <button id="btn21" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn22);disable(btn23);showCampo();Tipo(btn21)" value="passe errado"><img id="passeerrado" src="./images/passeerrado.png" onclick="changepasseerrado()" height="170px" width="110px"></button>
             <button id="btn22"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn21);disable(btn23);showCampo();Tipo(btn22)" value="desarme"><img id="desarme" src="./images/intersetado.png" onclick="changepasseintersetado()" height="170px" width="110px"></button>
             <button id="btn23" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn22);disable(btn21);showCampo();Tipo(btn23)" value="maacaotecnica"><img id="maacaotecnica" src="./images/maacaotecnica.png" onclick="changemaacaotecnica()" height="170px" width="110px"></button>
-           </div>
+            <button id="corrigir4" style="position:center;text-align: center;" onclick="corrigir4()">Corrigir</button> 
+          </div>
             <div id="DivTipoSancao" class="container-sm" style="display:none">
               <br>
               <button id="btn24" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn25);showFinalButton();Tipo(btn24);showJogador()" value="amarelo"><img id="amarelo" src="./images/amarelo.png" onclick="changeamarelo()" height="170px" width="110px"></button>
               <button id="btn25" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn24);showFinalButton();Tipo(btn25);showJogador()" value="vermelho"><img id="vermelho" src="./images/vermelho.png" onclick="changevermelho()" height="170px" width="110px"></button>
-              </div>
+              <button id="corrigir5" style="position:center;text-align: center;" onclick="corrigir5()">Corrigir</button>  
+            </div>
               <div id="DivTipoGoloVisitante" class="container-sm" style="display:none">
                 <br>
                 <button id="btn26"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn27);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);disable(btn33);showCampo();Tipo(btn26)" value="bolaparadaadv"><img id="cantoadv" src="./images/bolaparada.png" onclick="changebolaparadaadv()" height="170px" width="110px"></button>
@@ -223,7 +227,8 @@
                 <button id="btn31"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn32);disable(btn33);showCampo();Tipo(btn31)" value="livre10metrosadv"><img id="livre10metrosadv" src="./images/livre10metros.png" onclick="changelivre10metrosadv()" height="170px" width="110px"></button>
                 <button id="btn32"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn33);showCampo();Tipo(btn32)" value="livreadv"><img id="livreadv" src="./images/freekick.png" onclick="changefreekickadv()" height="170px" width="110px"></button>
                 <button id="btn33"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn27);disable(btn26);disable(btn28);disable(btn29);disable(btn30);disable(btn31);disable(btn32);showCampo();Tipo(btn33)" value="5para4adv"><img id="5para4adv" src="./images/5x4.png" onclick="change5para4adv()" height="170px" width="110px"></button>
-                </div>
+                <button id="corrigir6" style="position:center;text-align: center;" onclick="corrigir6()">Corrigir</button>  
+              </div>
               <div id="DivJogadorGolo" class="container-sm" style="display:none">
                 <br>
                 <button id="btn34"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn35);disable(btn36);disable(btn37);disable(btn38);showJogadorAssist();Jogador1(btn34)" value="diogovieira"><img id="diogovieira" src="./images/diogovieira.png" onclick="changediogovieira()" height="170px" width="110px"></button>
@@ -1038,6 +1043,74 @@ function hideinicio(){
 
 //golo adversario
 //Enable de novo
+function corrigir1() {
+  document.getElementById("btn1").disabled = false;
+  document.getElementById("btn2").disabled = false;
+  document.getElementById("btn3").disabled = false;
+  document.getElementById("btn4").disabled = false;
+  document.getElementById("btn5").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("golo").src="./images/golo.png";
+ document.getElementById("golo").height="170px";
+ document.getElementById("golo").width="100px";
+ document.getElementById("faltaefetuada").src="./images/bolaicon.png";
+ document.getElementById("faltaefetuada").height="170px";
+ document.getElementById("faltaefetuada").width="100px";
+ document.getElementById("faltasofrida").src="./images/falta.png";
+ document.getElementById("faltasofrida").height="170px";
+ document.getElementById("faltasofrida").width="100px";
+ document.getElementById("perdabola").src="./images/perdabola.png";
+ document.getElementById("perdabola").height="170px";
+ document.getElementById("perdabola").width="100px";
+ document.getElementById("remate").src="./images/remate.png";
+ document.getElementById("remate").height="170px";
+ document.getElementById("remate").width="100px";
+ document.getElementById("substituicao").src="./images/substituicao.png";
+ document.getElementById("substituicao").height="170px";
+ document.getElementById("substituicao").width="100px";
+ document.getElementById("sancao").src="./images/cartoes.png";
+ document.getElementById("sancao").height="170px";
+ document.getElementById("sancao").width="100px";
+ document.getElementById("goloadversario").src="./images/goloadversario.png";
+ document.getElementById("goloadversario").height="170px";
+ document.getElementById("goloadversario").width="100px";
+}
+function corrigir1() {
+  document.getElementById("btn1").disabled = false;
+  document.getElementById("btn2").disabled = false;
+  document.getElementById("btn3").disabled = false;
+  document.getElementById("btn4").disabled = false;
+  document.getElementById("btn5").disabled = false;
+  document.getElementById("btn6").disabled = false;
+  document.getElementById("btn7").disabled = false;
+  document.getElementById("btn8").disabled = false;
+  document.getElementById("golo").src="./images/golo.png";
+ document.getElementById("golo").height="170px";
+ document.getElementById("golo").width="100px";
+ document.getElementById("faltaefetuada").src="./images/bolaicon.png";
+ document.getElementById("faltaefetuada").height="170px";
+ document.getElementById("faltaefetuada").width="100px";
+ document.getElementById("faltasofrida").src="./images/falta.png";
+ document.getElementById("faltasofrida").height="170px";
+ document.getElementById("faltasofrida").width="100px";
+ document.getElementById("perdabola").src="./images/perdabola.png";
+ document.getElementById("perdabola").height="170px";
+ document.getElementById("perdabola").width="100px";
+ document.getElementById("remate").src="./images/remate.png";
+ document.getElementById("remate").height="170px";
+ document.getElementById("remate").width="100px";
+ document.getElementById("substituicao").src="./images/substituicao.png";
+ document.getElementById("substituicao").height="170px";
+ document.getElementById("substituicao").width="100px";
+ document.getElementById("sancao").src="./images/cartoes.png";
+ document.getElementById("sancao").height="170px";
+ document.getElementById("sancao").width="100px";
+ document.getElementById("goloadversario").src="./images/goloadversario.png";
+ document.getElementById("goloadversario").height="170px";
+ document.getElementById("goloadversario").width="100px";
+}
 function corrigir1() {
   document.getElementById("btn1").disabled = false;
   document.getElementById("btn2").disabled = false;
