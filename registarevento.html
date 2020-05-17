@@ -163,6 +163,7 @@
                   <button id="resume" onclick="retomarjogo()" style="background-color: transparent;display:none">Retomar</button>
                 </div>
 
+                <button id="corrigir" style="display:none;position:center;text-align: center;" onclick="corrigir()">Corrigir</button>
 
                 <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -193,7 +194,6 @@
           <button id="btn14" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn14)" value="livre10metros"><img id="livre10metros" src="./images/livre10metros.png" onclick="changelivre10metros()" height="170px" width="110px"></button>
           <button id="btn15" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn16);showJogadorGolo();Tipo(btn15)" value="livre"><img id="livre" src="./images/freekick.png" onclick="changefreekick()" height="170px" width="110px"></button>
           <button id="btn16" style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn9);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);showJogadorGolo();Tipo(btn16)" value="5para4"><img id="5para4" src="./images/5contra4.png" onclick="change5para4()" height="170px" width="110px"></button>
-          <button id="corrigir1" style="position:center;text-align: center;" onclick="corrigir1()">Corrigir</button>
         </div>
         <div id="DivTipoRemate" class="container-sm" style="display:none">
           <br>
@@ -992,6 +992,7 @@ function showTipoEvento() {
 function showtimer(){
   document.getElementById('pause').style.display = "block";
   document.getElementById('resume').style.display = "none";
+  document.getElementById('corrigir').style.display = "block";
 }
 function showTipoEvento2() {
   document.getElementById('escolhaevento').style.display = "block";
@@ -1050,7 +1051,7 @@ function hideinicio(){
 
 //golo adversario
 //Enable de novo
-function corrigir1() {
+function corrigir() {
   document.getElementById("btn1").disabled = false;
   document.getElementById("btn2").disabled = false;
   document.getElementById("btn3").disabled = false;
