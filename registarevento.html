@@ -295,7 +295,7 @@
                 <button onClick="showDiv();guardar();">Próximo Evento</button>
                </div>
                
-               <button id="corrigir1" style="text-align: center;" onclick="corrigir1()">Corrigir</button>
+               <button id="corrigir1" style="display:none; text-align: center;" onclick="corrigir1()">Corrigir</button>
               
         <br>
             <div style="background-color: transparent; display:none" class="preamble" id="main" role="article">
@@ -1008,12 +1008,11 @@ function showJogadorAssist() {
   document.getElementById('DivJogadorAssist').style.display = "block";
 }
 //botões showoutradiv jogadores
-function showCorrigir(){
-  document.getElementById("corrigir1").style.display= "block;"
-}
+
 
 function showTipoGolo() {
   document.getElementById('DivTipoGolo').style.display = "block";
+  document.getElementById("corrigir1").style.display= "block;"
 }
 function showTipoPerda() {
   document.getElementById('DivTipoPerdaBola').style.display = "block";
