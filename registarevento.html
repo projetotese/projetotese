@@ -182,8 +182,7 @@
             <button id="btn6"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn7);disable(btn8);showJogEntraSubst();showCorrigir();myFunction(btn6)" name="evento" value="substituicao"><img id="substituicao" src="./images/substituicao.png" onclick="changesubstituicao()" height="170px" width="100px">a</button>
             <button id="btn7"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn8);showTipoSancao();showCorrigir();myFunction(btn7)" name="evento" value="sancao"><img id="sancao" src="./images/cartoes.png" onclick="changesancao()" height="170px" width="100px">a</button>
             <button id="btn8"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn2);disable(btn1);disable(btn3);disable(btn4);disable(btn5);disable(btn6);disable(btn7);showTipoGoloAdversario();showCorrigir();myFunction(btn8)" name="evento" value="goloadversario"><img id="goloadversario" src="./images/goloadversario.png" onclick="changegoloadversario()" height="170px" width="100px"></button>
-            <button id="corrigir1" style="display:none;position:center;text-align: center;" onclick="corrigir1()">Corrigir</button>
-          </div>
+                      </div>
         <div id="DivTipoGolo" class="container-sm" style="display:none">
           <br>
           <button id="btn9"  style="background-color: transparent;border:  5px solid black"  onclick="disable(btn10);disable(btn11);disable(btn12);disable(btn13);disable(btn14);disable(btn15);disable(btn16);showJogadorGolo();Tipo(btn9)" value="bolaparada"><img id="canto" src="./images/bolaparada.png" onclick="changebolaparada()" height="170px" width="110px"></button>
@@ -295,6 +294,7 @@
                 <br>
                 <button onClick="showDiv();guardar();">Próximo Evento</button>
                </div>
+               <button id="corrigir1" style="display:none;position:center;text-align: center;" onclick="corrigir1()">Corrigir</button>
         <br>
             <div style="background-color: transparent; display:none" class="preamble" id="main" role="article">
                 <p id="demo"></p>
