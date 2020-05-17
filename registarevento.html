@@ -276,7 +276,7 @@
         
               <!-- Mostrar Campo-->
         <br>
-              <div id="DivCampo" class="container-sm" height="120px" width="120px" style="display:none">
+              <div id="DivCampo" class="container-sm" height="120px" width="120px" >
                 <a><img style="position: relative;" src="./images/campofutsal.png" alt="campogolo" style="width:20%"></a>
                 <button  style="background-color: transparent;font-size: 12px;text-align:center;top: 4%;" id="btn70" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn70)" class="zona1" value="zona1">1</button>
                 <button  style="background-color: transparent;border: 5px solid black;font-size: 16px;text-align:center;top: 34%;" id="btn71" onclick="showFinalButton();disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn71)" class="zona2" value="zona2">2</button>
@@ -294,8 +294,9 @@
                 <br>
                 <button onClick="showDiv();guardar();">Próximo Evento</button>
                </div>
-               <div id="Divcorrigir"></div>
-               <button id="corrigir1" style="display: none;position:center;text-align: center;" onclick="corrigir1()">Corrigir</button>
+               
+               <div id="Divcorrigir" style="display:none" ></div>
+               <button id="corrigir1" style="position:center;text-align: center;" onclick="corrigir1()">Corrigir</button>
               </div>
         <br>
             <div style="background-color: transparent; display:none" class="preamble" id="main" role="article">
@@ -1009,7 +1010,7 @@ function showJogadorAssist() {
 }
 //botões showoutradiv jogadores
 function showCorrigir(){
-  document.getElementById('Divcorrigir').style.display= "block;"
+  document.getElementById("Divcorrigir").style.display= "block;"
 }
 function showCorrigir2(){
   document.getElementById('corrigir2').style.display= "block;"
