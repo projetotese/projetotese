@@ -31,17 +31,7 @@
     }
     
     /*Campo Golo*/
-    .zona1 {
-        top: 4%;
-        font-size:xx-small;
-        text-align: center;
-        height: 20px; 
-        width: 20px;
-        opacity: 0.7;
-        background-color: #ff9800;
-        left: -50%;
-        right: 3%;
-    }
+  
     .zona2 {
         top: 4%;
         font-size:xx-small;
@@ -136,6 +126,33 @@
         left: -50%;
         right: 3%;
     }
+    .campo {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.campo img {
+    width: 100%;
+    height: auto;
+}
+
+.campo .zona1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
     .inicio{
                 text-align:center;
             }
