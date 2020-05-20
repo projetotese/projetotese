@@ -321,15 +321,15 @@
         <br>
               <div id="DivCampo" class="campo" style="display:none" height="120px" width="120px" >
                 <a><img style="position: relative;" src="./images/campofutsal.png" alt="campogolo" style="width:20%"></a>
-                <button  id="btn70" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn70)" class="zona1" value="zona1">1</button>
-                <button  id="btn71" onclick="showFinalButton();disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn71)" class="zona2" value="zona2">2</button>
-                <button  id="btn72" onclick="showFinalButton();disable(btn71);disable(btn70);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn72)" class="zona3" value="zona3">3</button>
-                <button  id="btn73" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn70);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn73)" class="zona4" value="zona4">4</button>
-                <button  id="btn74" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn70);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn74)" class="zona5" value="zona5">5</button>
-                <button  id="btn75" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn70);disable(btn76);disable(btn77);disable(btn78);Zona(btn75)" class="zona6" value="zona6">6</button>
-                <button  id="btn76" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn70);disable(btn77);disable(btn78);Zona(btn76)" class="zona7" value="zona7">7</button>
-                <button  id="btn77" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn70);disable(btn78);Zona(btn77)" class="zona8" value="zona8">8</button>
-                <button  id="btn78" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn70);Zona(btn78)" class="zona9" value="zona9">9</button>
+                <button  id="btn70" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona1();Zona(btn70)" class="zona1" value="zona1">1</button>
+                <button  id="btn71" onclick="showFinalButton();disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona2();Zona(btn71)" class="zona2" value="zona2">2</button>
+                <button  id="btn72" onclick="showFinalButton();disable(btn71);disable(btn70);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona3();Zona(btn72)" class="zona3" value="zona3">3</button>
+                <button  id="btn73" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn70);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona4();Zona(btn73)" class="zona4" value="zona4">4</button>
+                <button  id="btn74" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn70);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona5();Zona(btn74)" class="zona5" value="zona5">5</button>
+                <button  id="btn75" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn70);disable(btn76);disable(btn77);disable(btn78);changezona6();Zona(btn75)" class="zona6" value="zona6">6</button>
+                <button  id="btn76" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn70);disable(btn77);disable(btn78);changezona7();Zona(btn76)" class="zona7" value="zona7">7</button>
+                <button  id="btn77" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn70);disable(btn78);changezona8();Zona(btn77)" class="zona8" value="zona8">8</button>
+                <button  id="btn78" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn70);changezona9();Zona(btn78)" class="zona9" value="zona9">9</button>
                 </div>
                 
               <div id="DivSubmeter" style="display:none">
@@ -1365,6 +1365,15 @@ function corrigir() {
  document.getElementById("tomascastro").src="./images/tomascastro.png";
  document.getElementById("tomascastro").height="170";
  document.getElementById("tomascastro").width="100";
+ document.getElementById("btn70").style.border = "5px solid black";
+ document.getElementById("btn71").style.border = "5px solid black";
+ document.getElementById("btn72").style.border = "5px solid black";
+ document.getElementById("btn73").style.border = "5px solid black";
+ document.getElementById("btn74").style.border = "5px solid black";
+ document.getElementById("btn75").style.border = "5px solid black";
+ document.getElementById("btn76").style.border = "5px solid black";
+ document.getElementById("btn77").style.border = "5px solid black";
+ document.getElementById("btn78").style.border = "5px solid black";
 }
 
 //botões tipo golo
@@ -1912,6 +1921,34 @@ function changediogojose(){
  document.getElementById("diogojose").width="10";
  }
 
+//border button
+function changezona1(){
+  document.getElementById("btn70").style.border = "5px solid orange";
+ }
+ function changezona2(){
+  document.getElementById("btn71").style.border = "5px solid orange";
+ }
+ function changezona3(){
+  document.getElementById("btn72").style.border = "5px solid orange";
+ }
+ function changezona4(){
+  document.getElementById("btn73").style.border = "5px solid orange";
+ }
+ function changezona5(){
+  document.getElementById("btn74").style.border = "5px solid orange";
+ }
+ function changezona6(){
+  document.getElementById("btn75").style.border = "5px solid orange";
+ }
+ function changezona7(){
+  document.getElementById("btn76").style.border = "5px solid orange";
+ }
+ function changezona8(){
+  document.getElementById("btn77").style.border = "5px solid orange";
+ }
+ function changezona9(){
+  document.getElementById("btn78").style.border = "5px solid orange";
+ }
 //Evento
 function myFunction(btn) {
   var x = document.getElementById(btn.id).value;
@@ -2306,6 +2343,15 @@ function guardar() {
  document.getElementById("tomascastro").src="./images/tomascastro.png";
  document.getElementById("tomascastro").height="170";
  document.getElementById("tomascastro").width="100";
+ document.getElementById("btn70").style.border = "5px solid black";
+ document.getElementById("btn71").style.border = "5px solid black";
+ document.getElementById("btn72").style.border = "5px solid black";
+ document.getElementById("btn73").style.border = "5px solid black";
+ document.getElementById("btn74").style.border = "5px solid black";
+ document.getElementById("btn75").style.border = "5px solid black";
+ document.getElementById("btn76").style.border = "5px solid black";
+ document.getElementById("btn77").style.border = "5px solid black";
+ document.getElementById("btn78").style.border = "5px solid black";
   } else {
     txt = "";
   }
