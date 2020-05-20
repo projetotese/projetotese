@@ -2042,7 +2042,13 @@ function showDiv() {
 }
 
 function guardar() {
-  alert("Evento registado!");
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "Evento Registado";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
 }
 
 
