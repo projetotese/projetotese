@@ -523,7 +523,7 @@ h4 {
           </div>
         </div>
       </div>
-
+      <p id="demo"></p>
       <a style="display: none;" onclick="avançar()" id="avancarregisto" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
@@ -870,9 +870,14 @@ function yesnoCheck(that) {
 
 function avançar() {
   var valor = document.getElementById('valor');
+    var txt;
     if (valor.value >= "3" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor  
-      confirm("Tem a certeza que quer avançar para o registo do evento?");
-      window.location.href = "registarevento.html";
+      if (confirm("Tem a certeza que quer avançar para o registo do evento?")) {
+        window.location.href = "registarevento.html";;
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;      
     } else {
       alert("Tem de concluir escolha do 5 inicial");
     }
