@@ -336,7 +336,10 @@
                 <br>
                 <button id="submeter" onClick="guardar();">Próximo Evento</button>
                </div>
-               <p id="resultadosubmits"></p>
+               <div id="hidemydiv">
+                <p id="resultadosubmits"></p>
+               </div>
+               
               
         <br>
             <div style="background-color: transparent; display:none" class="preamble" id="main" role="article">
@@ -2311,6 +2314,10 @@ function guardar() {
   document.getElementById("resultadosubmits").innerHTML = txt;
 }
 
+
+setTimeout(function() {
+    $('#hidemydiv').fadeOut('fast');
+}, 1000); // <-- time in milliseconds
 
     </script>
 
