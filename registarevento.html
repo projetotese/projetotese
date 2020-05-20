@@ -321,7 +321,7 @@
         <br>
               <div id="DivCampo" class="campo" style="display:none" height="120px" width="120px" >
                 <a><img style="position: relative;" src="./images/campofutsal.png" alt="campogolo" style="width:20%"></a>
-                <button  id="btn70" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn70)" class="zona1" value="zona1">1</button>
+                <button  id="btn70" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);changezona1();Zona(btn70)" class="zona1" value="zona1">1</button>
                 <button  id="btn71" onclick="showFinalButton();disable(btn70);disable(btn72);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn71)" class="zona2" value="zona2">2</button>
                 <button  id="btn72" onclick="showFinalButton();disable(btn71);disable(btn70);disable(btn73);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn72)" class="zona3" value="zona3">3</button>
                 <button  id="btn73" onclick="showFinalButton();disable(btn71);disable(btn72);disable(btn70);disable(btn74);disable(btn75);disable(btn76);disable(btn77);disable(btn78);Zona(btn73)" class="zona4" value="zona4">4</button>
@@ -1910,6 +1910,10 @@ function changediogojose(){
  document.getElementById("samuelmarques").width="10";
  document.getElementById("diogojose").height="10";
  document.getElementById("diogojose").width="10";
+ }
+
+ function changezona1(){
+  document.getElementById("btn70").style.border = "5px solid orange";
  }
 
 //Evento
