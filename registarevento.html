@@ -291,6 +291,14 @@
                 <button id="btn42"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn40);disable(btn41);disable(btn43);showFinalButton();fu(this);Jogador1(btn42)" value="claudiosilva"><img id="clasilva" src="./images/claudiosilva.png" onclick="changeclasilva()" height="170px" width="110px"></button>
                 <button id="btn43"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn40);disable(btn41);disable(btn42);showFinalButton();fu(this);Jogador1(btn43)" value="dinispereira"><img id="dpereira" src="./images/dinispereira.png" onclick="changedpereira()" height="170px" width="110px"></button>
                 </div>
+                <div id="DivJogadorMais" class="container-sm" style="display:none">
+                  <br>
+                <button id="btn80"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn81);disable(btn82);disable(btn83);disable(btn84);showCampo();fu(this);Jogador1(btn80)" value="diogovieira"><img id="diogovieira1" src="./images/diogovieira.png" onclick="changedvieira()" height="170px" width="110px"></button>
+                <button id="btn81"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn41);disable(btn42);disable(btn43);showCampo();fu(this);Jogador1(btn81)" value="alexandrefernandes"><img id="alexandrefernandes1" src="./images/alexandrefernandes.png" onclick="changealexfernandes()" height="170px" width="110px"></button>
+                <button id="btn82"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn40);disable(btn42);disable(btn43);showCampo();fu(this);Jogador1(btn82)" value="andrecarvalho"><img id="andrecarvalho1" src="./images/andrecarvalho.png" onclick="changeacarvalho()" height="170px" width="110px"></button>
+                <button id="btn83"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn40);disable(btn41);disable(btn43);showCampo();fu(this);Jogador1(btn83)" value="claudiosilva"><img id="claudiosilva1" src="./images/claudiosilva.png" onclick="changeclasilva()" height="170px" width="110px"></button>
+                <button id="btn84"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn39);disable(btn40);disable(btn41);disable(btn42);showCampo();fu(this);Jogador1(btn84)" value="dinispereira"><img id="dinispereira1" src="./images/dinispereira.png" onclick="changedpereira()" height="170px" width="110px"></button>
+                  </div>
               <div id="DivJogadorAssist" class="container-sm" style="display:none">
                 <br>
                 <button id="btn44"  style="background-color: transparent;border:  5px solid black" onclick="disable(btn45);disable(btn46);disable(btn47);disable(btn48);disable(btn49);showCampo();fu(this);Jogador2(btn44)" value="diogovieira"><img id="diovieira" src="./images/diogovieira.png" onclick="changediogovieiraassist()" height="170px" width="110px"></button>
@@ -932,8 +940,76 @@ function changedefendido(){
  document.getElementById("clasilva").height="10";
  document.getElementById("clasilva").width="10";
  }
+// botoesJogadoresMais
+function changediogovieira1(){
+ document.getElementById("dvieira").src="./images/diogovieirach.png";
+ document.getElementById("dvieira").height="40";
+ document.getElementById("dvieira").width="40";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
 
- 
+ function changealexandrefernandes1(){
+ document.getElementById("alexfernandes").src="./images/alexandrefernandesch.png";
+ document.getElementById("alexfernandes").height="40";
+ document.getElementById("alexfernandes").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changeandrecarvalho1(){
+ document.getElementById("acarvalho").src="./images/andrecarvalhoph.png";
+ document.getElementById("acarvalho").height="40";
+ document.getElementById("acarvalho").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changeclaudiosilva1(){
+ document.getElementById("clasilva").src="./images/claudiosilvach.png";
+ document.getElementById("clasilva").height="40";
+ document.getElementById("clasilva").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("dpereira").height="10";
+ document.getElementById("dpereira").width="10";
+ }
+
+ function changedinispereira1(){
+ document.getElementById("dpereira").src="./images/dinispereirach.png";
+ document.getElementById("dpereira").height="40";
+ document.getElementById("dpereira").width="40";
+ document.getElementById("dvieira").height="10";
+ document.getElementById("dvieira").width="10";
+ document.getElementById("alexfernandes").height="10";
+ document.getElementById("alexfernandes").width="10";
+ document.getElementById("acarvalho").height="10";
+ document.getElementById("acarvalho").width="10";
+ document.getElementById("clasilva").height="10";
+ document.getElementById("clasilva").width="10";
+ }
  //botões jogadoresAssist
  function changediogovieiraassist(){
   document.getElementById("diovieira").src="./images/diogovieirach.png";
