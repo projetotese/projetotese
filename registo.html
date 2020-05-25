@@ -838,7 +838,7 @@ for (i = 0; i < checkboxes.length; i++) {
 }
 
 function yesnoCheck(that) {
-    if (that.value >= "2" ) {
+    if (that.value >= "1" ) {
         document.getElementById("convocados").style.display = "block";
     } else {
       alert("Selecione um jogo");
@@ -849,7 +849,7 @@ function yesnoCheck(that) {
 function avançar() {
   var valor = document.getElementById('valor');
     var txt;
-    if (valor.value >= "3" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor  
+    if (valor.value >= "1" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor  
       if (confirm("Tem a certeza que quer avançar para o registo do evento?")) {
         window.location.href = "registarevento.html";;
   } else {
