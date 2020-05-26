@@ -195,47 +195,33 @@ function updateBarChart() {
 }
 
 function drawPieChart1() {
-  if ($("#chartgolos").length) {
-    var chartHeight = 300;
-
-    $("#pieChartContainer1").css("height", chartHeight + "px");
-
-    ctxPie1 = document.getElementById("chartgolos").getContext("2d");
-
-    optionsPie = {
-      responsive: true,
-      maintainAspectRatio: false,
-      layout: {
-        padding: {
-          left: 10,
-          right: 10,
-          top: 10,
-          bottom: 10
-        }
-      },
-      legend: {
-        position: "top"
-      }
-    };
-
-    configuPie = {
-      type: "pie",
-      data: {
-        datasets: [
-          {
-            data: [67.86 , 32.14],
-            backgroundColor: ["#4ED6B8", "#F7604D"],
-            label: "Jogos Realizados e Por Realizar"
-          }
-        ],
-        labels: [
-          "Jogos Não Realizados(%)",
-          "Jogos Realizados(%)"
-        ]
-      },
-      options: optionsPie
-    };
-
-    pieChart = new Chart(ctxPie1, configuPie);
-  }
+  new Chart(document.getElementById("horizontalBar"), {
+    "type": "horizontalBar",
+    "data": {
+    "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+    "datasets": [{
+    "label": "My First Dataset",
+    "data": [22, 33, 55, 12, 86, 23, 14],
+    "fill": false,
+    "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
+    "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
+    "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"
+    ],
+    "borderColor": ["rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)",
+    "rgb(75, 192, 192)", "rgb(54, 162, 235)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"
+    ],
+    "borderWidth": 1
+    }]
+    },
+    "options": {
+    "scales": {
+    "xAxes": [{
+    "ticks": {
+    "beginAtZero": true
+    }
+    }]
+    }
+    }
+    });
+    
 }
