@@ -855,7 +855,27 @@ function avançar() {
     var txt;
     if (valor.value >= "1" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor  
       if (confirm("Tem a certeza que quer avançar para o registo do evento?")) {
-        window.location.href = "registarevento.html";;
+        window.location.href = "registarevento.html";
+        var csv = "";
+    $("table").find("tr").each(function () {
+        var sep = "";
+        $(this).find("input").each(function () {
+            csv += sep + $(this).val();
+            sep = ",";
+        });
+        csv += "\n";
+    });
+    $("#csv").text(csv);
+
+    window.URL = window.URL || window.webkiURL;
+    var blob = new Blob([csv]);
+    var blobURL = window.URL.createObjectURL(blob);
+    $("#downloadLink").html("");
+    $("<a></a>").
+    attr("href", blobURL).
+    attr("download", "data.csv").
+    text("Download Data").
+    appendTo('#downloadLink');
   } else {
     txt = "You pressed Cancel!";
   }
@@ -889,6 +909,29 @@ if( count > maxchecked ) {
 if( count == 5 ) { 
   document.getElementById('avancarregisto').style.display ="block";
    }
+}
+
+function makeCSV() {
+    var csv = "";
+    $("table").find("tr").each(function () {
+        var sep = "";
+        $(this).find("input").each(function () {
+            csv += sep + $(this).val();
+            sep = ",";
+        });
+        csv += "\n";
+    });
+    $("#csv").text(csv);
+
+    window.URL = window.URL || window.webkiURL;
+    var blob = new Blob([csv]);
+    var blobURL = window.URL.createObjectURL(blob);
+    $("#downloadLink").html("");
+    $("<a></a>").
+    attr("href", blobURL).
+    attr("download", "data.csv").
+    text("Download Data").
+    appendTo('#downloadLink');
 }
 
 
