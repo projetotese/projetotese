@@ -174,23 +174,7 @@ function drawPieChart() {
 
     pieChart = new Chart(ctxPie, configPie);
   }
-}
 
-function updateLineChart() {
-  if (lineChart) {
-    lineChart.options = optionsLine;
-    lineChart.update();
-  }
-}
-
-function updateBarChart() {
-  if (barChart) {
-    barChart.options = optionsBar;
-    barChart.update();
-  }
-}
-
-function drawPieChart1() {
   if ($("#chartgolos").length) {
     var chartHeight = 300;
 
@@ -234,4 +218,21 @@ function drawPieChart1() {
 
     pieChart = new Chart(ctxPie, configPie);
   }
+
+
 }
+
+function updateLineChart() {
+  if (lineChart) {
+    lineChart.options = optionsLine;
+    lineChart.update();
+  }
+}
+
+function updateBarChart() {
+  if (barChart) {
+    barChart.options = optionsBar;
+    barChart.update();
+  }
+}
+
