@@ -502,7 +502,7 @@ h4 {
         </div>
       </div>
       <p id="demo"></p>
-      <a style="display: none;" onclick="makeCSV()" id="registarconvocados" class="btn btn-primary btn-block text-uppercase mb-3">Registar Convocados</a>
+      <a style="display: none;" onclick="DownloadJSON2CSV(objArray)" id="registarconvocados" class="btn btn-primary btn-block text-uppercase mb-3">Registar Convocados</a>
     
       <a style="display: none;" onclick="avançar()" id="avancarregisto" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
@@ -896,29 +896,24 @@ if( count == 5 ) {
    }
 }
 
-function makeCSV() {
-    var csv = "";
-    $("table").find("tr").each(function () {
-        var sep = "";
-        $(this).find("input").each(function () {
-            csv += sep + $(this).val();
-            sep = ",";
-        });
-        csv += "\n";
-    });
-    $("#csv").text(csv);
+function DownloadJSON2CSV(objArray)
+{
+    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
 
-    window.URL = window.URL || window.webkiURL;
-    var blob = new Blob([csv]);
-    var blobURL = window.URL.createObjectURL(blob);
-    $("#downloadLink").html("");
-    $("<a></a>").
-    attr("href", blobURL).
-    attr("download", "data.csv").
-    text("Download Data").
-    appendTo('#downloadLink');
+    var str = '';
+
+    for (var i = 0; i < array.length; i++) {
+        var line = new Array();
+
+        for (var index in array[i]) {
+           line.push('"' + array[i][index] + '"');
+        }
+
+        str += line.join(';');
+        str += '\r\n';
+    }
+    window.open( "data:text/csv;charset=utf-8," + encodeURIComponent(str));
 }
-
 
 
 
