@@ -197,10 +197,10 @@ function updateBarChart() {
 new Chart(document.getElementById("horizontalBar"), {
   "type": "horizontalBar",
   "data": {
-  "labels": ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Grey"],
+  "labels": ["Golos Marcados", "Golos Sofridos"],
   "datasets": [{
   "label": "My First Dataset",
-  "data": [22, 33, 55, 12, 86, 23, 14],
+  "data": [22, 33],
   "fill": false,
   "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
   "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(54, 162, 235, 0.2)",
