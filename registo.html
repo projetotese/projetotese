@@ -502,6 +502,8 @@ h4 {
         </div>
       </div>
       <p id="demo"></p>
+      <a style="display: none;" onclick="makeCSV()" id="registarconvocados" class="btn btn-primary btn-block text-uppercase mb-3">Registar Convocados</a>
+    
       <a style="display: none;" onclick="avançar()" id="avancarregisto" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
@@ -856,26 +858,7 @@ function avançar() {
     if (valor.value >= "1" ) { //else está a funcionar bem e location.href também. Problema é no if ou no var valor  
       if (confirm("Tem a certeza que quer avançar para o registo do evento?")) {
         window.location.href = "registarevento.html";
-        var csv = "";
-    $("table").find("tr").each(function () {
-        var sep = "";
-        $(this).find("input").each(function () {
-            csv += sep + $(this).val();
-            sep = ",";
-        });
-        csv += "\n";
-    });
-    $("#csv").text(csv);
-
-    window.URL = window.URL || window.webkiURL;
-    var blob = new Blob([csv]);
-    var blobURL = window.URL.createObjectURL(blob);
-    $("#downloadLink").html("");
-    $("<a></a>").
-    attr("href", blobURL).
-    attr("download", "data.csv").
-    text("Download Data").
-    appendTo('#downloadLink');
+        
   } else {
     txt = "You pressed Cancel!";
   }
@@ -905,9 +888,11 @@ for( var i=0; i<iterationlist.length; i++ ) {
 if( count > maxchecked ) {
    alert('Só ' + maxchecked + ' jogadores podem ser selecionados.');
    document.getElementById('avancarregisto').style.display = "block";
+   document.getElementById('registarconvocados').style.display = "block";
    }
 if( count == 5 ) { 
   document.getElementById('avancarregisto').style.display ="block";
+   document.getElementById('registarconvocados').style.display = "block";
    }
 }
 
