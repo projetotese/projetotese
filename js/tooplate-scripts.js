@@ -194,7 +194,6 @@ function updateBarChart() {
   }
 }
 
-function drawPieChart1() {
   new Chart(document.getElementById("horizontalBar"), {
     "type": "horizontalBar",
     "data": {
@@ -224,4 +223,3 @@ function drawPieChart1() {
     }
     });
     
-}
