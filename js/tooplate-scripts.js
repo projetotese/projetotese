@@ -189,3 +189,49 @@ function updateBarChart() {
     barChart.update();
   }
 }
+
+function drawPieChart1() {
+  if ($("#chartgolos").length) {
+    var chartHeight = 300;
+
+    $("#pieChartContainer1").css("height", chartHeight + "px");
+
+    ctxPie = document.getElementById("chartgolos").getContext("2d");
+
+    optionsPie = {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: {
+        padding: {
+          left: 10,
+          right: 10,
+          top: 10,
+          bottom: 10
+        }
+      },
+      legend: {
+        position: "top"
+      }
+    };
+
+    configPie = {
+      type: "pie",
+      data: {
+        datasets: [
+          {
+            data: [67.86 , 32.14],
+            backgroundColor: ["#4ED6B8", "#F7604D"],
+            label: "Jogos Realizados e Por Realizar"
+          }
+        ],
+        labels: [
+          "Jogos Não Realizados(%)",
+          "Jogos Realizados(%)"
+        ]
+      },
+      options: optionsPie
+    };
+
+    pieChart = new Chart(ctxPie, configPie);
+  }
+}
