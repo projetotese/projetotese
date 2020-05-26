@@ -175,12 +175,32 @@ function drawPieChart() {
     pieChart = new Chart(ctxPie, configPie);
   }
 
+
+
+  
+}
+
+function updateLineChart() {
+  if (lineChart) {
+    lineChart.options = optionsLine;
+    lineChart.update();
+  }
+}
+
+function updateBarChart() {
+  if (barChart) {
+    barChart.options = optionsBar;
+    barChart.update();
+  }
+}
+
+function drawPieChart1() {
   if ($("#chartgolos").length) {
     var chartHeight = 300;
 
     $("#pieChartContainer1").css("height", chartHeight + "px");
 
-    ctxPie = document.getElementById("chartgolos").getContext("2d");
+    ctxPie1 = document.getElementById("chartgolos").getContext("2d");
 
     optionsPie = {
       responsive: true,
@@ -198,7 +218,7 @@ function drawPieChart() {
       }
     };
 
-    configPie = {
+    configuPie = {
       type: "pie",
       data: {
         datasets: [
@@ -216,23 +236,6 @@ function drawPieChart() {
       options: optionsPie
     };
 
-    pieChart = new Chart(ctxPie, configPie);
-  }
-
-
-}
-
-function updateLineChart() {
-  if (lineChart) {
-    lineChart.options = optionsLine;
-    lineChart.update();
+    pieChart = new Chart(ctxPie1, configuPie);
   }
 }
-
-function updateBarChart() {
-  if (barChart) {
-    barChart.options = optionsBar;
-    barChart.update();
-  }
-}
-
