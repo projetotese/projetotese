@@ -199,7 +199,7 @@ new Chart(document.getElementById("horizontalBar"), {
   "data": {
   "labels": ["Golos Marcados", "Golos Sofridos"],
   "datasets": [{
-  "label": "My First Dataset",
+  "label": "Golos Marcados e Sofridos",
   "data": [22, 33],
   "fill": false,
   "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)",
