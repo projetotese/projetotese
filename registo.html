@@ -506,8 +506,9 @@ h4 {
           </div>
         </div>
       </div>
-      <p id="demo"></p>
-      <button onclick="exportTableToExcel('tblData')">Export Table Data To Excel File</button>
+      <p id="demo"></p> 
+      <a style="display: none;" id="btn" class="btn btn-primary btn-block text-uppercase mb-3">Registar Convocados</a>
+    
       <a style="display: none;" onclick="avançar()" id="avancarregisto" class="btn btn-primary btn-block text-uppercase mb-3">Avançar Registo de Jogo</a>
     </div>
     <footer class="tm-footer row tm-mt-small">
@@ -892,11 +893,11 @@ for( var i=0; i<iterationlist.length; i++ ) {
 if( count > maxchecked ) {
    alert('Só ' + maxchecked + ' jogadores podem ser selecionados.');
    document.getElementById('avancarregisto').style.display = "block";
-   document.getElementById('registarconvocados').style.display = "block";
+   document.getElementById('btn').style.display = "block";
    }
 if( count == 5 ) { 
   document.getElementById('avancarregisto').style.display ="block";
-   document.getElementById('registarconvocados').style.display = "block";
+   document.getElementById('btn').style.display = "block";
    }
 }
 
@@ -1000,6 +1001,13 @@ function exportTableToExcel(convocados, filename = ''){
         //triggering the function
         downloadLink.click();
     }
+}
+
+$('#btn').click(function(){
+  $('#convocados').table2excel({
+    name:"Jogo",
+    filename:"Jogo"
+  })
 }
 
   </script>
