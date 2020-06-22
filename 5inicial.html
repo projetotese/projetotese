@@ -107,26 +107,9 @@ h4 {
       </nav>
 
     <div class="container mt-5">
-      <div id="div1" class="row tm-content-row">
-        <div class="col-12 tm-block-col">
-          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
-            <h2 class="tm-block-title">Lista de Jogos</h2>
-            <select id="valor" onchange="yesnoCheck(this);" class="custom-select">
-              <option value="0">Selecionar Jogo a Registar</option>
-              <option value="1">CS São João-Braga</option>
-              <option value="2">Braga-Modicus</option>
-              <option value="3">Braga-Caxinas</option>
-              <option value="4">Sporting-Braga</option>
-              <option value="5">Braga-Leões Porto Salvo</option>
-              <option value="6">Benfica-Braga</option>
-              <option value="7">Braga-CS São Joao</option>
-              <option value="8">Braga-Quinta Lombos</option>
-            </select>
-          </div>
-        </div>
-      </div>
       
-      <div id="convocados" class="container" style="display: none;">
+      
+      <div id="convocados" class="container">
         <div class="row">
           <div class="col-12">
             <h2 class="tm-block-title">5 Titular e Suplentes</h2>
@@ -847,14 +830,7 @@ for (i = 0; i < checkboxes.length; i++) {
   }
 }
 
-function yesnoCheck(that) {
-    if (that.value >= "1" ) {
-        document.getElementById("convocados").style.display = "block";
-    } else {
-      alert("Selecione um jogo");
-        document.getElementById("convocados").style.display = "none";
-    }
-}
+
 
 function avançar() {
   var valor = document.getElementById('valor');
