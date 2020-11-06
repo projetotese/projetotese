@@ -8,9 +8,7 @@ try:
                                          user='root',
                                          password='dissertacao')
                                          
-    mySql_insert_query = """INSERT INTO teste (idteste, Nome1, Tipo, Numero, Obs) 
-                           VALUES 
-                           (150, 'Exemplo P71', 'ass', 123, 'datetime.datetime.now()') """
+    mySql_insert_query = """UPDATE teste SET Tipo= 'ventura' WHERE idteste= 10; """
 
     cursor = connection.cursor()
     cursor.execute(mySql_insert_query)
