@@ -178,32 +178,32 @@
 });
 
 //GetDataBase
-import mysql.connector
-from mysql.connector import Error
-from mysql.connector import errorcode
+//import mysql.connector
+//from mysql.connector import Error
+//from mysql.connector import errorcode
 
-try:
-    connection = mysql.connector.connect(host='127.0.0.1',
-                                         database='registoeventos',
-                                         user='root',
-                                         password='dissertacao')
+//try:
+  //  connection = mysql.connector.connect(host='127.0.0.1',
+    //                                     database='registoeventos',
+      //                                   user='root',
+        //                                 password='dissertacao')
                                          
-    mySql_insert_query = """GET calendariojogos"""
+    //mySql_insert_query = """GET calendariojogos"""
 
-    cursor = connection.cursor()
-    cursor.execute(mySql_insert_query)
-    connection.commit()
-    print(cursor.rowcount, "Record inserted successfully into teste table")
-    cursor.close()
+    //cursor = connection.cursor()
+    //cursor.execute(mySql_insert_query)
+    //connection.commit()
+    //print(cursor.rowcount, "Record inserted successfully into teste table")
+    //cursor.close()
 
-except mysql.connector.Error as error:
-    print("Failed to insert record into teste table {}".format(error))
+//except mysql.connector.Error as error:
+  //  print("Failed to insert record into teste table {}".format(error))
 
-finally:
-    if (connection.is_connected()):
-        connection.close()
-        print("MySQL connection is closed")
-
+//finally:
+  //  if (connection.is_connected()):
+    //    connection.close()
+      //  print("MySQL connection is closed")
+//""
     </script>
 </body>
 
